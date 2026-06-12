@@ -1,7 +1,7 @@
 use rust_bert::pipelines::{common::ModelType, keywords_extraction::KeywordExtractionModel, translation::{
     Language,  
     TranslationModelBuilder,
-}};
+}, zero_shot_classification::ZeroShotClassificationModel};
 
 use tch::{Device};
 
@@ -9,7 +9,8 @@ fn main() {
     translate();
     pos();
     sentiment();
-    keyword_extraction();
+    keywords();
+    clasification();
 }
 
 
@@ -76,7 +77,7 @@ fn sentiment() {
     }
 }
 
-fn keyword_extraction() {
+fn keywords() {
     let model = KeywordExtractionModel::new(Default::default()).unwrap();
     let input = [
         "Rust is a systems programming language focused on safety and performance.", 
@@ -87,4 +88,24 @@ fn keyword_extraction() {
     for(i, keywords) in output.iter().enumerate() {
         println!("Sentence {}: Keywords: {:?}", i + 1, keywords);
     }
+}
+
+fn clasification() {
+    let classification_model = ZeroShotClassificationModel::new(Default::default()).unwrap();
+    let input = [
+        "I love this movie!", 
+        "This is the worst experience I've ever had."
+    ];
+    let candidate_labels = ["positive", "negative", "neutral"];
+    let output = classification_model.predict(
+        &input, 
+        &candidate_labels, 
+        None, 
+        16
+    );   
+    for(i, classification) in output.iter().enumerate() {
+        println!("Sentence {}: {:#?}", i + 1, classification);
+    }
+
+    
 }
