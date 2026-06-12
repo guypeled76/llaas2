@@ -30,5 +30,13 @@ fn translate() {
         Language::Spanish
     );
 
-    println!("{:?}", output);
+    match output {
+        Ok(translations) => for v in translations {
+            println!("{}", v);
+        },
+        Err(e) => {
+            eprintln!("Error during translation: {}", e);
+            return;
+        }
+    }
 }
