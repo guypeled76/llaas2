@@ -1,0 +1,9 @@
+[package]
+name = "llaas"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rust-bert = "0.23.0"
+tch = "0.17.0"
+console = { version = "0.16.3", features = ["std"] }

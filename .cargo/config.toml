@@ -1,0 +1,3 @@
+[env]
+# Workaround for torch-sys/tch 0.17 with newer Apple libc++ headers.
+CXXFLAGS = "-Wno-invalid-specialization -Wno-error=invalid-specialization"
