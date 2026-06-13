@@ -1,12 +1,16 @@
-use rust_bert::pipelines::{common::ModelType, keywords_extraction::KeywordExtractionModel, translation::{
-    Language,  
-    TranslationModelBuilder,
-}, zero_shot_classification::ZeroShotClassificationModel};
+mod models;
 
-use tch::{Device};
+use rust_bert::pipelines::{
+    keywords_extraction::KeywordExtractionModel, 
+    zero_shot_classification::ZeroShotClassificationModel
+};
+
+
+
+
 
 fn main() {
-    translate();
+    models::translate::apply();
     pos();
     sentiment();
     keywords();
@@ -14,36 +18,6 @@ fn main() {
 }
 
 
-fn translate() {
-    let model = TranslationModelBuilder::new()
-        .with_device(Device::cuda_if_available())
-        .with_model_type(ModelType::Marian)
-        .with_source_languages(vec![Language::English])
-        .with_target_languages(vec![Language::Spanish])
-        .create_model()
-        .unwrap();
-
-    let input = [
-        "Hello, how are you?", 
-        "This is a test of the translation pipeline."
-    ];
-    
-    let output = model.translate(
-        &input, 
-        None, 
-        Language::Spanish
-    );
-
-    match output {
-        Ok(translations) => for v in translations {
-            println!("{}", v);
-        },
-        Err(e) => {
-            eprintln!("Error during translation: {}", e);
-            return;
-        }
-    }
-}
 
 
 fn pos() {
@@ -109,3 +83,4 @@ fn clasification() {
 
     
 }
+
