@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+message Book {
+    string title = 1;
+    string author = 2;
+    string description = 3;
+    repeated string keywords = 4;
+    repeated Chapter chapters = 5;
+}
+
+message Article {
+    string title = 1;
+    string author = 2;
+    string description = 3;
+    repeated string keywords = 4;
+    repeated Paragraph paragraphs = 5;   
+}
+
+message Chapter {
+    string title = 1;
+    repeated Paragraph paragraphs = 2;   
+}
+
+message Paragraph {
+    string text = 1;
+    repeated Line lines = 2;
+}
+
+message Line {
+    string text = 1;
+}
