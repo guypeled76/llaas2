@@ -20,6 +20,12 @@ enum Commands {
         #[arg(long)]
         to: String,
     },
+    Tts {
+        #[arg(long)]
+        text: String,
+        #[arg(long)]
+        file: String,
+    },
 }
 
 fn main() {
@@ -32,6 +38,10 @@ fn main() {
             let output = serde_json::to_string_pretty(&json).expect("Failed to serialize JSON");
             fs::write(&to, output).expect("Failed to write output file");
             println!("Written to {to}");
+        }
+        Commands::Tts { text, file } => {
+            models::tts::TtsModel::wav(&text, &file).expect("Failed to synthesize speech");
+            println!("Written to {file}");
         }
     }
 }
