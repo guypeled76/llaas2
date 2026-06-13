@@ -1,5 +1,6 @@
 use epub::doc::EpubDoc;
 use unicode_segmentation::UnicodeSegmentation;
+use crate::models::keywords::KeywordsModel;
 
 use crate::messages::{Book, Chapter, Line, Paragraph};
 
@@ -9,16 +10,7 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
     let title = doc.mdata("title").map(|m| m.value.clone()).unwrap_or_default();
     let author = doc.mdata("creator").map(|m| m.value.clone()).unwrap_or_default();
     let description = doc.mdata("description").map(|m| m.value.clone()).unwrap_or_default();
-    let keywords = doc
-        .mdata("subject")
-        .map(|m| {
-            m.value
-                .split(',')
-                .map(|k| k.trim().to_string())
-                .filter(|k| !k.is_empty())
-                .collect()
-        })
-        .unwrap_or_default();
+    let keywords = KeywordsModel::apply(&[&title, &author, &description]);
 
     let mut chapters = Vec::new();
 

@@ -2,15 +2,39 @@ use rust_bert::pipelines::{
     keywords_extraction::KeywordExtractionModel
 };
 
-pub fn apply() {
-    let model = KeywordExtractionModel::new(Default::default()).unwrap();
-    let input = [
-        "Rust is a systems programming language focused on safety and performance.", 
-        "The quick brown fox jumps over the lazy dog."
-    ];
-    let output = model.predict(&input);
-    
-    for(i, keywords) in output.iter().enumerate() {
-        println!("Sentence {}: Keywords: {:?}", i + 1, keywords);
+pub struct KeywordsModel {
+    model: KeywordExtractionModel<'static>,
+}
+
+
+
+impl KeywordsModel {
+
+    pub fn new() -> Result<KeywordsModel, String> {
+        let result = KeywordExtractionModel::new(Default::default());
+        
+        match result {
+            Ok(model) =>  Ok(KeywordsModel { model }) ,
+            Err(e) => {
+                eprintln!("Error initializing the model: {}", e);
+                Err(e.to_string()) 
+            }
+        }
+    }
+
+    pub fn predict(&self, text: &[&str]) -> Vec<String> {
+        self.model.predict(text)
+                .into_iter()
+                .flatten()
+                .flatten()
+                .map(|kw| kw.text)
+                .collect()
+    }
+
+    pub fn apply(text: &[&str]) -> Vec<String> {
+        let model = KeywordsModel::new().expect("Failed to initialize the model");
+        model.predict(text)
     }
 }
+
+
