@@ -1,4 +1,5 @@
 mod models;
+pub mod messages;
 
 fn main() {
     models::translate::apply();
