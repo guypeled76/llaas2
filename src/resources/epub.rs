@@ -46,7 +46,7 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
 }
 
 fn parse_html_chapter(html: &str) -> Option<Chapter> {
-    let text = html2text::from_read(html.as_bytes(), 80);
+    let text = html2text::from_read(html.as_bytes(), usize::MAX);
 
     let mut blocks = text
         .split("\n\n")
