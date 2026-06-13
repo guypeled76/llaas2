@@ -25,6 +25,8 @@ enum Commands {
         text: String,
         #[arg(long)]
         file: String,
+        #[arg(long, default_value = "en")]
+        lang: String,
     },
 }
 
@@ -39,8 +41,8 @@ fn main() {
             fs::write(&to, output).expect("Failed to write output file");
             println!("Written to {to}");
         }
-        Commands::Tts { text, file } => {
-            models::tts::TtsModel::wav(&text, &file).expect("Failed to synthesize speech");
+        Commands::Tts { text, file, lang } => {
+            models::tts::TtsModel::wav(&text, &file, &lang).expect("Failed to synthesize speech");
             println!("Written to {file}");
         }
     }

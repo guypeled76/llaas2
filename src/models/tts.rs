@@ -35,8 +35,8 @@ impl TtsModel {
     /**
      * Synthesizes speech for the given text and returns WAV bytes.
      */
-    pub fn predict(&self, text: &str) -> Result<Vec<u8>, String> {
-        let request = SynthesisRequest::new(text);
+    pub fn predict(&self, text: &str, lang: &str) -> Result<Vec<u8>, String> {
+        let request = SynthesisRequest::new(text).with_language(lang);
         let audio = self.model.synthesize(&request).map_err(|e| e.to_string())?;
         Ok(audio.get_wav())
     }
@@ -45,16 +45,16 @@ impl TtsModel {
      * A convenience method to synthesize speech in one call.
      * It initializes the model and returns generated WAV bytes.
      */
-    pub fn apply(text: &str) -> Result<Vec<u8>, String> {
+    pub fn apply(text: &str, lang: &str) -> Result<Vec<u8>, String> {
         let model = TtsModel::new()?;
-        model.predict(text)
+        model.predict(text, lang)
     }
 
     /**
      * A convenience method to synthesize speech and write the WAV bytes to a file.
      */
-    pub fn wav(text: &str, file: &str) -> Result<(), String> {
-        let wav_bytes = TtsModel::apply(text)?;
+    pub fn wav(text: &str, file: &str, lang: &str) -> Result<(), String> {
+        let wav_bytes = TtsModel::apply(text, lang)?;
         std::fs::write(file, wav_bytes).map_err(|e| e.to_string())
     }
 }
