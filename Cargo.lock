@@ -1298,6 +1298,7 @@ dependencies = [
  "tonic",
  "tonic-prost",
  "tonic-prost-build",
+ "unicode-segmentation",
 ]
 
 [[package]]
@@ -2782,6 +2783,12 @@ checksum = "43f613e4fa046e69818dd287fdc4bc78175ff20331479dab6e1b0f98d57062de"
 dependencies = [
  "smallvec",
 ]
+
+[[package]]
+name = "unicode-segmentation"
+version = "1.13.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c6f5d3c3b1bf09027a88a6bc961fc00497d651009560b5463668dc81b0fa87a8"
 
 [[package]]
 name = "unicode-width"

@@ -1,4 +1,5 @@
 use epub::doc::EpubDoc;
+use unicode_segmentation::UnicodeSegmentation;
 
 use crate::messages::{Book, Chapter, Line, Paragraph};
 
@@ -66,11 +67,9 @@ fn parse_html_chapter(html: &str) -> Option<Chapter> {
         .chain(blocks)
         .map(|block| {
             let lines = block
-                .lines()
-                .map(|l| l.trim())
-                .filter(|l| !l.is_empty())
-                .map(|l| Line { text: l.to_string() })
-                .collect::<Vec<_>>();
+                .unicode_sentences()
+                .map(|s| Line { text: s.to_string() })
+                .collect();
             Paragraph { lines }
         })
         .filter(|p| !p.lines.is_empty())
