@@ -20,7 +20,7 @@ impl TtsModel {
      * If model loading fails, it returns an error message.
      */
     pub fn new() -> Result<TtsModel, String> {
-        let config = TtsConfig::new(ModelType::Kokoro);
+        let config = TtsConfig::new(ModelType::OmniVoice);
         let result = load_model(config);
 
         match result {
