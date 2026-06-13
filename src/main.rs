@@ -1,6 +1,7 @@
 mod models;
 mod resources;
-pub mod messages;
+mod common;
+mod messages;
 
 use clap::{Parser, Subcommand};
 use std::fs;
@@ -42,7 +43,7 @@ fn main() {
             println!("Written to {to}");
         }
         Commands::Tts { text, file, lang } => {
-            models::tts::TtsModel::wav(&text, &file, &lang).expect("Failed to synthesize speech");
+            models::tts::TtsModel::wav(&text, &file, &lang).unwrap();
             println!("Written to {file}");
         }
     }
