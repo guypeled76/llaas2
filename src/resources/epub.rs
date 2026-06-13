@@ -46,7 +46,7 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
                             return None;
                         }
                         let lines = vec![Line { text: text.clone() }];
-                        Some(Paragraph { text, lines })
+                        Some(Paragraph { lines })
                     })
                     .collect();
 

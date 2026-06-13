@@ -22,8 +22,7 @@ message Chapter {
 }
 
 message Paragraph {
-    string text = 1;
-    repeated Line lines = 2;
+    repeated Line lines = 1;
 }
 
 message Line {

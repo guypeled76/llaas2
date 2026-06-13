@@ -45,7 +45,6 @@ fn book_to_json(book: &messages::Book) -> serde_json::Value {
         "chapters": book.chapters.iter().map(|c| serde_json::json!({
             "title": c.title,
             "paragraphs": c.paragraphs.iter().map(|p| serde_json::json!({
-                "text": p.text,
                 "lines": p.lines.iter().map(|l| serde_json::json!({ "text": l.text })).collect::<Vec<_>>()
             })).collect::<Vec<_>>()
         })).collect::<Vec<_>>()
