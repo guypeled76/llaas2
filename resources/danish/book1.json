@@ -6,13 +6,6 @@
         {
           "lines": [
             {
-              "text": "BOWIE"
-            }
-          ]
-        },
-        {
-          "lines": [
-            {
               "text": "CRITCHLEY"
             }
           ]
@@ -32,17 +25,10 @@
           ]
         }
       ],
-      "title": ""
+      "title": "BOWIE"
     },
     {
       "paragraphs": [
-        {
-          "lines": [
-            {
-              "text": "Simon Critchley: Bowie"
-            }
-          ]
-        },
         {
           "lines": [
             {
@@ -67,7 +53,7 @@
         {
           "lines": [
             {
-              "text": "Bowie"
+              "text": "*Bowie*"
             }
           ]
         },
@@ -81,7 +67,7 @@
         {
           "lines": [
             {
-              "text": "Bowie (revideret udgave 2016)"
+              "text": "*Bowie* (revideret udgave 2016)"
             }
           ]
         },
@@ -137,7 +123,7 @@
         {
           "lines": [
             {
-              "text": "www.klim.dk"
+              "text": "[www.klim.dk][1]"
             }
           ]
         },
@@ -168,9 +154,16 @@
               "text": "LYT TIL MUSIKKEN MENS DU LÆSER"
             }
           ]
+        },
+        {
+          "lines": [
+            {
+              "text": "[1]: http://www.klim.dk"
+            }
+          ]
         }
       ],
-      "title": ""
+      "title": "Simon Critchley: *Bowie*"
     },
     {
       "paragraphs": [
@@ -371,21 +364,21 @@
           ]
         }
       ],
-      "title": "INDHOLD"
+      "title": "# INDHOLD"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "LAD MIG BEGYNDE MED EN RET PINLIG TILSTÅELSE: Ingen person har gennem mit liv givet mig større nydelse og glæde end David Bowie. Det siger måske en hel del om min livskvalitet, selvfølgelig. Misforstå mig ikke. Der har været gode øjeblikke, endda nogle, som har involveret andre mennesker. Men når vi taler om konstant, vedvarende glæde gennem de årtier, der er gået, er der intet, der kommer i nærheden af den glæde, som Bowie har givet mig."
+              "text": "**LAD MIG BEGYNDE MED EN RET PINLIG TILSTÅELSE**: Ingen person har gennem mit liv givet mig større nydelse og glæde end David Bowie. Det siger måske en hel del om min livskvalitet, selvfølgelig. Misforstå mig ikke. Der har været gode øjeblikke, endda nogle, som har involveret andre mennesker. Men når vi taler om konstant, vedvarende glæde gennem de årtier, der er gået, er der intet, der kommer i nærheden af den glæde, som Bowie har givet mig."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Det hele begyndte, som det gjorde for mange andre almindelige engelske drenge og piger, med Bowies optræden med ‘Starman’ på BBC’s ikoniske Top of the Pops den 6. juli 1972, der blev set af mere end en fjerdedel af den britiske befolkning. Jeg tabte mælet, da jeg så dette væsen – med orange hår og klædt i en vild dragt – med løst håndled lægge armen om Mick Ronsons skulder. Det var ikke så meget selve sangen, der ramte mig; det var Bowies chokerende look. Det var overvældende. Han virkede så seksuel, så vidende, så underfundig og så fremmedartet. På én gang arrogant og sårbar. Han så ud, som om han havde forstået, hvad det hele gik ud på – hans ansigt var en dør til en verden af ukendte nydelser."
+              "text": "Det hele begyndte, som det gjorde for mange andre almindelige engelske drenge og piger, med Bowies optræden med ‘Starman’ på BBC’s ikoniske *Top of the Pops* den 6. juli 1972, der blev set af mere end en fjerdedel af den britiske befolkning. Jeg tabte mælet, da jeg så dette væsen – med orange hår og klædt i en vild dragt – med løst håndled lægge armen om Mick Ronsons skulder. Det var ikke så meget selve sangen, der ramte mig; det var Bowies chokerende look. Det var overvældende. Han virkede så seksuel, så vidende, så underfundig og så fremmedartet. På én gang arrogant og sårbar. Han så ud, som om han havde forstået, hvad det hele gik ud på – hans ansigt var en dør til en verden af ukendte nydelser."
             }
           ]
         },
@@ -411,14 +404,14 @@
           ]
         }
       ],
-      "title": "MIN FØRSTE SEKSUELLE ERFARING"
+      "title": "# MIN FØRSTE SEKSUELLE ERFARING"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "DET ER EN UDBREDT OPFATTELSE, AT MAN KAN TALE OM et menneskes ‘narrative identitet’. Dette begreb indebærer forestillingen om, at ens liv er en form for fortælling med en begyndelse, en midte og en slutning. Normalt er der en tidlig, definerende, traumatisk oplevelse og en eller flere kriser i midten (sex, stoffer, alle former for afhængighed kan bruges), som individet på mirakuløs vis overvinder. Sådanne livshistorier kulminerer med forløsning, før de slutter med fred til mennesker med Guds velbehag. Enheden i ens liv udgøres af sammenhængskraften i den historie, man kan fortælle om sig selv. Folk gør det hele tiden. Det er den løgn, der ligger bag forestillingen om memoirer. Det er også raison d’être for en stor luns af det, der er tilbage af forlagsbranchen, og som får sin næring fra den rædsomme rendestensverden, der tilbyder kurser i kreative skriveprocesser. Jeg tror ikke på det. I lighed med Simone Weil tror jeg på en dekreativ skriveproces, der bevæger sig gennem spiraler af opadstigende negationer, før man når frem til … ingenting."
+              "text": "**DET ER EN UDBREDT OPFATTELSE, AT MAN KAN TALE OM** et menneskes ‘narrative identitet’. Dette begreb indebærer forestillingen om, at ens liv er en form for fortælling med en begyndelse, en midte og en slutning. Normalt er der en tidlig, definerende, traumatisk oplevelse og en eller flere kriser i midten (sex, stoffer, alle former for afhængighed kan bruges), som individet på mirakuløs vis overvinder. Sådanne livshistorier kulminerer med forløsning, før de slutter med fred til mennesker med Guds velbehag. Enheden i ens liv udgøres af sammenhængskraften i den historie, man kan fortælle om sig selv. Folk gør det hele tiden. Det er den løgn, der ligger bag forestillingen om memoirer. Det er også *raison d’être* for en stor luns af det, der er tilbage af forlagsbranchen, og som får sin næring fra den rædsomme rendestensverden, der tilbyder kurser i kreative skriveprocesser. Jeg tror ikke på det. I lighed med Simone Weil tror jeg på en *dekreativ* skriveproces, der bevæger sig gennem spiraler af opadstigende negationer, før man når frem til … ingenting."
             }
           ]
         },
@@ -444,14 +437,14 @@
           ]
         }
       ],
-      "title": "EPISODISKE GLIMT"
+      "title": "# EPISODISKE GLIMT"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "EFTER ANDY WARHOL I 1968 VAR BLEVET SKUDT AF Valerie Solanos, sagde han: “Før jeg blev skudt, nærede jeg en mistanke om, at jeg i stedet for at leve bare ser tv. Efter at være blevet skudt er jeg sikker på det.” Bowies skarpsindige, ti ord lange kommentar til Warhols udsagn i ‘Andy Warhol’ fra Hunky Dory (1971) er ekstremt præcis: “Andy Warhol, silver screen / Can’t tell them apart at all.” Kunstnerens og hans publikums ironiske selverkendelse kan kun være erkendelsen af deres inautenticitet, som gentages på stadig mere bevidste niveauer. Bowie mobiliserer gentagne gange denne warholske æstetik."
+              "text": "**EFTER ANDY WARHOL I 1968 VAR BLEVET SKUDT AF** Valerie Solanos, sagde han: “Før jeg blev skudt, nærede jeg en mistanke om, at jeg i stedet for at leve bare ser tv. Efter at være blevet skudt er jeg sikker på det.” Bowies skarpsindige, ti ord lange kommentar til Warhols udsagn i ‘Andy Warhol’ fra *Hunky Dory* (1971) er ekstremt præcis: “Andy Warhol, silver screen / Can’t tell them apart at all.” Kunstnerens og hans publikums ironiske selverkendelse kan kun være erkendelsen af deres *inautenticitet*, som gentages på stadig mere bevidste niveauer. Bowie mobiliserer gentagne gange denne warholske æstetik."
             }
           ]
         },
@@ -514,7 +507,7 @@
         {
           "lines": [
             {
-              "text": "Bowie udviser en indsigtsfuld bevidsthed om Himmlers opfattelse af nationalsocialismen som politisk kunstgreb, som en kunstnerisk og især arkitektonisk konstruktion såvel som et filmisk skue. Hitler var med Hans-Jürgen Syberbergs ord ein Film aus Deutschland. Som Bowie formulerer det, var Hitler den første popstjerne. Men at være spærret inde i en film fremmaner ikke opstemthed, men nedtrykthed og en Major Tom-lignende passivitet:"
+              "text": "Bowie udviser en indsigtsfuld bevidsthed om Himmlers opfattelse af nationalsocialismen som politisk *kunstgreb*, som en kunstnerisk og især arkitektonisk konstruktion såvel som et filmisk skue. Hitler var med Hans-Jürgen Syberbergs ord *ein Film aus Deutschland*. Som Bowie formulerer det, var Hitler den første popstjerne. Men at være spærret inde i en film fremmaner ikke opstemthed, men nedtrykthed og en Major Tom-lignende passivitet:"
             }
           ]
         },
@@ -570,26 +563,26 @@
         {
           "lines": [
             {
-              "text": "Verden er en filmkulisse, og den film, der indspilles, kunne hedde Melancholia. En af Bowies bedste og mest trøstesløse sange, ‘Candidate’, begynder med en erklæring båret af eksplicit forstillelse: “We’ll pretend we’re walking home”, og efterfølges af linjen: “My set is amazing, it even smells like a street.”"
+              "text": "Verden er en filmkulisse, og den film, der indspilles, kunne hedde *Melancholia*. En af Bowies bedste og mest trøstesløse sange, ‘Candidate’, begynder med en erklæring båret af eksplicit forstillelse: “We’ll pretend we’re walking home”, og efterfølges af linjen: “My set is amazing, it even smells like a street.”"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Kunstens beskidte lektion lærer os én ting, og det er inautenticitet hele vejen igennem, en række gentagelser og rekonstruktioner: forfalskninger, som smadrer den illusion om virkelighed, vi lever i, og konfronterer os med illusionens realitet. Bowies verden er som en dystopisk version af The Truman Show, en syg verden, som kraftfuldt kommer til udtryk i de voldelige ruin- og bylandskaber på Aladdin Sane og Diamond Dogs og mere subtilt i de mennesketomme lydlandskaber på ‘Warszawa’ og ‘Neuköln’. Med en passage fra Iggy Pops ‘Passenger’ fra Lust for Life (sangens titel er lånt fra Antonionis film The Passenger fra 1975 (på dansk: Profession: reporter), selv om Bowie meget vel kan være den person, der refereres til): Bowie er passageren, som kører gennem byens forrevne randområder under en klar og åben himmel."
+              "text": "Kunstens beskidte lektion lærer os én ting, og det er inautenticitet hele vejen igennem, en række gentagelser og rekonstruktioner: forfalskninger, som smadrer den illusion om virkelighed, vi lever i, og konfronterer os med illusionens realitet. Bowies verden er som en dystopisk version af *The Truman Show*, en syg verden, som kraftfuldt kommer til udtryk i de voldelige ruin- og bylandskaber på *Aladdin Sane* og *Diamond Dogs* og mere subtilt i de mennesketomme lydlandskaber på ‘Warszawa’ og ‘Neuköln’. Med en passage fra Iggy Pops ‘Passenger’ fra *Lust for Life* (sangens titel er lånt fra Antonionis film *The Passenger* fra 1975 (på dansk: *Profession: reporter*), selv om Bowie meget vel kan være den person, der refereres til): Bowie er passageren, som kører gennem byens forrevne randområder under en klar og åben himmel."
             }
           ]
         }
       ],
-      "title": "KUNSTENS BESKIDTE LEKTIONER"
+      "title": "# KUNSTENS BESKIDTE LEKTIONER"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "HVAD VAR KILDEN TIL BOWIES EVNE TIL AT SKABE KONTAKT TIL helt almindelige drenge og piger, måske især de lettere fremmedgjorte, de drenge og piger, som dødkedede sig og havde det svært med sig selv, de socialt utilpassede? Det åbenlyse svar gives i ‘Rock ’n’ Roll Suicide’, det sidste nummer på Ziggy Stardust og den sang, som Bowie ofte afsluttede sine koncerter med. Her er sangens klimaks:"
+              "text": "**HVAD VAR KILDEN TIL BOWIES EVNE TIL AT SKABE KONTAKT TIL** helt almindelige drenge og piger, måske især de lettere fremmedgjorte, de drenge og piger, som dødkedede sig og havde det svært med sig selv, de socialt utilpassede? Det åbenlyse svar gives i ‘Rock ’n’ Roll Suicide’, det sidste nummer på *Ziggy Stardust* og den sang, som Bowie ofte afsluttede sine koncerter med. Her er sangens klimaks:"
             }
           ]
         },
@@ -673,40 +666,40 @@
         {
           "lines": [
             {
-              "text": "Bowie-som-Ziggy forkastede det eksisterende samfunds dominerende normer og opdelinger: dreng/pige, menneske/alien, homo/hetero. Han var outsideren, rumvæsenet, den besøgende (den menneskelignende alien Thomas Jerome Newton gav netop sit album – som en slags flaskepost til sin hustru ude i rummet – titlen The Visitor, da Bowie i 1976 spillede ham i Manden som kom ned på jorden). Her var Ziggy i sin selvmordssang, imens han rakte ud til os i vores umælende, rodede, selvsønderrivende forstadsforvirring og sagde til os, at vi var vidunderlige. Millioner af generte mini-Hamlet’er, som levede i deres kærlighedsløse helvede i spredtliggende flækker, byer og storbyer, hørte hans ord og var forbløffede over at blive tilgivet. Vi behøvede blot at række hænderne frem. Det gjorde vi. Vi købte albummet."
+              "text": "Bowie-som-Ziggy forkastede det eksisterende samfunds dominerende normer og opdelinger: dreng/pige, menneske/alien, homo/hetero. Han var outsideren, rumvæsenet, den besøgende (den menneskelignende alien Thomas Jerome Newton gav netop sit album – som en slags flaskepost til sin hustru ude i rummet – titlen *The Visitor*, da Bowie i 1976 spillede ham i *Manden som kom ned på jorden*). Her var Ziggy i sin selvmordssang, imens han rakte ud til os i vores umælende, rodede, selvsønderrivende forstadsforvirring og sagde til os, at vi var vidunderlige. Millioner af generte mini-Hamlet’er, som levede i deres kærlighedsløse helvede i spredtliggende flækker, byer og storbyer, hørte hans ord og var forbløffede over at blive tilgivet. Vi behøvede blot at række hænderne frem. Det gjorde vi. Vi købte albummet."
             }
           ]
         }
       ],
-      "title": "WONDERFUL"
+      "title": "# WONDERFUL"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "HVIS BOWIES KUNST ER INAUTENTISK, HVIS DEN ER F FOR Fup, som Orson Welles ville have formuleret det, er den så også F for Falskhed? Jeg kan huske, at jeg for mange år siden læste et interview med Robert Fripp, og han fortalte om en episode i slutningen af 1970’erne, hvor han under en indspilning i et pladestudie iagttog Bowie. Bowie lyttede til et nummer eller en båndsløjfe og forsøgte meget omhyggeligt, igen og igen og fuldkommen bevidst, at fremkalde den rigtige følelse i sin stemme. Kan det blive mere kunstigt og falskt? Bør musik ikke komme direkte fra hjertet og gennem stemmebåndet finde vej til vores ører, der venter som muslingeskaller? Jo, som andre har iagttaget, består Bowies særlige talent i den omhyggelige parring mellem stemning og musik gennem stemmens medium."
+              "text": "**HVIS BOWIES KUNST ER INAUTENTISK, HVIS DEN ER *F* FOR** *Fup*, som Orson Welles ville have formuleret det, er den så også *F* for *Falskhed*? Jeg kan huske, at jeg for mange år siden læste et interview med Robert Fripp, og han fortalte om en episode i slutningen af 1970’erne, hvor han under en indspilning i et pladestudie iagttog Bowie. Bowie lyttede til et nummer eller en båndsløjfe og forsøgte meget omhyggeligt, igen og igen og fuldkommen bevidst, at fremkalde den rigtige følelse i sin stemme. Kan det blive mere kunstigt og falskt? Bør musik ikke komme direkte fra hjertet og gennem stemmebåndet finde vej til vores ører, der venter som muslingeskaller? Jo, som andre har iagttaget, består Bowies særlige talent i den omhyggelige parring mellem stemning og musik gennem stemmens medium."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Hvis jeg i endnu højere grad var en heideggeriansk dødbider, end jeg faktisk er, kunne vi tale om forbindelsen mellem stemme (die Stimme) og stemning (die Stimmung) som den grundlæggende aktivitet, gennem hvilken en verden åbenbarer sig for os og derudover åbenbarer sig på en følelsesmæssig snarere end på en rationel måde. Bowies genialitet består således i hans evne til at fortolke – forstået som udlægning (Auslegung), hvor noget lægges ud, således at det stemmer for os eller giver genlyd for os på en klangfuld måde, der kan ramme os hårdt eller blødt."
+              "text": "Hvis jeg i endnu højere grad var en heideggeriansk dødbider, end jeg faktisk er, kunne vi tale om forbindelsen mellem stemme (*die Stimme*) og stemning (*die Stimmung*) som den grundlæggende aktivitet, gennem hvilken en verden åbenbarer sig for os og derudover åbenbarer sig på en følelsesmæssig snarere end på en rationel måde. Bowies genialitet består således i hans evne til at fortolke – forstået som udlægning (*Auslegung*), hvor noget lægges ud, således at det stemmer for os eller giver genlyd for os på en klangfuld måde, der kan ramme os hårdt eller blødt."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Men vi er nødt til at tage et vigtigt forbehold her. Musik som Bowies er ikke en metode til på en eller anden måde at bringe mennesker i følelsesmæssig kontakt med en form for præetableret harmoni med verden. Det ville bogstaveligt talt være banalt og mundant. Bowie muliggør med sin musik snarere en slags afverdensliggørelse af verden, en oplevelse af sindsstemning, følelse eller stemning (Stimmung), som viser, at alt i verden ikke stemmer – dvs. ikke er i overensstemmelse med selvet. I denne forstand er musik udtryk for en uoverensstemmelse med verden, som muliggør en vis afmundanisering, en tilbagetrækning, der måske kan gøre os i stand til at se verden i et utopisk lys."
+              "text": "Men vi er nødt til at tage et vigtigt forbehold her. Musik som Bowies er ikke en metode til på en eller anden måde at bringe mennesker i følelsesmæssig kontakt med en form for præetableret harmoni med verden. Det ville bogstaveligt talt være banalt og mundant. Bowie muliggør med sin musik snarere en slags *afverdensliggørelse* af verden, en oplevelse af sindsstemning, følelse eller stemning (*Stimmung*), som viser, at alt i verden ikke stemmer – dvs. ikke er i overensstemmelse med selvet. I denne forstand er musik udtryk for en uoverensstemmelse med verden, som muliggør en vis afmundanisering, en tilbagetrækning, der måske kan gøre os i stand til at se verden i et utopisk lys."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Alle, som gennem årene har lyttet til Bowie, er fuldstændig fortrolig med den næsten vaudeville- eller pantomimeagtige måde, som hans ensemble af arketyper synger på. Hver af disse karakterer har deres egen karakteristiske stemme: fra den flabede, affekterede cockneyimitation hos Tony Newley eller selv den forbandede leende gnom til den kerubiske, mascaraoversmurte anglosurrealisme hos Syd Barrett over den mørke, teatralske basso profun-do hos Scott Walker og en lysere Iggy Pop (der er nogle af Bowies Iggy-imitationer, som jeg ikke er den største fan af) til den hvide souldreng med den hviskende stemme og videre til det nærmest opera- eller endda hymneagtige som på ‘Word on a Wing’. Variationer af disse figurer og flere andre optræder på album efter album. Vi er ikke dumme. Vi ved godt, at ingen af dem er ægte."
+              "text": "Alle, som gennem årene har lyttet til Bowie, er fuldstændig fortrolig med den næsten vaudeville- eller pantomimeagtige måde, som hans ensemble af arketyper synger på. Hver af disse karakterer har deres egen karakteristiske stemme: fra den flabede, affekterede cockneyimitation hos Tony Newley eller selv den forbandede leende gnom til den kerubiske, mascaraoversmurte anglosurrealisme hos Syd Barrett over den mørke, teatralske *basso profun-do* hos Scott Walker og en lysere Iggy Pop (der er nogle af Bowies Iggy-imitationer, som jeg ikke er den største fan af) til den hvide souldreng med den hviskende stemme og videre til det nærmest opera- eller endda hymneagtige som på ‘Word on a Wing’. Variationer af disse figurer og flere andre optræder på album efter album. Vi er ikke dumme. Vi ved godt, at ingen af dem er ægte."
             }
           ]
         },
@@ -755,59 +748,59 @@
         {
           "lines": [
             {
-              "text": "Bowies sandhed er inautentisk, fuldstændig selvbevidst og helt og aldeles konstrueret. Men den er stadigvæk rigtig, es stimmt, som man kan sige på tysk, eller den føles rigtig, stimmig. Vi hører stemmen og siger “ja”. Inden i os selv eller nogle gange højlydt. Lyden af Bowies stemme vækker genklang i os. Den finder et fysisk ekko. Men resonans åbner for dissonans, genlyd for mislyd. Et rungende legeme ét sted begynder – som glas på et bord – at få et andet legeme til at ryste, og pludselig er hele gulvet fyldt med smadrede glas. Musik giver genlyd og opfordrer os til at afvige fra verden, at opleve en dissensus communis, en socialitet, der bryder med common sense. Ved hjælp af falskneriet og på grund af det føler vi en sandhed, som fører os hinsides os selv, hen imod en drøm om en anden måde at leve og være på."
+              "text": "Bowies sandhed er inautentisk, fuldstændig selvbevidst og helt og aldeles konstrueret. Men den er stadigvæk rigtig, *es stimmt*, som man kan sige på tysk, eller den føles rigtig, *stimmig*. Vi hører stemmen og siger “ja”. Inden i os selv eller nogle gange højlydt. Lyden af Bowies stemme vækker genklang i os. Den finder et fysisk ekko. Men resonans åbner for dissonans, genlyd for mislyd. Et rungende legeme ét sted begynder – som glas på et bord – at få et andet legeme til at ryste, og pludselig er hele gulvet fyldt med smadrede glas. Musik giver genlyd og opfordrer os til at afvige fra verden, at opleve en *dissensus communis*, en socialitet, der bryder med common sense. Ved hjælp af falskneriet og på grund af det føler vi en sandhed, som fører os hinsides os selv, hen imod en drøm om en anden måde at leve og være på."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowies særlige talent gør det muligt for os at overskære den overfladiske forbindelse, der synes at forbinde autenticitet med sandhed. Der er sandhed at finde i Bowies kunst, en stemningsfuld sandhed, en hørt sandhed, en følt sandhed, en legemliggjort sandhed. Noget, som høres med og i kroppen. Den syngende stemmes og musikkens klang og tone føles i tonus eller kroppens muskulære spænding. Musikalsk spænding er muskulær, stigende eller faldende, i voksende bølgeslag af nydelse."
+              "text": "Bowies særlige talent gør det muligt for os at overskære den overfladiske forbindelse, der synes at forbinde autenticitet med sandhed. Der er sandhed at finde i Bowies kunst, en stemningsfuld sandhed, en hørt sandhed, en følt sandhed, en legemliggjort sandhed. Noget, som høres med og i kroppen. Den syngende stemmes og musikkens klang og tone føles i *tonus* eller kroppens muskulære spænding. Musikalsk spænding er muskulær, stigende eller faldende, i voksende bølgeslag af nydelse."
             }
           ]
         }
       ],
-      "title": "JEG ER EN HEIDEGGERIANSK DØDBIDER"
+      "title": "# JEG ER EN HEIDEGGERIANSK DØDBIDER"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "BOWIE INKARNEREDE ET UTOPISK NOGET: EN ANDEN MÅDE at eksistere på i deprimerende forstæder som Bromley, Beckenham, Billericay, Basingstoke, Braintree eller Biggleswade. Bowies musik var ikke en afspejling af livet på gaden. Hvorfor skulle vi have været interesseret i det? Livet var rutinepræget, gråt, trangt og glansløst. Vores forældre var i moralsk vildrede efter 1960’erne, de havde affærer, blev skilt og gik i bukser med svaj. Vi kedede os. DØDKEDEDE os. Lad den øvre middelklasse hylde gadens liv efter deres skiferie med deres forældre eller bilferie i Volvoen i Dordogne. Bowie repræsenterede noget andet, især for intelligent oprørske almindelige drenge og piger. Dette andet havde noget usandsynligt glamourøst og fremmedartet over sig. Det forkastede gaden."
+              "text": "**BOWIE INKARNEREDE ET UTOPISK NOGET: EN ANDEN MÅDE** at eksistere på i deprimerende forstæder som Bromley, Beckenham, Billericay, Basingstoke, Braintree eller Biggleswade. Bowies musik var ikke en afspejling af livet på gaden. Hvorfor skulle vi have været interesseret i det? Livet var rutinepræget, gråt, trangt og glansløst. Vores forældre var i moralsk vildrede efter 1960’erne, de havde affærer, blev skilt og gik i bukser med svaj. Vi kedede os. DØDKEDEDE os. Lad den øvre middelklasse hylde gadens liv efter deres skiferie med deres forældre eller bilferie i Volvoen i Dordogne. Bowie repræsenterede noget andet, især for intelligent oprørske almindelige drenge og piger. Dette andet havde noget usandsynligt glamourøst og fremmedartet over sig. Det forkastede gaden."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Som Jon Savage med god grund har formuleret det, handlede Bowie ikke om realisme af nogen slags. Bowies succes knyttede an til en latent, low-budget science fiction-løssluppenhed (mere Michael Moorcock end Isaac Asimov; mere Quatermass and the Pit end Star Trek), som var en skabelon for de ruinlandskaber, som glam-, punk- og postpunkperiodens rumdrenge og -piger løb rundt i iklædt uhyrlige, ofte hjemmefremstillede og lettere kiksede outfits. Det var det, som Nicholas Pegg koncist har kaldt for en ‘forstadsapokalypse’, en forstadsapokalypse med mælkevogne og de sindssyge-hospitaler, der dengang lå rundt om London. Som andre har fremhævet, talte Bowie til excentrikerne og freakene. Men det viste sig, at der var mange af os. Hvilket fik en til at spekulere over, hvem det egentlig var, der var inde i varmen? Senere, meget senere, gav Bowie dem et nyt navn: heathen (hedninge). Vi ville for alt i verden ikke være hedninge."
+              "text": "Som Jon Savage med god grund har formuleret det, handlede Bowie ikke om realisme af nogen slags. Bowies succes knyttede an til en latent, low-budget science fiction-løssluppenhed (mere Michael Moorcock end Isaac Asimov; mere *Quatermass and the Pit* end *Star Trek*), som var en skabelon for de ruinlandskaber, som glam-, punk- og postpunkperiodens rumdrenge og -piger løb rundt i iklædt uhyrlige, ofte hjemmefremstillede og lettere kiksede outfits. Det var det, som Nicholas Pegg koncist har kaldt for en ‘forstadsapokalypse’, en forstadsapokalypse med mælkevogne og de sindssyge-hospitaler, der dengang lå rundt om London. Som andre har fremhævet, talte Bowie til excentrikerne og freakene. Men det viste sig, at der var mange af os. Hvilket fik en til at spekulere over, hvem det egentlig var, der var inde i varmen? Senere, meget senere, gav Bowie dem et nyt navn: *heathen* (hedninge). Vi ville for alt i verden ikke være hedninge."
             }
           ]
         }
       ],
-      "title": "UTOPISK NOGET"
+      "title": "# UTOPISK NOGET"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "TÆNK PÅ BOWIES TEKSTER. DET VIRKER, SOM OM VI – helt fra begyndelsen – ganske enkelt ikke kunne lade være med at læse dem selvbiografisk, som spor og tegn, der kunne føre os til en eller anden autentisk forståelse af den ‘virkelige’ Bowie, hans fortid, hans traumer, hans kærlighedsliv, hans politiske overbevisninger. Vi ville gerne se hans sange som vinduer ind til hans liv. Men dette er præcis, hvad vi skal opgive, hvis vi ønsker at misforstå Bowie lidt mindre. Som vi kun alt for godt ved, antog Bowie en lang række forskellige identiteter. Hans genialitet bestod i, at han var i stand til at være en anden, så længe en sang varede, nogle gange så længe som et helt album eller endda en koncertturné varede. Bowie var bugtaler."
+              "text": "**TÆNK PÅ BOWIES TEKSTER. DET VIRKER, SOM OM VI** – helt fra begyndelsen – ganske enkelt ikke kunne lade være med at læse dem selvbiografisk, som spor og tegn, der kunne føre os til en eller anden autentisk forståelse af den ‘virkelige’ Bowie, hans fortid, hans traumer, hans kærlighedsliv, hans politiske overbevisninger. Vi ville gerne se hans sange som vinduer ind til hans liv. Men dette er præcis, hvad vi skal opgive, hvis vi ønsker at misforstå Bowie lidt mindre. Som vi kun alt for godt ved, antog Bowie en lang række forskellige identiteter. Hans genialitet bestod i, at han var i stand til at være en anden, så længe en sang varede, nogle gange så længe som et helt album eller endda en koncertturné varede. Bowie var bugtaler."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Det var ikke en strategi, som døde med Ziggy på scenen i Hammersmith Odeon i 1973. Den varede ved helt frem til Bowies to sidste album, The Next Day og Blackstar."
+              "text": "Det var ikke en strategi, som døde med Ziggy på scenen i Hammersmith Odeon i 1973. Den varede ved helt frem til Bowies to sidste album, *The Next Day* og *Blackstar*."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "På The Next Day er mange af sangene skrevet fra en anden persons perspektiv, for eksempel den truende og primitive udøver af et skoleskyderi på ‘Valentine’s Day’ eller den gådefulde karakter på albummets sidste nummer, ‘Heat’. Det sidstnævnte nummer har måske den stærkeste og sværest forståelige tekst på albummet og handler om en søns had til en far, der enten var fængselsinspektør eller gjorde deres hjem til et fængsel. Der er en tydelig allusion til Mishimas roman Forårssne og det følgende fængslende billede:"
+              "text": "På *The Next Day* er mange af sangene skrevet fra en anden persons perspektiv, for eksempel den truende og primitive udøver af et skoleskyderi på ‘Valentine’s Day’ eller den gådefulde karakter på albummets sidste nummer, ‘Heat’. Det sidstnævnte nummer har måske den stærkeste og sværest forståelige tekst på albummet og handler om en søns had til en far, der enten var fængselsinspektør eller gjorde deres hjem til et fængsel. Der er en tydelig allusion til Mishimas roman *Forårssne* og det følgende fængslende billede:"
             }
           ]
         },
@@ -835,14 +828,14 @@
         {
           "lines": [
             {
-              "text": "Bowie synger gentagne gange: “And I tell myself, I don’t know who I am.” Sangen ender med linjen: “I am a seer, I am a liar.” Hvortil vi kan føje, at Bowie er en seer, fordi han er en løgner. Sandhedsindholdet i Bowies kunst bliver ikke kompromitteret af falskheden. Sandheden er muliggjort af denne falskhed."
+              "text": "Bowie synger gentagne gange: “And I tell myself, I don’t know who I am.” Sangen ender med linjen: “I am a seer, I am a liar.” Hvortil vi kan føje, at Bowie er en seer, *fordi* han er en løgner. Sandhedsindholdet i Bowies kunst bliver ikke kompromitteret af falskheden. Sandheden er muliggjort af denne falskhed."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Sagt på en anden måde: Bowie fremmaner sandhed ved hjælp af ‘Oblique Strategies’, hvilket var det navn, der blev givet til en serie på mere end 100 kort, som Brian Eno sammen med kunstneren Peter Schmidt skabte i 1975. For eksempel begyndte Bowie tilfældigvis at spille saxofon på offbeatet under indspilningen af ‘V-2 Schneider’ (titlen er både et ordspil på V2-raketten, der decimerede dele af London i 1944, og de to centrale medlemmer af Kraftwerk – we two = Ralf Hütter og Florian Schneider). Før indspilningen havde han læst et ‘Oblique Strategies’-kort med teksten: “Du skal ære dine fejl for deres skjulte intentioner.” Således blev nummeret undfanget. Jeg mener bestemt, at Bowies sangtekster skal forstås på baggrund af det indirektes kunst."
+              "text": "Sagt på en anden måde: Bowie fremmaner sandhed ved hjælp af ‘Oblique Strategies’, hvilket var det navn, der blev givet til en serie på mere end 100 kort, som Brian Eno sammen med kunstneren Peter Schmidt skabte i 1975. For eksempel begyndte Bowie tilfældigvis at spille saxofon på offbeatet under indspilningen af ‘V-2 Schneider’ (titlen er både et ordspil på V2-raketten, der decimerede dele af London i 1944, og de to centrale medlemmer af Kraftwerk – *we two* = Ralf Hütter og Florian Schneider). Før indspilningen havde han læst et ‘Oblique Strategies’-kort med teksten: “Du skal ære dine fejl for deres skjulte intentioner.” Således blev nummeret undfanget. Jeg mener bestemt, at Bowies sangtekster skal forstås på baggrund af det indirektes kunst."
             }
           ]
         },
@@ -877,40 +870,40 @@
         {
           "lines": [
             {
-              "text": "Hvor skrøbelige og inautentiske vores identiteter end er, lader Bowie os tro på, at vi kan genopfinde os selv. Vi kan faktisk genopfinde os selv, fordi vores identiteter er så skrøbelige og inautentiske. Ligesom Bowie tilsyneladende havde en grænseløs evne til at genopfinde sig selv, gjorde han det muligt for os at tro på, at vores egen evne til forandring var grænseløs. Der er selvfølgelig grænser – markante begrænsninger såsom menneskets endelighed – for, hvor meget vi kan forandre os. Men på en eller anden måde kan man – selv i dag – når man hører hans sange, høre et usædvanligt håb om, at vi ikke er alene, og at vi kan slippe væk fra dette sted – “just for one day”."
+              "text": "Hvor skrøbelige og inautentiske vores identiteter end er, lader Bowie os tro på, at vi kan genopfinde os selv. Vi kan faktisk genopfinde os selv, *fordi* vores identiteter er så skrøbelige og inautentiske. Ligesom Bowie tilsyneladende havde en grænseløs evne til at genopfinde sig selv, gjorde han det muligt for os at tro på, at vores egen evne til forandring var grænseløs. Der er selvfølgelig grænser – markante begrænsninger såsom menneskets endelighed – for, hvor meget vi kan forandre os. Men på en eller anden måde kan man – selv i dag – når man hører hans sange, høre et usædvanligt håb om, at vi ikke er alene, og at vi kan slippe væk fra dette sted – “just for one day”."
             }
           ]
         }
       ],
-      "title": "EN SEER ER EN LØGNER"
+      "title": "# EN SEER ER EN LØGNER"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "DENGANG DA JEG VAR TOLV ÅR GAMMEL, VISTE BOWIE OS – selv om jeg ikke kunne have sat ord på noget af det (jeg havde ikke særlig mange ord i mig; min familie talte sjældent om andet end fodbold, tv og indholdet i den mere og mere hegemoniske avis Sun og den evigt-unge-indtil-den-blev-lagt-i-graven News of the World) – en anden måde at være dreng, pige eller noget fuldstændig andet på. Bowie-som-Ziggy omformede seksualiteten til en udsvævende, men destilleret, så afgjort udfordrende, men samtidig raffineret seksualitet. Det var en form for degenereret askese. Hvilken seksualitet, der end blev udfoldet, lå den langt fra den 1960’er-variant, som vores forældre vænnede sig til gennem kornede, dårligt belyste sexscener i filmene eller de skræmmende behårede illustrationer i Alex Comforts Kærlighedens glæder – en bog om kunsten at elske. Dette var en form for fremmedartet sex, bogstaveligt talt som sexscenen i Manden som kom ned på jorden, hvor Bowie som Thomas Jerome Newton fjerner sine øjenlåg, brystvorter og kønsdele, før han viser sin kæreste Mary-Lou sin sande identitet som rumvæsen. Hun bliver skræmt fra vid og sans. De beslutter sig for at drikke sig fulde."
+              "text": "**DENGANG DA JEG VAR TOLV ÅR GAMMEL, VISTE BOWIE OS** – selv om jeg ikke kunne have sat ord på noget af det (jeg havde ikke særlig mange ord i mig; min familie talte sjældent om andet end fodbold, tv og indholdet i den mere og mere hegemoniske avis *Sun* og den evigt-unge-indtil-den-blev-lagt-i-graven *News of the World*) – en anden måde at være dreng, pige eller noget fuldstændig andet på. Bowie-som-Ziggy omformede seksualiteten til en udsvævende, men destilleret, så afgjort udfordrende, men samtidig raffineret seksualitet. Det var en form for degenereret askese. Hvilken seksualitet, der end blev udfoldet, lå den langt fra den 1960’er-variant, som vores forældre vænnede sig til gennem kornede, dårligt belyste sexscener i filmene eller de skræmmende behårede illustrationer i Alex Comforts *Kærlighedens glæder – en bog om kunsten at elske*. Dette var en form for fremmedartet sex, bogstaveligt talt som sexscenen i *Manden som kom ned på jorden*, hvor Bowie som Thomas Jerome Newton fjerner sine øjenlåg, brystvorter og kønsdele, før han viser sin kæreste Mary-Lou sin sande identitet som rumvæsen. Hun bliver skræmt fra vid og sans. De beslutter sig for at drikke sig fulde."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Fremmedgørelse blev konfronteret gennem en konfrontation med det fremmede. For mig handlede det om at finde vej ind i en allerede fremmedgjort seksualitet ved at elske det fremmede. Da vi med tiden begyndte at arbejde os baglæns gennem Bowies præ-Ziggy-katalog, lærte vi at kalde sådanne tilstande for “ch-ch-ch-ch-changes”, hvor “we turn and face the strange”. Hvad kan jeg sige? Det gav mening som intet andet, jeg havde oplevet. Det er rigtigt, at hele dette fokus på androgyni og flydende dreng/pige-identiteter blev fuldstændig vulgariseret i den britiske glamrocks rædsler med artister som Gary Glitter og bands som Sweet og det horrible Mud. Da Bowies ‘Rebel, Rebel’ med linjerne “You’ve got your mother in a whirl / Coz she’s not sure if you’re a boy or a girl”, blev udgivet i begyndelsen af 1974, stod det klart, at vi var på vej et andet sted hen. Todd Haynes’ hengivent mindevækkende film Velvet Goldmine (1998) indfanger præcist stemningen i denne periode."
+              "text": "Fremmedgørelse blev konfronteret gennem en konfrontation med det fremmede. For mig handlede det om at finde vej ind i en allerede fremmedgjort seksualitet ved at elske det fremmede. Da vi med tiden begyndte at arbejde os baglæns gennem Bowies præ-Ziggy-katalog, lærte vi at kalde sådanne tilstande for “ch-ch-ch-ch-changes”, hvor “we turn and face the strange”. Hvad kan jeg sige? Det gav mening som intet andet, jeg havde oplevet. Det er rigtigt, at hele dette fokus på androgyni og flydende dreng/pige-identiteter blev fuldstændig vulgariseret i den britiske glamrocks rædsler med artister som Gary Glitter og bands som Sweet og det horrible Mud. Da Bowies ‘Rebel, Rebel’ med linjerne “You’ve got your mother in a whirl / Coz she’s not sure if you’re a boy or a girl”, blev udgivet i begyndelsen af 1974, stod det klart, at vi var på vej et andet sted hen. Todd Haynes’ hengivent mindevækkende film *Velvet Goldmine* (1998) indfanger præcist stemningen i denne periode."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowies dristige og kreative/destruktive genistreg var meget enkel: Efter at have fået millioner af børn og unge som mig selv til at tro på illusionen om Ziggy som en form for nietzscheansk overmenneske tilintetgjorde han ham. Han dræbte Ziggy på scenen i Hammersmith Odeon den 3. juli 1973 tre dage før etårsdagen for sin optræden i Top of the Pops. Ziggy havde knap nok holdt et år. Efter at have skabt illusionen om denne supermand prikkede han hul på den som en ballon."
+              "text": "Bowies dristige og kreative/destruktive genistreg var meget enkel: Efter at have fået millioner af børn og unge som mig selv til at tro på illusionen om Ziggy som en form for nietzscheansk overmenneske tilintetgjorde han ham. Han dræbte Ziggy på scenen i Hammersmith Odeon den 3. juli 1973 tre dage før etårsdagen for sin optræden i *Top of the Pops*. Ziggy havde knap nok holdt et år. Efter at have skabt illusionen om denne supermand prikkede han hul på den som en ballon."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Hvis vi ikke havde været så unge, som vi var dengang, eller hvis vi havde været lige så begavede som Bowie, havde vi selvfølgelig set det komme. The Man Who Sold the World – et efter min mening vigtigt og misforstået album – afsluttes med nummeret ‘The Supermen’. Bowie spørger: Hvem er de nietzscheanske overmennesker, de væsener, der har ladt det menneskelige vilkår bag sig? De lever langt fra paradis, øst for Eden,"
+              "text": "Hvis vi ikke havde været så unge, som vi var dengang, eller hvis vi havde været lige så begavede som Bowie, havde vi selvfølgelig set det komme. *The Man Who Sold the World* – et efter min mening vigtigt og misforstået album – afsluttes med nummeret ‘The Supermen’. Bowie spørger: Hvem er de nietzscheanske overmennesker, de væsener, der har ladt det menneskelige vilkår bag sig? De lever langt fra paradis, øst for Eden,"
             }
           ]
         },
@@ -945,7 +938,7 @@
         {
           "lines": [
             {
-              "text": "Her begynder vi at kunne få øje på en produktiv spænding i Bowies værk. På den ene side er fantasien om overmennesket en tragisk katastrofe, en skikkelse, der kun higer efter det, han ikke kan få: døden. Derfor er Ziggys selvmord en form for befrielse fra denne fantasi efter at have udlevet denne erfaring. På den anden side skriver Bowie i ‘After All’, som også er fra The Man Who Sold the World: “Man is an obstacle, sad as the clown (oh by jingo).”"
+              "text": "Her begynder vi at kunne få øje på en produktiv spænding i Bowies værk. På den ene side er fantasien om overmennesket en tragisk katastrofe, en skikkelse, der kun higer efter det, han ikke kan få: døden. Derfor er Ziggys selvmord en form for befrielse fra denne fantasi efter at have udlevet denne erfaring. På den anden side skriver Bowie i ‘After All’, som også er fra *The Man Who Sold the World*: “Man is an obstacle, sad as the clown (oh by jingo).”"
             }
           ]
         },
@@ -959,7 +952,7 @@
         {
           "lines": [
             {
-              "text": "Hvordan lever man med denne spænding og den rastløshed og uro, som den fremkalder? Den næste linje i ‘After All’ er afslørende: “So hold on to nothing, and he won’t let you down (oh by jingo).” Jeg vil gerne holde fast i denne intethedens figur, fordi jeg mener, at den giver os en ledetråd til forståelse af et vedvarende, karakteristisk træk ved Bowies værk. Ordet nothing bliver ved med at vende tilbage i Bowies ord og de affekter, som disse ord forsøger at præge. Bowie synger for eksempel i ‘“Heroes”’: “We’re nothing, and nothing can help us.”"
+              "text": "Hvordan lever man med denne spænding og den rastløshed og uro, som den fremkalder? Den næste linje i ‘After All’ er afslørende: “So hold on to nothing, and he won’t let you down (oh by jingo).” Jeg vil gerne holde fast i denne intethedens figur, fordi jeg mener, at den giver os en ledetråd til forståelse af et vedvarende, karakteristisk træk ved Bowies værk. Ordet *nothing* bliver ved med at vende tilbage i Bowies ord og de affekter, som disse ord forsøger at præge. Bowie synger for eksempel i ‘“Heroes”’: “We’re nothing, and nothing can help us.”"
             }
           ]
         },
@@ -971,21 +964,21 @@
           ]
         }
       ],
-      "title": "HOLD FAST I INTET"
+      "title": "# HOLD FAST I INTET"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "LAD OS SE LIDT NÆRMERE PÅ BOWIES UNDERVURDEREDE første hit fra 1969, ‘Space Oddity’ (eller ‘odd ditty’ (underlig vise): det er en fascinerende antagelse – og her følger vi Nicholas Pegg – at Major Tom var varietésangeren og trapezartisten Tom Major (far til den tidligere britiske premierminister John Major), hvis navn var at finde på forskellige varietéplakater i Brixton, hvor David Jones, senere Bowie, blev født). Major Tom rejser ud i rummet og bliver kendt i medierne. (“And the papers want to know whose shirts you wear.”) Men i stedet for at være henrykt over at have overskredet det menneskelige vilkårs jordiske begrænsning trækker Major Tom sig tilbage i melankolsk passivitet."
+              "text": "**LAD OS SE LIDT NÆRMERE PÅ BOWIES UNDERVURDEREDE** første hit fra 1969, ‘Space Oddity’ (eller ‘odd ditty’ (underlig vise): det er en fascinerende antagelse – og her følger vi Nicholas Pegg – at Major Tom var varietésangeren og trapezartisten Tom Major (far til den tidligere britiske premierminister John Major), hvis navn var at finde på forskellige varietéplakater i Brixton, hvor David Jones, senere Bowie, blev født). Major Tom rejser ud i rummet og bliver kendt i medierne. (“And the papers want to know whose shirts you wear.”) Men i stedet for at være henrykt over at have overskredet det menneskelige vilkårs jordiske begrænsning trækker Major Tom sig tilbage i melankolsk passivitet."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Den episke politiske komedie omkring Apollo 11’s månelanding i juli 1969 bliver til en tragisk farce – en enakter med titlen Hamlet in Space. Men i modsætning til den melankolske dansker er Major Toms selvmordsdrift ikke forbundet med en appel til en transcendent guddom. I Hamlets første enetale lyder det: “Åh, gid dog … der intet lovbud var mod selvmord / fra Gud, den Evige” (Bowie antog med stor effekt skikkelse af Hamlet, da han under turnéen David Live i 1974 sang ‘Cracked Actor’ med Yoricks kranium i hånden). Major Tom intonerer derimod passivt:"
+              "text": "Den episke politiske komedie omkring Apollo 11’s månelanding i juli 1969 bliver til en tragisk farce – en enakter med titlen *Hamlet in Space*. Men i modsætning til den melankolske dansker er Major Toms selvmordsdrift ikke forbundet med en appel til en transcendent guddom. I Hamlets første enetale lyder det: “Åh, gid dog … der intet lovbud var mod selvmord / fra Gud, den Evige” (Bowie antog med stor effekt skikkelse af Hamlet, da han under turnéen *David Live* i 1974 sang ‘Cracked Actor’ med Yoricks kranium i hånden). Major Tom intonerer derimod passivt:"
             }
           ]
         },
@@ -1076,7 +1069,7 @@
         {
           "lines": [
             {
-              "text": "Disse ord refererer selvfølgelig til Bowie selv, hvor tekstens “all-time low” (et uovertruffet lavpunkt) både henviser til titlen på Bowies album fra 1977, Low, og den oplevelse, som albummet forsøger af fremmane og undslippe: en depression udløst af stofmisbrug. Det ser ud til, Major Tom har indtaget andet og mere end proteintilskud."
+              "text": "Disse ord refererer selvfølgelig til Bowie selv, hvor tekstens “all-time low” (et uovertruffet lavpunkt) både henviser til titlen på Bowies album fra 1977, *Low*, og den oplevelse, som albummet forsøger af fremmane og undslippe: en depression udløst af stofmisbrug. Det ser ud til, Major Tom har indtaget andet og mere end proteintilskud."
             }
           ]
         },
@@ -1088,14 +1081,14 @@
           ]
         }
       ],
-      "title": "HAMLET I RUMMET"
+      "title": "# HAMLET I RUMMET"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "ET AF DE MEST BIZARRE INDSLAG I BRITISK POPULÆRMUSIKS historie er Peter Noones coverversion af ‘Oh! You Pretty Things’, som klarede sig ret godt på de britiske hitlister i 1971. Noone (hvis navn på vidunderlig vis kan deles til ‘no one’ – lidt ligesom Odysseus, der fortæller kykloppen Polyfem, at hans navn er ‘Ingen’) havde været forsanger i det meget succesfulde band med det ejendommelige navn Herman’s Hermits. Noone udviste en i sandhed mesterlig mangel på forståelse for Bowies sangtekst, der er fuld af referencer til Nietzsches Således talte Zarathustra. Mere præcist påstås det i teksten, at homo sapiens ikke længere er til nogen gavn og må give plads til homo superior. Alt dette præsenteres ganske vist inden for rammerne af en noget letkøbt, britisk BBC-inspireret Doctor Who-version af fremtiden. Men pointen er ganske tydelig: De ukendte væsener fra rummet er kommet for at tage vores børn og føre dem ind i en ikkemenneskelig fremtid. For os mennesker er mareridtet begyndt, og “We’ve finished our news”."
+              "text": "**ET AF DE MEST BIZARRE INDSLAG I BRITISK POPULÆRMUSIKS** historie er Peter Noones coverversion af ‘Oh! You Pretty Things’, som klarede sig ret godt på de britiske hitlister i 1971. Noone (hvis navn på vidunderlig vis kan deles til ‘no one’ – lidt ligesom Odysseus, der fortæller kykloppen Polyfem, at hans navn er ‘Ingen’) havde været forsanger i det meget succesfulde band med det ejendommelige navn Herman’s Hermits. Noone udviste en i sandhed mesterlig mangel på forståelse for Bowies sangtekst, der er fuld af referencer til Nietzsches *Således talte Zarathustra*. Mere præcist påstås det i teksten, at *homo sapiens* ikke længere er til nogen gavn og må give plads til *homo superior*. Alt dette præsenteres ganske vist inden for rammerne af en noget letkøbt, britisk BBC-inspireret *Doctor Who*-version af fremtiden. Men pointen er ganske tydelig: De ukendte væsener fra rummet er kommet for at tage vores børn og føre dem ind i en ikkemenneskelig fremtid. For os mennesker er mareridtet begyndt, og “We’ve finished our news”."
             }
           ]
         },
@@ -1109,7 +1102,7 @@
         {
           "lines": [
             {
-              "text": "Men den mest dybsindige og omfattende dystopiske vision udfoldes i forbindelse med brugen af Gysins cut up-metode i Diamond Dogs (fra april 1974), som Peter Doggett kalder for Bowies “dystre studie i kulturel opløsning”. Hvordan man end bedømmer Bowies musikalske udvikling, kan man ikke komme uden om, at Diamond Dogs er et modigt konceptuelt skridt ind på nyt territorium. Selv mener jeg, at det er det album, hvor Bowie endelig befrier sig selv fra Ziggys spøgelse og indleder rækken af frugtbare og hastige æstetiske transformationer, der varer ved indtil Scary Monsters (1980). Trods sine åbenlyse, gentagne hyldester til Rolling Stones, især gennem Bowies vidunderligt skurrende og lettere forskruede Keith Richard-guitarimitationer, overskrider albummet, hvad rock’n’roll end måtte have været, sønderriver og lemlæster det, før det køres på kirkegården: “This ain’t rock’n’roll. This is genocide.”"
+              "text": "Men den mest dybsindige og omfattende dystopiske vision udfoldes i forbindelse med brugen af Gysins cut up-metode i *Diamond Dogs* (fra april 1974), som Peter Doggett kalder for Bowies “dystre studie i kulturel opløsning”. Hvordan man end bedømmer Bowies musikalske udvikling, kan man ikke komme uden om, at *Diamond Dogs* er et modigt konceptuelt skridt ind på nyt territorium. Selv mener jeg, at det er det album, hvor Bowie endelig befrier sig selv fra Ziggys spøgelse og indleder rækken af frugtbare og hastige æstetiske transformationer, der varer ved indtil *Scary Monsters* (1980). Trods sine åbenlyse, gentagne hyldester til Rolling Stones, især gennem Bowies vidunderligt skurrende og lettere forskruede Keith Richard-guitarimitationer, overskrider albummet, hvad rock’n’roll end måtte have været, sønderriver og lemlæster det, før det køres på kirkegården: “This ain’t rock’n’roll. This is genocide.”"
             }
           ]
         },
@@ -1123,7 +1116,7 @@
         {
           "lines": [
             {
-              "text": "Inspireret af Burroughs Wild Boys, hvor plyndrende bander går rundt med tveæggede 18 tommers Bowie-knive – en forudanelse om de forstadsdrenge og -piger, der ville gå rundt på gaderne i henfaldende britiske byer i punkens tumultariske tid – begynder Diamond Dogs med fremtidsprofetien ‘Future Legend’. Bowies tekst er også tveægget:"
+              "text": "Inspireret af Burroughs *Wild Boys*, hvor plyndrende bander går rundt med tveæggede 18 tommers Bowie-knive – en forudanelse om de forstadsdrenge og -piger, der ville gå rundt på gaderne i henfaldende britiske byer i punkens tumultariske tid – begynder *Diamond Dogs* med fremtidsprofetien ‘Future Legend’. Bowies tekst er også tveægget:"
             }
           ]
         },
@@ -1151,14 +1144,20 @@
         {
           "lines": [
             {
-              "text": "Like packs of dogs assaulting the glass fronts ofLove-Me Avenue"
+              "text": "Like packs of dogs assaulting the glass fronts of"
+            },
+            {
+              "text": "Love-Me Avenue"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Ripping and rewrapping mink and shiny silverfox, now legwarmers"
+              "text": "Ripping and rewrapping mink and shiny silver"
+            },
+            {
+              "text": "fox, now legwarmers"
             }
           ]
         },
@@ -1184,35 +1183,35 @@
           ]
         }
       ],
-      "title": "DYSTOPI – GET IT HERE, THING"
+      "title": "# DYSTOPI – GET IT HERE, THING"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "BOWIES ALBUM INDEHOLDER OFTE SPOR AF MUSIKALSKE stilarter, efterladt i skraldespanden som udtjente huder, ved siden af en forudanelse om noget nyt, som finder sin stemme i fremtidige værker. I Diamonds Dogs hører sangene ‘Rebel, Rebel’ og ‘Rock ’n’ Roll with Me’ til fortiden, og man kan sige, at den sjælfulde, Isaac Hayes-inspirerede wah-wah-guitar på ‘1984’ peger frem mod Young Americans. Men den virkelige nyskabelse er den ni minutter lange sekvens bestående af ‘Sweet Thing’, ‘Candidate’ og ‘Sweet Thing (Reprise)’, som efterfølges af den mareridtsagtige og geniale ‘We Are the Dead’ (og vi kunne også slå et slag for ‘Chant of the Ever Circling Skeletal Family’; på den originale vinylversion af Diamond Dogs, som jeg ejede i 1970’erne, sad pickuppen fast til sidst i nummeret og afspillede et uendeligt og stadig mere forstyrrende “bro, bro, bro, bro, bro, bro, bro, bro, bro, bro”)."
+              "text": "**BOWIES ALBUM INDEHOLDER OFTE SPOR AF MUSIKALSKE** stilarter, efterladt i skraldespanden som udtjente huder, ved siden af en forudanelse om noget nyt, som finder sin stemme i fremtidige værker. I *Diamonds Dogs* hører sangene ‘Rebel, Rebel’ og ‘Rock ’n’ Roll with Me’ til fortiden, og man kan sige, at den sjælfulde, Isaac Hayes-inspirerede wah-wah-guitar på ‘1984’ peger frem mod *Young Americans*. Men den virkelige nyskabelse er den ni minutter lange sekvens bestående af ‘Sweet Thing’, ‘Candidate’ og ‘Sweet Thing (Reprise)’, som efterfølges af den mareridtsagtige og geniale ‘We Are the Dead’ (og vi kunne også slå et slag for ‘Chant of the Ever Circling Skeletal Family’; på den originale vinylversion af *Diamond Dogs*, som jeg ejede i 1970’erne, sad pickuppen fast til sidst i nummeret og afspillede et uendeligt og stadig mere forstyrrende “bro, bro, bro, bro, bro, bro, bro, bro, bro, bro”)."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "I Halloween Jacks døde diamanthundeverden (Halloween Jack er en af de personer, der optræder på albummet) er sex ikke længere en form for overskridende og ophidsende akt. Sex er ensbetydende med “putting pain in a stranger”. Sex skildres – som i et maleri af Bacon – som “a portrait in flesh, who trails on a leash.” Hvis dette er en verden af kød, er dette kød døende. Vi finder her et næsten paranoid-skizofrent billede af verden som uddød, rådnende og med behov for frelse. Det er en sådan verden, vi finder i den tyske dommer Daniel Paul Schrebers udsøgt ejendommelige vrang-forestillinger i Denkwürdigkeiten eines Nervenkranken (‘Et nervesvækket menneskes erindringer’) eller hos beboerne i R.D. Laings åbne galeanstalt Kingsley Hall i London i slutningen af 1960’erne: “Kan du ikke se, jeg er død? Jeg kan lugte kødet rådne.”"
+              "text": "I Halloween Jacks døde diamanthundeverden (Halloween Jack er en af de personer, der optræder på albummet) er sex ikke længere en form for overskridende og ophidsende akt. Sex er ensbetydende med “putting pain in a stranger”. Sex skildres – som i et maleri af Bacon – som “a portrait in flesh, who trails on a leash.” Hvis dette er en verden af kød, er dette kød døende. Vi finder her et næsten paranoid-skizofrent billede af verden som uddød, rådnende og med behov for frelse. Det er en sådan verden, vi finder i den tyske dommer Daniel Paul Schrebers udsøgt ejendommelige vrang-forestillinger i *Denkwürdigkeiten eines Nervenkranken* (‘Et nervesvækket menneskes erindringer’) eller hos beboerne i R.D. Laings åbne galeanstalt Kingsley Hall i London i slutningen af 1960’erne: “Kan du ikke se, jeg er død? Jeg kan lugte kødet rådne.”"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Måske er Bowie også her inspireret af et minde om den verden, som hans skizofrene halvbror, Terry Burns, levede i, en storebror, som lærte ham så meget i så tidlig en alder (om jazz, om Jack Kerouac, om at vandre rundt i det snuskede Soho-kvarter i London), og som efter at have været indlagt på et psykiatrisk hospital i mange år på et tidspunkt troede, at David kunne redde ham. Terry Burns begik selvmord i midten af januar 1985 ved jernbanestationen South Coulsdon syd for London ved at lægge sit hoved på skinnerne og vente på det næste tog. Bowie udløste en familiefejde og mediestorm ved ikke at dukke op til begravelsen. Han ønskede ikke, at begravelsen skulle udvikle sig til et cirkus. Ordene på det kort, der var vedlagt Bowies buket, var yderst bevægende: “Du har set flere ting, end vi kan forestille os, men alle disse øjeblikke vil forsvinde – som tårer, der vaskes væk af regnen.”*"
+              "text": "Måske er Bowie også her inspireret af et minde om den verden, som hans skizofrene halvbror, Terry Burns, levede i, en storebror, som lærte ham så meget i så tidlig en alder (om jazz, om Jack Kerouac, om at vandre rundt i det snuskede Soho-kvarter i London), og som efter at have været indlagt på et psykiatrisk hospital i mange år på et tidspunkt troede, at David kunne redde ham. Terry Burns begik selvmord i midten af januar 1985 ved jernbanestationen South Coulsdon syd for London ved at lægge sit hoved på skinnerne og vente på det næste tog. Bowie udløste en familiefejde og mediestorm ved ikke at dukke op til begravelsen. Han ønskede ikke, at begravelsen skulle udvikle sig til et cirkus. Ordene på det kort, der var vedlagt Bowies buket, var yderst bevægende: “Du har set flere ting, end vi kan forestille os, men alle disse øjeblikke vil forsvinde – som tårer, der vaskes væk af regnen.”[*][1]"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Det er ofte blevet sagt, at der er noget psykotisk over Bowie. Det er jeg ikke enig i. Bowie var ikke en sindssyg knægt (a lad insane). Hvis sådanne tendenser eksisterer, bliver de – som hos Joyce i Finnegans Wake eller hos Artaud i hans Grusomhedens Teater – sublimeret til kunst. Måske er han takket være sin kunst ikke forrykt eller i hvert fald ikke særlig forrykt. De konstante referencer til galskab, paranoia og vrangforestillinger – især på The Man Who Sold the World – er en musikalsk transformation af galskabens rædsler, selv den vanvittige, afsluttende hundelignende messen til ‘All the Madmen’: “Zane, zane, zane. Ouvrez le chien.”"
+              "text": "Det er ofte blevet sagt, at der er noget psykotisk over Bowie. Det er jeg ikke enig i. Bowie var ikke en sindssyg knægt (*a lad insane*). Hvis sådanne tendenser eksisterer, bliver de – som hos Joyce i *Finnegans Wake* eller hos Artaud i hans Grusomhedens Teater – sublimeret til kunst. Måske er han takket være sin kunst ikke forrykt eller i hvert fald ikke særlig forrykt. De konstante referencer til galskab, paranoia og vrangforestillinger – især på *The Man Who Sold the World* – er en musikalsk transformation af galskabens rædsler, selv den vanvittige, afsluttende hundelignende messen til ‘All the Madmen’: “Zane, zane, zane. *Ouvrez le chien*.”"
             }
           ]
         },
@@ -1226,14 +1225,17 @@
         {
           "lines": [
             {
-              "text": "“Is it nice in your snow storm, freezing your brain?” spørger Bowie. Det er den fascinerende dysterhed i Bowies vision i Diamond Dogs, der tiltrækker mig med sine beskidte kløer. Mens hovedpersonen i nummeret ‘Candidate’ går gennem sine filmkulisser, som “even smells like a street”, praler han:"
+              "text": "“Is it nice in your snow storm, freezing your brain?” spørger Bowie. Det er den fascinerende dysterhed i Bowies vision i *Diamond Dogs*, der tiltrækker mig med sine beskidte kløer. Mens hovedpersonen i nummeret ‘Candidate’ går gennem sine filmkulisser, som “even smells like a street”, praler han:"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Someone scrawled on the wall, ‘I smell theblood of les tricoteuses’"
+              "text": "Someone scrawled on the wall, ‘I smell the"
+            },
+            {
+              "text": "blood of *les tricoteuses*’"
             }
           ]
         },
@@ -1247,21 +1249,27 @@
         {
           "lines": [
             {
-              "text": "Les tricoteuses (strikkedamerne) var de oprørske arbejder-klassekvinder i Paris, som under Terrorregimet i 1793 og 1794 mødte op til henrettelserne for at betragte Madame Guillotines kirurgisk præcise arbejde. ‘Candidate’ trækker veksler på en grusom lyrisk kraft, der tegner billedet af en verden fuld af udnyttelse, forfald og voldtægt:"
+              "text": "*Les tricoteuses* (strikkedamerne) var de oprørske arbejder-klassekvinder i Paris, som under Terrorregimet i 1793 og 1794 mødte op til henrettelserne for at betragte Madame Guillotines kirurgisk præcise arbejde. ‘Candidate’ trækker veksler på en grusom lyrisk kraft, der tegner billedet af en verden fuld af udnyttelse, forfald og voldtægt:"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Till the sun drips love on the seedyyoung knights"
+              "text": "Till the sun drips love on the seedy"
+            },
+            {
+              "text": "young knights"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Who press you on the ground whileshaking in fright."
+              "text": "Who press you on the ground while"
+            },
+            {
+              "text": "shaking in fright."
             }
           ]
         },
@@ -1310,7 +1318,7 @@
         {
           "lines": [
             {
-              "text": "* På engelsk: “You’ve seen more things than we can imagine, but all these moments will be lost – like tears washed away by the rain.” Bowie sender her ikke kun en sidste hilsen til sin bror, men også en hilsen til replikanten Roys dødsmonolog i Ridley Scotts Blade Runner (1982): “I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die”; o.a."
+              "text": "[*][2] På engelsk: “You’ve seen more things than we can imagine, but all these moments will be lost – like tears washed away by the rain.” Bowie sender her ikke kun en sidste hilsen til sin bror, men også en hilsen til replikanten Roys dødsmonolog i Ridley Scotts *Blade Runner* (1982): “I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die”; o.a."
             }
           ]
         },
@@ -1324,26 +1332,36 @@
         {
           "lines": [
             {
-              "text": "* På engelsk: “You’ve seen more things than we can imagine, but all these moments will be lost – like tears washed away by the rain.” Bowie sender her ikke kun en sidste hilsen til sin bror, men også en hilsen til replikanten Roys dødsmonolog i Ridley Scotts Blade Runner (1982): “I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die”; o.a."
-            }
-          ]
-        }
-      ],
-      "title": "LES TRICOTEUSES"
-    },
-    {
-      "paragraphs": [
-        {
-          "lines": [
-            {
-              "text": "JEG VENDER LIGE TILBAGE TIL HENVISNINGEN TIL les tricoteuses og foretager et lille spring her eller i det mindste et lille skridt. Når jeg lytter til Diamond Dogs og reflekterer over Bowies dystopiske vision, kommer jeg til at tænke på Georg Büchners Dantons død. Dette usædvanlige skuespil er kendetegnet ved en postrevolutionær fortvivlelse, passivitet og altgennemtrængende nihilisme. Mens den fængslede Danton afventer sin henrettelse, siger han:"
+              "text": "* På engelsk: “You’ve seen more things than we can imagine, but all these moments will be lost – like tears washed away by the rain.” Bowie sender her ikke kun en sidste hilsen til sin bror, men også en hilsen til replikanten Roys dødsmonolog i Ridley Scotts *Blade Runner* (1982): “I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die”; o.a."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Skabningen har gjort sig så bred, så der intet tomrum er, alt er udfyldt af ét stort mylder. Intetheden har dræbt sig selv (das Nichts hat sich ermordert), skabningen er dens sår, vi er dens bloddråber og verden den grav, hvori den rådner."
+              "text": "[1]: #gieqcn6qcbp"
+            },
+            {
+              "text": "[2]: #gieqcn6qcbq"
+            }
+          ]
+        }
+      ],
+      "title": "# LES TRICOTEUSES"
+    },
+    {
+      "paragraphs": [
+        {
+          "lines": [
+            {
+              "text": "**JEG VENDER LIGE TILBAGE TIL HENVISNINGEN TIL** *les tricoteuses* og foretager et lille spring her eller i det mindste et lille skridt. Når jeg lytter til *Diamond Dogs* og reflekterer over Bowies dystopiske vision, kommer jeg til at tænke på Georg Büchners *Dantons død*. Dette usædvanlige skuespil er kendetegnet ved en postrevolutionær fortvivlelse, passivitet og altgennemtrængende nihilisme. Mens den fængslede Danton afventer sin henrettelse, siger han:"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "text": "Skabningen har gjort sig så bred, så der intet tomrum er, alt er udfyldt af ét stort mylder. Intetheden har dræbt sig selv (*das Nichts hat sich ermordert*), skabningen er dens sår, vi er dens bloddråber og verden den grav, hvori den rådner."
             }
           ]
         },
@@ -1357,14 +1375,14 @@
         {
           "lines": [
             {
-              "text": "Verden er kaos. Intetheden er den verdensgud, som bestandigt skal fødes (das Nichts ist das zu gebärende Weltgott)."
+              "text": "Verden er kaos. Intetheden er den verdensgud, som bestandigt skal fødes (*das Nichts ist das zu gebärende Weltgott*)."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Dantons død ender med, at Lucile – meget Ofelia-lignen-de – sætter sig på trappen, som fører op til guillotinen, hvor vagterne sover, og råber: “Leve kongen! (Es lebe der König!)” Det virker som en selvmordsgestus, og man kan forestille sig, at der ikke vil gå længe, før også hun ender i guillotinen, selv om Büchner overlader det til publikum selv at drage denne slutning. Men Paul Celan siger i sin med rette berømte ‘Meridian’-tale, som han holdt, da han i 1960 modtog Büchner-prisen, at Luciles ord kan forstås på en ganske anden måde. Han hævder, at “det er en frihedens handling. Det er et skridt.” For nogle forekommer dette måske at være et reaktionært forsvar for l’ancien régime, men Celan fastslår, at det ikke er tilfældet:"
+              "text": "*Dantons død* ender med, at Lucile – meget Ofelia-lignen-de – sætter sig på trappen, som fører op til guillotinen, hvor vagterne sover, og råber: “Leve kongen! (*Es lebe der König!*)” Det virker som en selvmordsgestus, og man kan forestille sig, at der ikke vil gå længe, før også hun ender i guillotinen, selv om Büchner overlader det til publikum selv at drage denne slutning. Men Paul Celan siger i sin med rette berømte ‘Meridian’-tale, som han holdt, da han i 1960 modtog Büchner-prisen, at Luciles ord kan forstås på en ganske anden måde. Han hævder, at “det er en frihedens handling. Det er et skridt.” For nogle forekommer dette måske at være et reaktionært forsvar for *l’ancien régime*, men Celan fastslår, at det ikke er tilfældet:"
             }
           ]
         },
@@ -1385,7 +1403,7 @@
         {
           "lines": [
             {
-              "text": "Dette, mine damer og herrer, har ikke et fastslået navn, men jeg tror, at det er … digtning (die Dichtung)."
+              "text": "Dette, mine damer og herrer, har ikke et fastslået navn, men jeg tror, at det er … digtning (*die Dichtung*)."
             }
           ]
         },
@@ -1413,7 +1431,7 @@
         {
           "lines": [
             {
-              "text": "Jeg mener, at denne tanke kaster et anderledes lys over Bowies vision om verden og verdenspolitikken. Tænk på et nummer som ‘It’s No Game’, der optræder i to versioner (‘Part 1’ og ‘Part 2’) som bogstøtter til resten af numrene på Scary Monsters. Tony Visconti har fortalt, at begge versioner forbløffende nok har det samme backing track, men så ophører lighederne også. Hvor den anden version er jævn og følelsesmæssigt neutral, er Bowie i den første version voldsomt teatralsk og akkompagneres af en truende voice-over fremført på japansk af Michi Hirota og af Robert Fripps vanvittige guitar. Nummeret ender med, at Bowie råber “shut up” hen over Fripps tilsyneladende uendelige, gentagne guitarriff."
+              "text": "Jeg mener, at denne tanke kaster et anderledes lys over Bowies vision om verden og verdenspolitikken. Tænk på et nummer som ‘It’s No Game’, der optræder i to versioner (‘Part 1’ og ‘Part 2’) som bogstøtter til resten af numrene på *Scary Monsters*. Tony Visconti har fortalt, at begge versioner forbløffende nok har det samme backing track, men så ophører lighederne også. Hvor den anden version er jævn og følelsesmæssigt neutral, er Bowie i den første version voldsomt teatralsk og akkompagneres af en truende voice-over fremført på japansk af Michi Hirota og af Robert Fripps vanvittige guitar. Nummeret ender med, at Bowie råber “shut up” hen over Fripps tilsyneladende uendelige, gentagne guitarriff."
             }
           ]
         },
@@ -1462,26 +1480,29 @@
         {
           "lines": [
             {
-              "text": "Det andet nummer på Scary Monsters, “Up the Hill Backwards”, begynder: “The vacuum created by the arrival of freedom, and the possibilities it seems to offer.” Som Luciles råb til sidst i Dantons død lyder disse linjer lidt som Edmund Burkes konservative kritik af den franske revolution. Men hvis vi følger Celans logik, kan vi sige, at dette ikke er en hyldest til noget monarki eller nogen bevaringsværdig gårsdag, men til det absurdes majestætiske væsen, den absurditet, som er menneskenes verden. Sådan er digtning i Celans forstand, Bowies digning."
+              "text": "Det andet nummer på *Scary Monsters*, “Up the Hill Backwards”, begynder: “The vacuum created by the arrival of freedom, and the possibilities it seems to offer.” Som Luciles råb til sidst i *Dantons død* lyder disse linjer lidt som Edmund Burkes konservative kritik af den franske revolution. Men hvis vi følger Celans logik, kan vi sige, at dette ikke er en hyldest til noget monarki eller nogen bevaringsværdig gårsdag, men til det absurdes majestætiske væsen, den absurditet, som er menneskenes verden. Sådan er digtning i Celans forstand, Bowies digning."
             }
           ]
         }
       ],
-      "title": "DET ABSURDES MAJESTÆTISKE VÆSEN"
+      "title": "# DET ABSURDES MAJESTÆTISKE VÆSEN"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "VI VAR UNGE OG UVIDENDE DENGANG SOM TOLV-, TRETTEN- og fjortenårige. Men Bowie lærte os både om illusionens bedrageriske væsen og dens uimodståelige kraft. Vi lærte at leve med illusioner og lære af illusioner i stedet for at løbe skrigende væk fra dem. At bebo et sådant rum er også ensbetydende med at leve efter revolutionen, i den des-illusion, der følger efter en revolutionær periode. For os var dette den fucked-up, skuffede solidaritet i begyndelsen af 1970’erne, og den fik sit stærkeste udtryk med ‘All the Young Dudes’, som Bowie skrev til Mott the Hoople. Sangen var som Kerouacs Vejene for en slagen generation, som vidste, at de sad fast og ikke var på vej nogen steder hen:"
+              "text": "**VI VAR UNGE OG UVIDENDE DENGANG SOM TOLV-, TRETTEN-** og fjortenårige. Men Bowie lærte os både om illusionens bedrageriske væsen og dens uimodståelige kraft. Vi lærte at leve med illusioner og lære af illusioner i stedet for at løbe skrigende væk fra dem. At bebo et sådant rum er også ensbetydende med at leve *efter* revolutionen, i den *des*-illusion, der følger efter en revolutionær periode. For os var dette den fucked-up, skuffede solidaritet i begyndelsen af 1970’erne, og den fik sit stærkeste udtryk med ‘All the Young Dudes’, som Bowie skrev til Mott the Hoople. Sangen var som Kerouacs *Vejene* for en slagen generation, som vidste, at de sad fast og ikke var på vej nogen steder hen:"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "My brother’s back at home with his Beatles andhis Stones"
+              "text": "My brother’s back at home with his Beatles and"
+            },
+            {
+              "text": "his Stones"
             }
           ]
         },
@@ -1509,7 +1530,7 @@
         {
           "lines": [
             {
-              "text": "I februar 1976 stjal jeg et brugt eksemplar af Station to Station i David’s (nej, ikke Bowies) Bookshop i Letchworth Garden City. Jeg var næsten seksten år gammel og følte, at noget var ved at forandre sig – både hos Bowie og i mig selv. Det ti minutter og fjorten sekunder lange titelnummer (Bowies længste) syntes at åbne en dør ind til et nyt landskab af musikalske muligheder. Hvad der var nok så vigtigt: Hvad end dette var, havde det ikke et navn. Men det var ikke længere rock’n’roll. Det var derfor, jeg kunne lide det."
+              "text": "I februar 1976 stjal jeg et brugt eksemplar af *Station to Station* i David’s (nej, ikke Bowies) Bookshop i Letchworth Garden City. Jeg var næsten seksten år gammel og følte, at noget var ved at forandre sig – både hos Bowie og i mig selv. Det ti minutter og fjorten sekunder lange titelnummer (Bowies længste) syntes at åbne en dør ind til et nyt landskab af musikalske muligheder. Hvad der var nok så vigtigt: Hvad end dette var, havde det ikke et navn. Men det var ikke længere rock’n’roll. Det var derfor, jeg kunne lide det."
             }
           ]
         },
@@ -1523,61 +1544,61 @@
         {
           "lines": [
             {
-              "text": "Jeg kan huske, at jeg gik ind i bladkiosken John Menzies i Letchworth en sen eftermiddag i januar 1977 og lyttede til Low sammen med den pige, som arbejdede der, og som jeg var ret vild med, uden at jeg nogensinde fik sagt det til hende. Sammen hørte vi hele albummet bagest i butikken. Selv om det lød, som om pladen var blevet optaget i det ydre rum, og vi aldrig helt havde hørt trommer lyde på denne måde og så langt fremme i mixet, gav det total mening for os. Endda også pladens ambient og instrumentelle side 2. Det var en kold vinter, og dette var den køligste modernisme. Jeg var klar til det. Af grunde, som jeg stadigvæk ikke forstår, tilbragte jeg fire måneder sidst i 1976 i fuldkommen social isolation bortset fra anstrengt samvær med min mor og enkelte dage og lørdag formiddage på en blikfabrik med min far. Så når Bowie på ‘Sound and Vision’ sang ordene “Drifting into my solitude”, påvirkede det mig dybt. Jeg havde også været low."
+              "text": "Jeg kan huske, at jeg gik ind i bladkiosken John Menzies i Letchworth en sen eftermiddag i januar 1977 og lyttede til *Low* sammen med den pige, som arbejdede der, og som jeg var ret vild med, uden at jeg nogensinde fik sagt det til hende. Sammen hørte vi hele albummet bagest i butikken. Selv om det lød, som om pladen var blevet optaget i det ydre rum, og vi aldrig helt havde hørt trommer lyde på denne måde og så langt fremme i mixet, gav det total mening for os. Endda også pladens ambient og instrumentelle side 2. Det var en kold vinter, og dette var den køligste modernisme. Jeg var klar til det. Af grunde, som jeg stadigvæk ikke forstår, tilbragte jeg fire måneder sidst i 1976 i fuldkommen social isolation bortset fra anstrengt samvær med min mor og enkelte dage og lørdag formiddage på en blikfabrik med min far. Så når Bowie på ‘Sound and Vision’ sang ordene “Drifting into my solitude”, påvirkede det mig dybt. Jeg havde også været *low*."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Punken ændrede med ét alt dette, og i marts 1977 gik jeg i sorte bondagebokser, en Lewis-læderjakke og Dr. Martens-støvler med tolv huller. Jeg havde i et par år sporadisk spillet i forskellige skodbands med navne som Social Class Five og Panik (med et k bare for at være lidt tyske i det). Da “Heroes” blev udgivet i oktober 1977 blot ni måneder efter Low, ramte pladen os med usædvanlig stor kraft. Ikke så meget titelnummeret, som jeg bedre kan lide i dag, end jeg kunne dengang, men snarere den kraftige, fyldige og lagdelte komplekse tæthed på numre som ‘Beauty and the Beast’ og især ‘Blackout’. Det lød også sort og var funky ad helvede til, drevet frem af Bowies bedste rytmesektion bestående af Dennis Davis, Georges Murray og Carlos Alomar. Robert Fripps Frippertronics svævede over det hele i æteren. Jeg sled to eksemplarer af “Heroes” op ved at imitere basstykkerne på min Fender Jazz-kopi og mistede mit tredje. Jeg sagde til mig selv og til alle, jeg kunne få til at lytte, at det var sådan, musik skulle lyde. Og det mener jeg stadigvæk. Indflydelsen fra de indspilnings- og produktionsteknikker, der blev brugt under arbejdet med “Heroes”, kan stadigvæk i den grad høres i moderne musik – for eksempel på Arcade Fires betagende Reflektor fra 2013, hvor Bowie kort gæsteoptræder på titelnummeret."
+              "text": "Punken ændrede med ét alt dette, og i marts 1977 gik jeg i sorte bondagebokser, en Lewis-læderjakke og Dr. Martens-støvler med tolv huller. Jeg havde i et par år sporadisk spillet i forskellige skodbands med navne som Social Class Five og Panik (med et k bare for at være lidt tyske i det). Da *“Heroes”* blev udgivet i oktober 1977 blot ni måneder efter *Low*, ramte pladen os med usædvanlig stor kraft. Ikke så meget titelnummeret, som jeg bedre kan lide i dag, end jeg kunne dengang, men snarere den kraftige, fyldige og lagdelte komplekse tæthed på numre som ‘Beauty and the Beast’ og især ‘Blackout’. Det lød også sort og var funky ad helvede til, drevet frem af Bowies bedste rytmesektion bestående af Dennis Davis, Georges Murray og Carlos Alomar. Robert Fripps Frippertronics svævede over det hele i æteren. Jeg sled to eksemplarer af *“Heroes”* op ved at imitere basstykkerne på min Fender Jazz-kopi og mistede mit tredje. Jeg sagde til mig selv og til alle, jeg kunne få til at lytte, at det var *sådan*, musik skulle lyde. Og det mener jeg stadigvæk. Indflydelsen fra de indspilnings- og produktionsteknikker, der blev brugt under arbejdet med *“Heroes”*, kan stadigvæk i den grad høres i moderne musik – for eksempel på Arcade Fires betagende *Reflektor* fra 2013, hvor Bowie kort gæsteoptræder på titelnummeret."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "De store forventninger, der var til Lodger forud for udgivelsen af albummet i maj 1979, betød, at albummet nødvendigvis måtte være en skuffelse – med alt for mange tvangsmæssigt omarbejdede gentagne loops, som var blevet omdannet til sange, og en sært tynd lyd. Nogle af disse loops virkede, for eksempel på ‘Red Sails’, der er en værdig hyldest til Neu!. ‘Repetition’ er en sang med stor virkning om hustruvold, som fungerer på grund af sin mangel på direkte moraliseren, en sang, som fremføres af Bowie med en følelsesløs, monoton stemme. Jeg kan huske, at jeg sad alene med benene over kors på gulvet i min mors lejlighed og stirrede på coveret, hvor man ser Bowie ligge i en forvreden ulykkesofferpositur, mens jeg forsøgte at komme til at kunne lide albummet lidt mere, end jeg gjorde, og finde på måder, hvorpå jeg kunne tilgive lettere stupide numre som ‘Yassassin’, den frygtede hvide-mands-udgave-af-reggae (at Bowie lød blot en anelse som Sting, var ubærligt)."
+              "text": "De store forventninger, der var til *Lodger* forud for udgivelsen af albummet i maj 1979, betød, at albummet nødvendigvis måtte være en skuffelse – med alt for mange tvangsmæssigt omarbejdede gentagne loops, som var blevet omdannet til sange, og en sært tynd lyd. Nogle af disse loops virkede, for eksempel på ‘Red Sails’, der er en værdig hyldest til Neu!. ‘Repetition’ er en sang med stor virkning om hustruvold, som fungerer på grund af sin mangel på direkte moraliseren, en sang, som fremføres af Bowie med en følelsesløs, monoton stemme. Jeg kan huske, at jeg sad alene med benene over kors på gulvet i min mors lejlighed og stirrede på coveret, hvor man ser Bowie ligge i en forvreden ulykkesofferpositur, mens jeg forsøgte at komme til at kunne lide albummet lidt mere, end jeg gjorde, og finde på måder, hvorpå jeg kunne tilgive lettere stupide numre som ‘Yassassin’, den frygtede hvide-mands-udgave-af-reggae (at Bowie lød blot en anelse som Sting, var ubærligt)."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Det var en anden historie med Scary Monsters. På det tidspunkt var jeg – efter to pinlige år på en lokal erhvervsskole med catering som studieretning (min skole var blevet lukket og omdannet til et socialkontor, og erhvervsskolen lå lige ved siden af; kald mig bare doven) og et forgæves forsøg på at blive rockstjerne – havnet på arbejdsløshedsunderstøttelse og tog nogle fag på Stevenage Further Education College (lad os bare sige, at det ikke var Harvard). Jeg havde ikke råd til at købe plader, så jeg lyttede til en vens eksemplar i studenter-foreningen i frokostpauserne. Jeg blev overvældet af den selvreflekterende åndfuldhed på ‘Ashes to Ashes’ og ‘Teenage Wildlife’. Bowie betragtede sig selv og vidste, at alle kiggede på ham. Men jeg kan huske, at jeg havde en klar følelse af, at en dør blev lukket. Scary Monsters var ekstremt selvbevidst om den rolle, som Bowie havde spillet på hvert eneste stadium i udviklingen af punk og postpunk. Det var en form for metaalbum. Men der var noget trist over det. Eller måske var tristheden min. Jeg var begyndt at opdage en anden verden, en nydelsesfuld verden af ord, og skrev nogle virkelig gyselige digte. Omkring et år senere begyndte jeg på universitetet, og tingene forandrede sig. Jeg lærte at lade, som om jeg ikke elskede Bowie så meget, som jeg gjorde."
+              "text": "Det var en anden historie med *Scary Monsters*. På det tidspunkt var jeg – efter to pinlige år på en lokal erhvervsskole med catering som studieretning (min skole var blevet lukket og omdannet til et socialkontor, og erhvervsskolen lå lige ved siden af; kald mig bare doven) og et forgæves forsøg på at blive rockstjerne – havnet på arbejdsløshedsunderstøttelse og tog nogle fag på Stevenage Further Education College (lad os bare sige, at det ikke var Harvard). Jeg havde ikke råd til at købe plader, så jeg lyttede til en vens eksemplar i studenter-foreningen i frokostpauserne. Jeg blev overvældet af den selvreflekterende åndfuldhed på ‘Ashes to Ashes’ og ‘Teenage Wildlife’. Bowie betragtede sig selv og vidste, at alle kiggede på ham. Men jeg kan huske, at jeg havde en klar følelse af, at en dør blev lukket. *Scary Monsters* var ekstremt selvbevidst om den rolle, som Bowie havde spillet på hvert eneste stadium i udviklingen af punk og postpunk. Det var en form for metaalbum. Men der var noget trist over det. Eller måske var tristheden min. Jeg var begyndt at opdage en anden verden, en nydelsesfuld verden af ord, og skrev nogle virkelig gyselige digte. Omkring et år senere begyndte jeg på universitetet, og tingene forandrede sig. Jeg lærte at lade, som om jeg ikke elskede Bowie så meget, som jeg gjorde."
             }
           ]
         }
       ],
-      "title": "FRA ILLUSION TIL ILLUSION"
+      "title": "# FRA ILLUSION TIL ILLUSION"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "I SIN BOG THE MAN WHO SOLD THE WORLD: DAVID BOWIE and the 1970s hævder Peter Doggett, at Bowie var en anakronisme i 1960’ernes optimistiske, frigjorte verden, men at hans publikum i 1970’erne var kommet på bølgelængde med ham og hans portræt af en verden kendetegnet af fragmentering, forfald og skuffelse. Efter at have taget livet af Ziggy bevægede Bowie sig ubarmhjertigt fra illusion til illusion, idet han fulgte et kunstnerisk mønster bestående af identifikation, imitation, perfektion og destruktion. Mønsteret kan minde lidt om Gustav Metzgers forestilling om selvdestruktiv kunst, og Bowie er måske et endnu mere overbevisende eksempel end Metzgers tidligere elev Pete Townshend – The Who smadrede ofte på selvdestruktiv vis deres udstyr under en koncerts afslutning. Dette firdelte mønster kommer måske mest tydeligt til udtryk i Bowies identifikation med amerikansk soul og R&B på Young Americans. En perfekt imitation af en genre fører også til dens raffinerede ophøjelse, hvorefter Bowie begynder at kede sig, tilintetgør sit værk og kommer videre. Station and Station indeholder klare spor af Young Americans, men Bowie er allerede ved at skifte ham og se fremad mod Low."
+              "text": "**I SIN BOG *THE MAN WHO SOLD THE WORLD: DAVID BOWIE**** and the 1970s* hævder Peter Doggett, at Bowie var en anakronisme i 1960’ernes optimistiske, frigjorte verden, men at hans publikum i 1970’erne var kommet på bølgelængde med ham og hans portræt af en verden kendetegnet af fragmentering, forfald og skuffelse. Efter at have taget livet af Ziggy bevægede Bowie sig ubarmhjertigt fra illusion til illusion, idet han fulgte et kunstnerisk mønster bestående af identifikation, imitation, perfektion og destruktion. Mønsteret kan minde lidt om Gustav Metzgers forestilling om selvdestruktiv kunst, og Bowie er måske et endnu mere overbevisende eksempel end Metzgers tidligere elev Pete Townshend – *The Who* smadrede ofte på selvdestruktiv vis deres udstyr under en koncerts afslutning. Dette firdelte mønster kommer måske mest tydeligt til udtryk i Bowies identifikation med amerikansk soul og R&B på *Young Americans*. En perfekt imitation af en genre fører også til dens raffinerede ophøjelse, hvorefter Bowie begynder at kede sig, tilintetgør sit værk og kommer videre. *Station and Station* indeholder klare spor af *Young Americans*, men Bowie er allerede ved at skifte ham og se fremad mod *Low*."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Pointen er, at Bowie i 1970’erne, især fra 1974 og fremefter, var i stand til at mobilisere en kunstnerisk disciplin, som er skræmmende i al sin intensitet, dristighed og risiko. Denne disciplin er modsætningen til den selvtilfredshed, man ser hos så mange rockstjerner. Det er, som om Bowie nærmest asketisk, nærmest eremitisk, disciplinerede sig selv til at blive et intet, et mobilt og massivt kreativt intet, der kunne antage nye ansigter, generere nye illusioner og skabe nye former. Det er nærmest uhyggeligt og meget sjældent. Måske er det unikt i populærmusikkens historie."
+              "text": "Pointen er, at Bowie i 1970’erne, især fra 1974 og fremefter, var i stand til at mobilisere en kunstnerisk *disciplin*, som er skræmmende i al sin intensitet, dristighed og risiko. Denne disciplin er modsætningen til den selvtilfredshed, man ser hos så mange rockstjerner. Det er, som om Bowie nærmest asketisk, nærmest eremitisk, disciplinerede sig selv til at blive et intet, et mobilt og massivt kreativt intet, der kunne antage nye ansigter, generere nye illusioner og skabe nye former. Det er nærmest uhyggeligt og meget sjældent. Måske er det unikt i populærmusikkens historie."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Efter at have lavet tretten soloalbum i perioden 1969-1980, udsendt flere liveplader, opsamlinger plus alt det, han lavede for Lou Reed på Transformer (som er Reeds bedst sælgende og også bedste soloalbum), for Iggy Pop på de imponerende The Idiot og Lust for Life, for Mott the Hoople og selv for tapre, lille Lulu, forsvinder Bowie i realiteten i 1980. Som Doggett påpeger, dukker Bowie op igen i 1983 i form af den lyshårede, solbrændte, glatte, sludrevorne entertainer, som han så intenst havde latterliggjort i 1970’erne. Jeg kan huske, at jeg så en koncert med ham i Milton Keynes Bowl i juli 1983, hvor blandt andre Carlos Alomar og Earl Slick var med i hans band. Billetterne kostede en formue, og jeg var i dårligt humør under hele koncerten. Jeg kan mest af alt huske, at jeg var irriteret, fordi jeg mistede mine briller og derfor ikke kunne læse i det eksemplar af Heideggers Væren og tid, som jeg havde taget med. Det er mere eller mindre det indtryk, der står tilbage."
+              "text": "Efter at have lavet tretten soloalbum i perioden 1969-1980, udsendt flere liveplader, opsamlinger plus alt det, han lavede for Lou Reed på *Transformer* (som er Reeds bedst sælgende og også bedste soloalbum), for Iggy Pop på de imponerende *The Idiot* og *Lust for Life*, for Mott the Hoople og selv for tapre, lille Lulu, forsvinder Bowie i realiteten i 1980. Som Doggett påpeger, dukker Bowie op igen i 1983 i form af den lyshårede, solbrændte, glatte, sludrevorne entertainer, som han så intenst havde latterliggjort i 1970’erne. Jeg kan huske, at jeg så en koncert med ham i Milton Keynes Bowl i juli 1983, hvor blandt andre Carlos Alomar og Earl Slick var med i hans band. Billetterne kostede en formue, og jeg var i dårligt humør under hele koncerten. Jeg kan mest af alt huske, at jeg var irriteret, fordi jeg mistede mine briller og derfor ikke kunne læse i det eksemplar af Heideggers *Væren og tid*, som jeg havde taget med. Det er mere eller mindre det indtryk, der står tilbage."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Vi må ikke glemme, at der har været tider, hvor det har været forfærdeligt at være Bowie-fan. Der har været nogle illusioner, som jeg virkelig godt kunne have været foruden. Ikke så meget Let’s Dance (1983), der har flere fine øjeblikke (jeg havde i mange år været en flittig studerende i Nile Rodgers’ funkskole), men snarere den langsomme og tilsyneladende uundgåelige nedtur, som var tydelig på Tonight (1984), bortset fra ‘Loving the Alien’, og på det i sandhed virkelig elendige Never Let Me Down (1987). Bowie var på en eller anden måde blevet overbevist om, at det var en god idé at lave coverversioner af og slagte sange, som han havde skrevet sammen med Iggy, for eksempel ‘Neighborhood Threat’. Det var virkelig grufuldt og fortvivlende."
+              "text": "Vi må ikke glemme, at der har været tider, hvor det har været forfærdeligt at være Bowie-fan. Der har været nogle illusioner, som jeg virkelig godt kunne have været foruden. Ikke så meget *Let’s Dance* (1983), der har flere fine øjeblikke (jeg havde i mange år været en flittig studerende i Nile Rodgers’ funkskole), men snarere den langsomme og tilsyneladende uundgåelige nedtur, som var tydelig på *Tonight* (1984), bortset fra ‘Loving the Alien’, og på det i sandhed virkelig elendige *Never Let Me Down* (1987). Bowie var på en eller anden måde blevet overbevist om, at det var en god idé at lave coverversioner af og slagte sange, som han havde skrevet sammen med Iggy, for eksempel ‘Neighborhood Threat’. Det var virkelig grufuldt og fortvivlende."
             }
           ]
         },
@@ -1589,47 +1610,47 @@
           ]
         }
       ],
-      "title": "DISCIPLIN"
+      "title": "# DISCIPLIN"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "DET VAR NOGET ANDET I 1990’ERNE. HVERT AF DE FIRE soloalbum, som Bowie udgav i løbet af dette årti, havde sine særlige dyder såvel som en eller to laster. Jeg kunne ikke rigtig beslutte mig vedrørende Black Tie White Noise (1993), selv om jeg lyttede meget til det og elskede den glade løssluppenhed hos den nygifte Bowie på numre som ‘Miracle Goodnight’ og ‘Don’t Let Me Down and Down’. Jeg boede i Frankfurt, da Earthling blev udgivet i 1997, og gik stadigvæk (må jeg med skam indrømme) meget på natklub i disse år, hvor drum’n’bass fra London erobrede Tyskland, selv om jeg aldrig fandt ud af at danse til den. Jeg havde – til trods for den harmoniske kompleksitet på numre som ‘Looking for Satellites’ – derfor alvorlige betænkeligheder ved de drum’n’bass-eksperimenter, man kunne finde på Earthling. Den stærkt retrospektive og lettere klaustrofobiske Hours… fra 1999, som i vid udstrækning blev markedsført som en form for Summa af Bowies værk, der hævdede at genbesøge hvert eneste centrale øjeblik i hans udvikling (det gjorde albummet ikke), var en skuffelse for mig, selv om ‘Survive’ og ‘Thursday’s Child’ egentlig er ret pragtfulde sange."
+              "text": "**DET VAR NOGET ANDET I 1990’ERNE. HVERT AF DE FIRE** soloalbum, som Bowie udgav i løbet af dette årti, havde sine særlige dyder såvel som en eller to laster. Jeg kunne ikke rigtig beslutte mig vedrørende *Black Tie White Noise* (1993), selv om jeg lyttede meget til det og elskede den glade løssluppenhed hos den nygifte Bowie på numre som ‘Miracle Goodnight’ og ‘Don’t Let Me Down and Down’. Jeg boede i Frankfurt, da *Earthling* blev udgivet i 1997, og gik stadigvæk (må jeg med skam indrømme) meget på natklub i disse år, hvor drum’n’bass fra London erobrede Tyskland, selv om jeg aldrig fandt ud af at danse til den. Jeg havde – til trods for den harmoniske kompleksitet på numre som ‘Looking for Satellites’ – derfor alvorlige betænkeligheder ved de drum’n’bass-eksperimenter, man kunne finde på *Earthling*. Den stærkt retrospektive og lettere klaustrofobiske *Hours…* fra 1999, som i vid udstrækning blev markedsført som en form for *Summa* af Bowies værk, der hævdede at genbesøge hvert eneste centrale øjeblik i hans udvikling (det gjorde albummet ikke), var en skuffelse for mig, selv om ‘Survive’ og ‘Thursday’s Child’ egentlig er ret pragtfulde sange."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Men jeg kan huske, at jeg lyttede til 1.Outside igen og igen på en lille kassettebåndoptager i min kærestes køkken i Stockholm i vinteren 1995 og smilende sagde til mig selv: “Ja, der er den. Der er den.” I flere uger dansede og dansede jeg i det køkken, mens jeg mimede sange som en komplet idiot, især ‘No Control’ og ‘The Motel’."
+              "text": "Men jeg kan huske, at jeg lyttede til *1.Outside* igen og igen på en lille kassettebåndoptager i min kærestes køkken i Stockholm i vinteren 1995 og smilende sagde til mig selv: “Ja, der er den. Der er den.” I flere uger dansede og dansede jeg i det køkken, mens jeg mimede sange som en komplet idiot, især ‘No Control’ og ‘The Motel’."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Nogle år gik. Og så, i juni 2002, blev jeg ved udgivelsen af Heathen fuldstændig overrasket og begejstret. Alene titelnummeret er bjergtagende i sin musikalske umiddelbarhed, subtilitet og opbygning. Her var en ny og anden Bowie: reflekterende, dyb, dyster, men stadigvæk fuld af vid. Medierne erklærede, at det var en post-9/11-Bowieplade. Det var jeg lidt mere skeptisk over for. Heathen blev hurtigt efterfulgt af Reality i 2003. De to album, udgivet hurtigt efter hinanden, udgør lidt et par, hvilket har været mest til skade for Reality, som er et virkelig undervurderet album og efter min mening det bedste af de to. Jeg kan huske, at jeg kørte rundt på landet i Essex i min Vauxhall Corsa og lyttede til ‘New Killer Star’ og ‘She’ll Drive the Big Car’. Bowie havde også i denne periode genopdaget kunsten at lave en god ballade, hvilke udmøntede sig i numre som ‘Sunday’, ‘5:15 The Angels Have Gone’ og ‘The Loneliest Guy’. Bowie, der så utrolig sund og rask ud og havde fået sindssygt flotte hvide tænder – en hyldest til hans tandlæge i New York – besøgte flere britiske talkshows og så ud til at være fuldstændig i balance og parerede dygtigt uønskede spørgsmål med sit store vid …"
+              "text": "Nogle år gik. Og så, i juni 2002, blev jeg ved udgivelsen af *Heathen* fuldstændig overrasket og begejstret. Alene titelnummeret er bjergtagende i sin musikalske umiddelbarhed, subtilitet og opbygning. Her var en ny og anden Bowie: reflekterende, dyb, dyster, men stadigvæk fuld af vid. Medierne erklærede, at det var en post-9/11-Bowieplade. Det var jeg lidt mere skeptisk over for. *Heathen* blev hurtigt efterfulgt af *Reality* i 2003. De to album, udgivet hurtigt efter hinanden, udgør lidt et par, hvilket har været mest til skade for *Reality*, som er et virkelig undervurderet album og efter min mening det bedste af de to. Jeg kan huske, at jeg kørte rundt på landet i Essex i min Vauxhall Corsa og lyttede til ‘New Killer Star’ og ‘She’ll Drive the Big Car’. Bowie havde også i denne periode genopdaget kunsten at lave en god ballade, hvilke udmøntede sig i numre som ‘Sunday’, ‘5:15 The Angels Have Gone’ og ‘The Loneliest Guy’. Bowie, der så utrolig sund og rask ud og havde fået sindssygt flotte hvide tænder – en hyldest til hans tandlæge i New York – besøgte flere britiske talkshows og så ud til at være fuldstændig i balance og parerede dygtigt uønskede spørgsmål med sit store vid …"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "… Og så ingenting. Tavshed på linjen. Jeg flyttede til New York, Bowies nye hjemby. Måske ville jeg støde ind i ham på gaden. I 2004 gik der historier om et hjerteanfald i Tyskland, efterfulgt af rygter om sygdom, om lungekræft, om emfysem, alle mulige slags sygdomme. For nogle få år siden besøgte jeg en sen aften en ven på Manhattan. Hans lejlighed lå lige neden under Bowies. Jeg rettede konstant nervøst blikket mod loftet og følte mig som en trist, midaldrende stalker. Jeg tvang endda værten til at spille hele Ziggy Stardust, om end meget stille, blot for det tilfælde, at Bowie forsøgte at falde i søvn. Jeg havde de vildeste drømme, da jeg faldt i søvn den nat."
+              "text": "… Og så ingenting. Tavshed på linjen. Jeg flyttede til New York, Bowies nye hjemby. Måske ville jeg støde ind i ham på gaden. I 2004 gik der historier om et hjerteanfald i Tyskland, efterfulgt af rygter om sygdom, om lungekræft, om emfysem, alle mulige slags sygdomme. For nogle få år siden besøgte jeg en sen aften en ven på Manhattan. Hans lejlighed lå lige neden under Bowies. Jeg rettede konstant nervøst blikket mod loftet og følte mig som en trist, midaldrende stalker. Jeg tvang endda værten til at spille hele *Ziggy Stardust*, om end meget stille, blot for det tilfælde, at Bowie forsøgte at falde i søvn. Jeg havde de vildeste drømme, da jeg faldt i søvn den nat."
             }
           ]
         }
       ],
-      "title": "FORSVINDEN"
+      "title": "# FORSVINDEN"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "BOWIES MUSIK ER OFTE BLEVET SET SOM ISOLERET, indadvendt, solipsistisk og endda autistisk (som om vi ved, hvad det vil sige). Dette syn kan findes i Hugo Wilckens fine lille bog om Low, og de mest tydelige beviser for påstanden finder han i ‘Sound and Vision’, hvor vi finder endnu et par nothings:"
+              "text": "**BOWIES MUSIK ER OFTE BLEVET SET SOM ISOLERET**, indadvendt, solipsistisk og endda autistisk (som om vi ved, hvad det vil sige). Dette syn kan findes i Hugo Wilckens fine lille bog om *Low*, og de mest tydelige beviser for påstanden finder han i ‘Sound and Vision’, hvor vi finder endnu et par *nothings*:"
             }
           ]
         },
@@ -1692,14 +1713,14 @@
         {
           "lines": [
             {
-              "text": "Hvis Bowies musik tager sit udgangspunkt i ensomheden, er den på ingen måde en bekræftelse af afsondretheden. Den er et desperat forsøg på at overvinde ensomheden og skabe en form for forbindelse til andre mennesker. Det, som med andre ord definerer så meget af Bowie, er erfaringen af at længes."
+              "text": "Hvis Bowies musik tager sit udgangspunkt i ensomheden, er den på ingen måde en bekræftelse af afsondretheden. Den er et desperat forsøg på at overvinde ensomheden og skabe en form for forbindelse til andre mennesker. Det, som med andre ord definerer så meget af Bowie, er erfaringen af at *længes*."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowie synger om kærlighed. Men denne kærlighed er ofte kendetegnet ved et spørgsmål, plaget af tvivl eller indhyllet i et skær af fortrydelse. Selv når titelnummeret på Station to Station skifter fuldstændig tempo omkring fem minutter inde i nummeret, hvor Bowie er dybt optaget af Aleister Crowleys Magick og kabbalistisk esoterisme, stiller han umiddelbart spørgsmålet: “Who will connect me with love?” Og dette er ikke kun bivirkningerne af kokainen: “I’m thinking that it must be love.”"
+              "text": "Bowie synger om kærlighed. Men denne kærlighed er ofte kendetegnet ved et spørgsmål, plaget af tvivl eller indhyllet i et skær af fortrydelse. Selv når titelnummeret på *Station to Station* skifter fuldstændig tempo omkring fem minutter inde i nummeret, hvor Bowie er dybt optaget af Aleister Crowleys Magick og kabbalistisk esoterisme, stiller han umiddelbart spørgsmålet: “Who will connect me with love?” Og dette er *ikke* kun bivirkningerne af kokainen: “I’m thinking that it must be love.”"
             }
           ]
         },
@@ -1713,7 +1734,7 @@
         {
           "lines": [
             {
-              "text": "Længslen efter kærlighed er så stærk, at den også kan antage form af et krav, endda en trussel, som i ‘Blackout’, og bemærk igen Bowies brug af nothing:"
+              "text": "Længslen efter kærlighed er så stærk, at den også kan antage form af et krav, endda en trussel, som i ‘Blackout’, og bemærk igen Bowies brug af *nothing*:"
             }
           ]
         },
@@ -1769,7 +1790,7 @@
         {
           "lines": [
             {
-              "text": "I ‘5:15 The Angels Have Gone’ fra Heathen bruger Bowie togrejsen som metafor til at dramatisere afskeden efter kærlighedens forlis. Det virkelig svidende, polyfoniske omkvæd i denne kærlighedssang lyder:"
+              "text": "I ‘5:15 The Angels Have Gone’ fra *Heathen* bruger Bowie togrejsen som metafor til at dramatisere afskeden efter kærlighedens forlis. Det virkelig svidende, polyfoniske omkvæd i denne kærlighedssang lyder:"
             }
           ]
         },
@@ -1825,7 +1846,7 @@
         {
           "lines": [
             {
-              "text": "Men dette er også en kærlighed til et bestemt sted, en længsel efter England, der ses i et særligt lys, under skyer naturligvis, blandt forfald og murbrokker, lidt a la udendørsscenerne i Nicholas Roegs betagende Performance (1970; på dansk: Flip ud), der viser en trøstesløs og forfalden by. I et interview med Playboy i 1976 sagde Bowie efter ikke at have været i England i to år, at Storbritannien havde brug for en fascistisk leder, og han gav endda udtryk for, at han selv ville være en god premierminister. Senere forlød det, at Bowie virkelig fortrød denne udtalelse, især efter fremkomsten af en så autoritær leder som Margaret Thatcher, som ikke var kendt for at være en stor Bowie-fan. Men Bowie forstod fascisme som nationalisme, der er en kompleks følelse, en følelse, som det er meget lettere at nedgøre end at tage alvorligt. Måske er det tætteste, vi kommer på chauvinisme, den Union Jack-frakke (der er designet af Alexander McQueen), som Bowie bærer på coveret af Earthling, hvor David står rank og kigger ud over Englands smukke grønne marker."
+              "text": "Men dette er også en kærlighed til et bestemt sted, en længsel efter England, der ses i et særligt lys, under skyer naturligvis, blandt forfald og murbrokker, lidt a la udendørsscenerne i Nicholas Roegs betagende *Performance* (1970; på dansk: *Flip ud*), der viser en trøstesløs og forfalden by. I et interview med *Playboy* i 1976 sagde Bowie efter ikke at have været i England i to år, at Storbritannien havde brug for en fascistisk leder, og han gav endda udtryk for, at han selv ville være en god premierminister. Senere forlød det, at Bowie virkelig fortrød denne udtalelse, især efter fremkomsten af en så autoritær leder som Margaret Thatcher, som ikke var kendt for at være en stor Bowie-fan. Men Bowie forstod fascisme som nationalisme, der er en kompleks følelse, en følelse, som det er meget lettere at nedgøre end at tage alvorligt. Måske er det tætteste, vi kommer på chauvinisme, den Union Jack-frakke (der er designet af Alexander McQueen), som Bowie bærer på coveret af *Earthling*, hvor David står rank og kigger ud over Englands smukke grønne marker."
             }
           ]
         },
@@ -1839,19 +1860,19 @@
         {
           "lines": [
             {
-              "text": "Men dette nothing efterfølges af en fastholdelse af, at “I’ll survive your naked eyes” og lidt senere af “You’re the great mistake I never made.”"
+              "text": "Men dette *nothing* efterfølges af en fastholdelse af, at “I’ll survive your naked eyes” og lidt senere af “You’re the great mistake I never made.”"
             }
           ]
         }
       ],
-      "title": "LÆNGSEL"
+      "title": "# LÆNGSEL"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "BOWIES MUSIK HANDLER OM LÆNGSEL. DENNE LÆNGSEL er i sidste ende en længsel efter kærlighed. Bowies længsel vækker vores længsel, udløser en bittersød melankoli, for eksempel eksilets smertefulde længsel. Denne længsel er – og dette er intet mindre end mirakuløst, når man tænker over det – udløst af lyden af ord og musik, der kommer i kontakt med vores kroppe. Især i de tidlige værker har Bowies tekster en narrativ energi og fuldstændighed over sig – et eksempel på dette er historien om Ziggy Stardusts storhed og fald. Men efter Bowies indførelse af cut up-teknikken blev hans tekster meget mere fragmentariske, imagistiske og modernistiske. Bowies ord bliver synekdoker – hvor dele udtrykker helheder, men også hullerne i disse helheder. Brugen af cut up-teknikken baner vejen for en ny måde at se verden på. Den accelererer også alting. Cut up-metoden passer godt til fremdriften i Bowies utrolige produktivitet i 1970’erne. Den muliggør et æstetisk greb om livets hastighed og livets forandringer, livets hukommelsestab, tilfældigheder, kreative udviklinger og dets dumheder. Den lyriske stil på Low (der indeholder 410 ord) og på “Heroes” bryder med den narrative og almindelige forståelighed. Ordene siger mere ved at sige mindre og ved at give mindre indlysende mening. Bowies tekster er stærkest, når de er mest abstrakte. Vi fylder selv hullerne med vores fantasi, med vores længsel."
+              "text": "**BOWIES MUSIK HANDLER OM LÆNGSEL. DENNE LÆNGSEL** er i sidste ende en længsel efter kærlighed. Bowies længsel vækker vores længsel, udløser en bittersød melankoli, for eksempel eksilets smertefulde længsel. Denne længsel er – og dette er intet mindre end mirakuløst, når man tænker over det – udløst af lyden af ord og musik, der kommer i kontakt med vores kroppe. Især i de tidlige værker har Bowies tekster en narrativ energi og fuldstændighed over sig – et eksempel på dette er historien om Ziggy Stardusts storhed og fald. Men efter Bowies indførelse af cut up-teknikken blev hans tekster meget mere fragmentariske, imagistiske og modernistiske. Bowies ord bliver synekdoker – hvor dele udtrykker helheder, men også hullerne i disse helheder. Brugen af cut up-teknikken baner vejen for en ny måde at se verden på. Den accelererer også alting. Cut up-metoden passer godt til fremdriften i Bowies utrolige produktivitet i 1970’erne. Den muliggør et æstetisk greb om livets hastighed og livets forandringer, livets hukommelsestab, tilfældigheder, kreative udviklinger og dets dumheder. Den lyriske stil på *Low* (der indeholder 410 ord) og på *“Heroes”* bryder med den narrative og almindelige forståelighed. Ordene siger mere ved at sige mindre og ved at give mindre indlysende mening. Bowies tekster er stærkest, når de er mest abstrakte. Vi fylder selv hullerne med vores fantasi, med vores længsel."
             }
           ]
         },
@@ -1970,19 +1991,19 @@
         {
           "lines": [
             {
-              "text": "Måske er det ironiske i Bowies længsel efter kærlighed, at da han endelig synes at finde kærligheden, er resultaterne lidt kedelige, som i ‘Wedding’ fra Black Tie White Noise, som Bowie oprindeligt komponerede til brylluppet med Iman Abdulmajid i 1992. Som han synger på ‘The Loneliest Guy’ – selv om dette dog i den grad modsiges af den ledsagende musiks melankolske klage: “I’m the luckiest guy, not the loneliest guy.” Jeg var glad for, at Bowie var glad, men jeg foretrak den musik, han skabte, da han var mest ulykkelig."
+              "text": "Måske er det ironiske i Bowies længsel efter kærlighed, at da han endelig synes at finde kærligheden, er resultaterne lidt kedelige, som i ‘Wedding’ fra *Black Tie White Noise*, som Bowie oprindeligt komponerede til brylluppet med Iman Abdulmajid i 1992. Som han synger på ‘The Loneliest Guy’ – selv om dette dog i den grad modsiges af den ledsagende musiks melankolske klage: “I’m the luckiest guy, not the loneliest guy.” Jeg var glad for, at Bowie var glad, men jeg foretrak den musik, han skabte, da han var mest ulykkelig."
             }
           ]
         }
       ],
-      "title": "DU SIGER, DU VIL FORLADE MIG"
+      "title": "# DU SIGER, DU VIL FORLADE MIG"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "HVAD ER DAVID BOWIES VIRKELIGHED? JEG TÆNKER HER specifikt på titelsangen til Bowies album Reality fra 2003. Hvad kan jeg sige? Det er et meget larmende nummer præget af Earl Slicks prægtige guitar og de insisterende, nærmest militante staccatotrommer fra ‘Hello Spaceboy’, men på en eller anden måde er det endnu mere klaustrofobisk og intenst. Vi begynder med et Aladdin Sane-lignende minde om et tilfældigt seksuelt møde med “tragic youth”, der giver sangens “mig” et blowjob. I omkvædet skifter vi så hurtigt til en række tilsyneladende selvbiografiske billeder:"
+              "text": "**HVAD ER DAVID BOWIES VIRKELIGHED? JEG TÆNKER HER** specifikt på titelsangen til Bowies album *Reality* fra 2003. Hvad kan jeg sige? Det er et meget *larmende* nummer præget af Earl Slicks prægtige guitar og de insisterende, nærmest militante staccatotrommer fra ‘Hello Spaceboy’, men på en eller anden måde er det endnu mere klaustrofobisk og intenst. Vi begynder med et *Aladdin Sane*-lignende minde om et tilfældigt seksuelt møde med “tragic youth”, der giver sangens “mig” et blowjob. I omkvædet skifter vi så hurtigt til en række tilsyneladende selvbiografiske billeder:"
             }
           ]
         },
@@ -2017,7 +2038,7 @@
         {
           "lines": [
             {
-              "text": "Selv om vi altid må være varsomme med at sætte lighedstegn mellem sangens persona og Bowie selv er lydmuren både en hentydning til Phil Spectors Wall of Sound, men også til den mur af illusioner, som Bowie med Ziggy opførte i de tidlige 1970’ere. Dengang gemte han sig bag denne mur ved at tage store mængder kokain. Den uafbrudte bevægelse fra planet X til planet Alpha, fra ‘Space Oddity’ over ‘Starman’ til ‘Ashes to Ashes’, præsenteres som en kamp for virkelighed – efterfulgt af en hul, hård latter, et forbitret og hånligt spottende “HA HA HA HA”. Det er dette, som Beckett i romanen Watt kalder for risus puris, den rene latter, den latter, som ler af latteren, som er “honnøren for den mest sublime spøg af alle, kort sagt den latter, der ler – må jeg bede om stilhed, tak – ad det, der er ulykkeligt.”"
+              "text": "Selv om vi altid må være varsomme med at sætte lighedstegn mellem sangens persona og Bowie selv er lydmuren både en hentydning til Phil Spectors Wall of Sound, men også til den mur af illusioner, som Bowie med Ziggy opførte i de tidlige 1970’ere. Dengang gemte han sig bag denne mur ved at tage store mængder kokain. Den uafbrudte bevægelse fra planet X til planet Alpha, fra ‘Space Oddity’ over ‘Starman’ til ‘Ashes to Ashes’, præsenteres som en kamp for virkelighed – efterfulgt af en hul, hård latter, et forbitret og hånligt spottende “HA HA HA HA”. Det er dette, som Beckett i romanen *Watt* kalder for *risus puris*, den rene latter, den latter, som ler af latteren, som er “honnøren for den mest sublime spøg af alle, kort sagt den latter, der ler – må jeg bede om stilhed, tak – ad det, der er ulykkeligt.”"
             }
           ]
         },
@@ -2073,7 +2094,7 @@
         {
           "lines": [
             {
-              "text": "Den kamp for virkelighed, som Bowie her beskriver som omdrejningspunkt for hele sit kunstneriske virke, viser sig at fejle. Der er ingen bærende virkelighed, som kan danne udgangspunkt for mening i verden. Jo mere vi kæmper, jo nærmere kommer vi intetheden. Mening opløses i meningsløshed. I en rigtig god artikel fra Sound on Sound fra 2003 beskriver Bowie virkelighed som “et abstrakt begreb”:"
+              "text": "Den kamp for virkelighed, som Bowie her beskriver som omdrejningspunkt for hele sit kunstneriske virke, viser sig at fejle. Der er ingen bærende virkelighed, som kan danne udgangspunkt for mening i verden. Jo mere vi kæmper, jo nærmere kommer vi intetheden. Mening opløses i meningsløshed. I en rigtig god artikel fra *Sound on Sound* fra 2003 beskriver Bowie virkelighed som “et abstrakt begreb”:"
             }
           ]
         },
@@ -2129,7 +2150,7 @@
         {
           "lines": [
             {
-              "text": "Bowie skrev i den pressemeddelelse, som fulgte med Reality:"
+              "text": "Bowie skrev i den pressemeddelelse, som fulgte med *Reality*:"
             }
           ]
         },
@@ -2143,26 +2164,26 @@
         {
           "lines": [
             {
-              "text": "Denne bekræftelse af altings kontingens eller tilfældighed har kompositorisk og i pladestudiet været Bowies modus operandi siden midten af 1970’erne, hvor Bowie blev påvirket af Enos ‘planlagte tilfælde’ (Planned Accidents var i spil som titel på det album, der endte med at hedde Lodger). Men dette beskriver også Bowies virkelighed og måske vores egen. Absolutternes sammenbrud, Guds død eller hvad man end måtte kalde det, bør ikke imødegås med enten pessimistisk nihilisme eller konstruktionen af en ny guddom, et overmenneske eller homo superior. Det fører blot til det 20. århundredes barbari, som desværre ikke viser de store tegn på at aftage i dette århundrede. Hvis vi erstatter os selv med den Gud, som er død, bliver vi hedninge, og så er alt blot “big heads and drums, full speed and pagan”."
+              "text": "Denne bekræftelse af altings kontingens eller tilfældighed har kompositorisk og i pladestudiet været Bowies *modus operandi* siden midten af 1970’erne, hvor Bowie blev påvirket af Enos ‘planlagte tilfælde’ (*Planned Accidents* var i spil som titel på det album, der endte med at hedde *Lodger*). Men dette beskriver også Bowies virkelighed og måske vores egen. Absolutternes sammenbrud, Guds død eller hvad man end måtte kalde det, bør ikke imødegås med enten pessimistisk nihilisme eller konstruktionen af en ny guddom, et overmenneske eller *homo superior*. Det fører blot til det 20. århundredes barbari, som desværre ikke viser de store tegn på at aftage i dette århundrede. Hvis vi erstatter os selv med den Gud, som er død, bliver vi hedninge, og så er alt blot “big heads and drums, full speed and pagan”."
             }
           ]
         }
       ],
-      "title": "AT OPGIVE VIRKELIGHEDEN"
+      "title": "# AT OPGIVE VIRKELIGHEDEN"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "DET ER I MODSÆTNING TIL DENNE HEDENSKE EKSISTENS, at man kan spore det, som jeg er fristet til at kalde for religiøsiteten i Bowies kunst. Gud har altid spillet en stor rolle i Bowies lyriske ordforråd fra ‘God Knows I’m Good’ på Space Oddity og ‘The Width of a Circle’ på The Man Who Sold the World, hvor Bowie intonerer: “I realized that God’s a young man too.”"
+              "text": "**DET ER I MODSÆTNING TIL DENNE HEDENSKE EKSISTENS**, at man kan spore det, som jeg er fristet til at kalde for religiøsiteten i Bowies kunst. Gud har altid spillet en stor rolle i Bowies lyriske ordforråd fra ‘God Knows I’m Good’ på *Space Oddity* og ‘The Width of a Circle’ på *The Man Who Sold the World*, hvor Bowie intonerer: “I realized that God’s a young man too.”"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "For at tage et eksempel ud af mange mulige kan albummet Hours… fra 1999 være en hentydning til en middelalderlig tradition for opbyggelige tidebøger, som ofte indeholdt syv bodssamler. Det er måske mere end et tilfælde, at et af albummets numre bærer titlen ‘Seven’ og indeholder følgende vers:"
+              "text": "For at tage et eksempel ud af mange mulige kan albummet *Hours…* fra 1999 være en hentydning til en middelalderlig tradition for opbyggelige tidebøger, som ofte indeholdt syv bodssamler. Det er måske mere end et tilfælde, at et af albummets numre bærer titlen ‘Seven’ og indeholder følgende vers:"
             }
           ]
         },
@@ -2246,14 +2267,20 @@
         {
           "lines": [
             {
-              "text": "Just because I believe don’t meanI don’t think as well"
+              "text": "Just because I believe don’t mean"
+            },
+            {
+              "text": "I don’t think as well"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Don’t have to question everythingin heaven or hell."
+              "text": "Don’t have to question everything"
+            },
+            {
+              "text": "in heaven or hell."
             }
           ]
         },
@@ -2267,7 +2294,7 @@
         {
           "lines": [
             {
-              "text": "Dette kan selvfølgelig blot være bivirkningerne af kokainen. Men hvis man kan finde en troldmandslignende identifikation med det guddommelige i ‘Station to Station’, kan Gud andre steder lyde decideret tyrannisk og fremkalde paranoia. Bowies album fra 1995 1. Outside er gennemtrængt af følelsen af at være overvåget, for eksempel i ‘No Control’:"
+              "text": "Dette kan selvfølgelig blot være bivirkningerne af kokainen. Men hvis man kan finde en troldmandslignende identifikation med det guddommelige i ‘Station to Station’, kan Gud andre steder lyde decideret tyrannisk og fremkalde paranoia. Bowies album fra 1995 *1. Outside* er gennemtrængt af følelsen af at være overvåget, for eksempel i ‘No Control’:"
             }
           ]
         },
@@ -2316,7 +2343,7 @@
         {
           "lines": [
             {
-              "text": "Den depraverede præst som figur bliver ved med at dukke op hos Bowie, senest i titelnummeret på The Next Day. Pointen får et herligt, manieret udtryk i Floria Sigismondis ledsagende musikvideo, hvor Gary Oldman optræder som den dekadente præst, Marion Cotillard som den skøge/mystiker, der får Kristus’ stigmata, og Bowie selv som den dommedagsprofet, der med ét forsvinder til sidst i videoen, idet han formentligt er steget til himmels. Præsten er “stiff in hate demanding fun begin / Of his women dressed as men for the pleasure of that priest”. Bowie fortsætter:"
+              "text": "Den depraverede præst som figur bliver ved med at dukke op hos Bowie, senest i titelnummeret på *The Next Day*. Pointen får et herligt, manieret udtryk i Floria Sigismondis ledsagende musikvideo, hvor Gary Oldman optræder som den dekadente præst, Marion Cotillard som den skøge/mystiker, der får Kristus’ stigmata, og Bowie selv som den dommedagsprofet, der med ét forsvinder til sidst i videoen, idet han formentligt er steget til himmels. Præsten er “stiff in hate demanding fun begin / Of his women dressed as men for the pleasure of that priest”. Bowie fortsætter:"
             }
           ]
         },
@@ -2337,28 +2364,40 @@
         {
           "lines": [
             {
-              "text": "They live upon their feet and they dieupon their knees"
+              "text": "They live upon their feet and they die"
+            },
+            {
+              "text": "upon their knees"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "They can work with Satan while they dresslike the saints"
+              "text": "They can work with Satan while they dress"
+            },
+            {
+              "text": "like the saints"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "They know God exists for the Devil toldthem so"
+              "text": "They know God exists for the Devil told"
+            },
+            {
+              "text": "them so"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "They scream my name aloud down intothe well below."
+              "text": "They scream my name aloud down into"
+            },
+            {
+              "text": "the well below."
             }
           ]
         },
@@ -2370,21 +2409,21 @@
           ]
         }
       ],
-      "title": "AT LEGE PÅ GUDS GRAV"
+      "title": "# AT LEGE PÅ GUDS GRAV"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "NOGET, DER KAN MINDE OM DENNE LÆNGSEL EFTER EN SAND religiøsitet, kan mærkes i det intense, subtile og tætte åbningsnummer på Heathen. Sangens titel, ‘Sunday’, giver associationer til den kristne hviledag og antyder også en familielighed med Wallace Stevens’ digt ‘Søndag morgen’, hvor digteren selv kæmper med den kristne tro, før han konkluderer: “Døden er skønhedens mystiske moder.”"
+              "text": "**NOGET, DER KAN MINDE OM DENNE LÆNGSEL EFTER EN SAND** religiøsitet, kan mærkes i det intense, subtile og tætte åbningsnummer på *Heathen*. Sangens titel, ‘Sunday’, giver associationer til den kristne hviledag og antyder også en familielighed med Wallace Stevens’ digt ‘Søndag morgen’, hvor digteren selv kæmper med den kristne tro, før han konkluderer: “Døden er skønhedens mystiske moder.”"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowie skrev ‘Sunday’ meget tidligt om morgenen i Allaire-pladestudiets landlige omgivelser i Catskill Mountains nord for New York. Han fortalte om det til magasinet Interview:"
+              "text": "Bowie skrev ‘Sunday’ meget tidligt om morgenen i Allaire-pladestudiets landlige omgivelser i Catskill Mountains nord for New York. Han fortalte om det til magasinet *Interview*:"
             }
           ]
         },
@@ -2398,7 +2437,7 @@
         {
           "lines": [
             {
-              "text": "‘Sunday’ er en hymne, en bøn eller måske mest af alt en salme, som Bowie afslutter med nogle ord henvendt til Gud: “All my trials, Lord, will be remembered.” Sangen blev fortolket som en reaktion på terrorangrebene den 11. september 2001 i New York, men billedsproget er meget landligt – Bowie synger om bregner og fugle, om varme og regn. Bowie tillader her – i dette inderlige og andagtsfulde øjeblik – ordet nothing at præge og dukke op forskellige steder i teksten. Han lægger ud med ordene “Nothing remains” – intet er tilbage. Kernen i nummeret er spørgsmålet om, hvordan vi kan fastholde et sådant intet. Sangen bygges langsomt op, og Bowie synger nu:"
+              "text": "‘Sunday’ er en hymne, en bøn eller måske mest af alt en salme, som Bowie afslutter med nogle ord henvendt til Gud: “All my trials, Lord, will be remembered.” Sangen blev fortolket som en reaktion på terrorangrebene den 11. september 2001 i New York, men billedsproget er meget landligt – Bowie synger om bregner og fugle, om varme og regn. Bowie tillader her – i dette inderlige og andagtsfulde øjeblik – ordet *nothing* at præge og dukke op forskellige steder i teksten. Han lægger ud med ordene “Nothing remains” – intet er tilbage. Kernen i nummeret er spørgsmålet om, hvordan vi kan fastholde et sådant intet. Sangen bygges langsomt op, og Bowie synger nu:"
             }
           ]
         },
@@ -2599,14 +2638,14 @@
           ]
         }
       ],
-      "title": "INTET AT FRYGTE"
+      "title": "# INTET AT FRYGTE"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "HVOR ER VI NU? JEG HAR TALT OM BOWIES USÆDVANLIGT store disciplin som kunstner, som en skaber af illusioner, der ved, at de er illusioner. Vi lærte at følge ham fra illusion til illusion og blev undervejs voksne. Bag illusionen findes ikke en virkelighed, der for altid vil undslippe os, men ingenting. Men dette intet er ikke ingenting, så at sige. Det er ikke et tomrum, det er ikke bevægelsens stilstand eller ophør. Det er et massivt, hvileløst intet, der er formet af vores frygt, især vores timor mortis, vores frygtsomme sygdom til døden."
+              "text": "**HVOR ER VI NU? JEG HAR TALT OM BOWIES USÆDVANLIGT** store disciplin som kunstner, som en skaber af illusioner, der ved, at de er illusioner. Vi lærte at følge ham fra illusion til illusion og blev undervejs voksne. Bag illusionen findes ikke en virkelighed, der for altid vil undslippe os, men ingenting. Men dette intet er ikke ingenting, så at sige. Det er ikke et tomrum, det er ikke bevægelsens stilstand eller ophør. Det er et massivt, hvileløst intet, der er formet af vores frygt, især vores *timor mortis*, vores frygtsomme sygdom til døden."
             }
           ]
         },
@@ -2634,21 +2673,21 @@
         {
           "lines": [
             {
-              "text": "Jeg kan ikke forklare den virkning, som videoen sammen med udsigten til et nyt album, The Next Day, hvis cover var en ikonoklastisk tilintetgørelse af coveret på “Heroes” fra 1977, havde på mig. Albummet blev udgivet den 8. marts, en forudbestilt vare, som lydløst blev lagt på min iPhone denne dags morgen. Det forunderlige var selvfølgelig, at dette album overhovedet eksisterede. Men det hjalp, at det var virkelig godt. Med det mener jeg, at det gjorde mig glad. Bowie var ikke død endnu. Langtfra. Det var vi heller ikke. Ikke så længe der er den “sun, rain, fire, me and you”, som Bowie synger om i de sidste linjer af ‘Where Are We Now?’."
+              "text": "Jeg kan ikke forklare den virkning, som videoen sammen med udsigten til et nyt album, *The Next Day*, hvis cover var en ikonoklastisk tilintetgørelse af coveret på *“Heroes”* fra 1977, havde på mig. Albummet blev udgivet den 8. marts, en forudbestilt vare, som lydløst blev lagt på min iPhone denne dags morgen. Det forunderlige var selvfølgelig, at dette album overhovedet eksisterede. Men det hjalp, at det var virkelig godt. Med det mener jeg, at det gjorde mig glad. Bowie var ikke død endnu. Langtfra. Det var vi heller ikke. Ikke så længe der er den “sun, rain, fire, me and you”, som Bowie synger om i de sidste linjer af ‘Where Are We Now?’."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowie udsendte fire musikvideoer til at ledsage The Next Day. Men der var ingen interview, ingen annoncering af turnédatoer, ingen forklaringer, intet mediegejl. Det var det, der var så smukt ved det hele. Bowie havde produceret billede og lyd, sound and vision. Intet mere. Personligt havde jeg ikke brug for en David Bowie, der optrådte på åndssvage talkshows med uvidende og respektløse værter, og hvor Bowie ville tale med sin bedste, flabede Cockney-accent og indstuderede undvigelser. Men jeg havde brug for hans musik.*"
+              "text": "Bowie udsendte fire musikvideoer til at ledsage *The Next Day*. Men der var ingen interview, ingen annoncering af turnédatoer, ingen forklaringer, intet mediegejl. Det var det, der var så smukt ved det hele. Bowie havde produceret billede og lyd, sound and vision. Intet mere. Personligt havde jeg ikke brug for en David Bowie, der optrådte på åndssvage talkshows med uvidende og respektløse værter, og hvor Bowie ville tale med sin bedste, flabede Cockney-accent og indstuderede undvigelser. Men jeg havde brug for hans musik.[*][1]"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Endnu en erindring fra dette år, 2013: Den anden store Bowie-begivenhed var David Bowie Is, en udstilling på Victoria and Albert Museum i London, der løb fra marts til august, og som siden har været på turne rundt i forskellige dele af verden (Toronto, São Paulo, Berlin, Chicago, Paris, Melbourne, Groningen – flere byer følger). Menneskevrimlen i London var enorm. Da jeg ankom til V & A en formiddag i begyndelsen af juni, var køen så lang, at jeg til sidst opgav at forsøge at komme ind. Men så fandt jeg en måde at snige mig ind på uden at betale ved at følge tæt efter to særlige gæster (jeg ved ikke, hvem de var, en mor og hendes barn), der blev eskorteret forbi vagterne og ind i udstillingsområdet. Vi lignede en lettere ældre version af den hellige familie, da jeg langsomt og med bøjet hoved fulgte i hælene på de to andre. Det lykkedes mig at komme ind. Jeg var forbløffet over alle de ting, som Bowie havde bevaret, selv nøglerne til sin lejlighed i Berlin. Jeg mener: Hvem fanden gør det?"
+              "text": "Endnu en erindring fra dette år, 2013: Den anden store Bowie-begivenhed var *David Bowie Is*, en udstilling på Victoria and Albert Museum i London, der løb fra marts til august, og som siden har været på turne rundt i forskellige dele af verden (Toronto, São Paulo, Berlin, Chicago, Paris, Melbourne, Groningen – flere byer følger). Menneskevrimlen i London var enorm. Da jeg ankom til V & A en formiddag i begyndelsen af juni, var køen så lang, at jeg til sidst opgav at forsøge at komme ind. Men så fandt jeg en måde at snige mig ind på uden at betale ved at følge tæt efter to særlige gæster (jeg ved ikke, hvem de var, en mor og hendes barn), der blev eskorteret forbi vagterne og ind i udstillingsområdet. Vi lignede en lettere ældre version af den hellige familie, da jeg langsomt og med bøjet hoved fulgte i hælene på de to andre. Det lykkedes mig at komme ind. Jeg var forbløffet over alle de ting, som Bowie havde bevaret, selv nøglerne til sin lejlighed i Berlin. Jeg mener: Hvem fanden gør det?"
             }
           ]
         },
@@ -2669,33 +2708,49 @@
         {
           "lines": [
             {
-              "text": "* Så vidt jeg ved, brød Bowie kun sin offentlige tavshed om The Next Day, da han sendte en venstrejusteret liste (med dobbelt mellemrum) på 42 ord til forfatteren Rick Moody, hvis bøger Bowie beundrer. Listen, der fungerer som et diagram for albummet, indeholder fængslende ord som “Effigies”, “Anarchist”, “Chthonic”, “Transference”, “Flitting”, “Tyrant”, “Funereal”, “Glide”, “Trace”, “Tragic” og “Nerve”. Moody bruger hvert af de 42 ord som løftestænger for en fremragende, tankevækkende og omfattende refleksion over The Next Day. Det er uden sammenligning den bedste tekst om albummet, jeg har læst. I sin tekst placerer Moody albummet inden for rammerne af Bowies øvrige værk og forædler det med rette ved at betragte det som et stykke seriøst, vigtigt konceptkunst. Teksten kan læses her: therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day"
+              "text": "[*][2] Så vidt jeg ved, brød Bowie kun sin offentlige tavshed om *The Next Day*, da han sendte en venstrejusteret liste (med dobbelt mellemrum) på 42 ord til forfatteren Rick Moody, hvis bøger Bowie beundrer. Listen, der fungerer som et diagram for albummet, indeholder fængslende ord som “Effigies”, “Anarchist”, “Chthonic”, “Transference”, “Flitting”, “Tyrant”, “Funereal”, “Glide”, “Trace”, “Tragic” og “Nerve”. Moody bruger hvert af de 42 ord som løftestænger for en fremragende, tankevækkende og omfattende refleksion over *The Next Day*. Det er uden sammenligning den bedste tekst om albummet, jeg har læst. I sin tekst placerer Moody albummet inden for rammerne af Bowies øvrige værk og forædler det med rette ved at betragte det som et stykke seriøst, vigtigt konceptkunst. Teksten kan læses her: [therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day][3]"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "* Så vidt jeg ved, brød Bowie kun sin offentlige tavshed om The Next Day, da han sendte en venstrejusteret liste (med dobbelt mellemrum) på 42 ord til forfatteren Rick Moody, hvis bøger Bowie beundrer. Listen, der fungerer som et diagram for albummet, indeholder fængslende ord som “Effigies”, “Anarchist”, “Chthonic”, “Transference”, “Flitting”, “Tyrant”, “Funereal”, “Glide”, “Trace”, “Tragic” og “Nerve”. Moody bruger hvert af de 42 ord som løftestænger for en fremragende, tankevækkende og omfattende refleksion over The Next Day. Det er uden sammenligning den bedste tekst om albummet, jeg har læst. I sin tekst placerer Moody albummet inden for rammerne af Bowies øvrige værk og forædler det med rette ved at betragte det som et stykke seriøst, vigtigt konceptkunst. Teksten kan læses her: therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day"
+              "text": "* Så vidt jeg ved, brød Bowie kun sin offentlige tavshed om *The Next Day*, da han sendte en venstrejusteret liste (med dobbelt mellemrum) på 42 ord til forfatteren Rick Moody, hvis bøger Bowie beundrer. Listen, der fungerer som et diagram for albummet, indeholder fængslende ord som “Effigies”, “Anarchist”, “Chthonic”, “Transference”, “Flitting”, “Tyrant”, “Funereal”, “Glide”, “Trace”, “Tragic” og “Nerve”. Moody bruger hvert af de 42 ord som løftestænger for en fremragende, tankevækkende og omfattende refleksion over *The Next Day*. Det er uden sammenligning den bedste tekst om albummet, jeg har læst. I sin tekst placerer Moody albummet inden for rammerne af Bowies øvrige værk og forædler det med rette ved at betragte det som et stykke seriøst, vigtigt konceptkunst. Teksten kan læses her: [therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day][4]"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Bowie udsendte fire musikvideoer til at ledsage The Next Day. Men der var ingen interview, ingen annoncering af turnédatoer, ingen forklaringer, intet mediegejl. Det var det, der var så smukt ved det hele. Bowie havde produceret billede og lyd, sound and vision. Intet mere. Personligt havde jeg ikke brug for en David Bowie, der optrådte på åndssvage talkshows med uvidende og respektløse værter, og hvor Bowie ville tale med sin bedste, flabede Cockney-accent og indstuderede undvigelser. Men jeg havde brug for hans musik.*"
+              "text": "Bowie udsendte fire musikvideoer til at ledsage *The Next Day*. Men der var ingen interview, ingen annoncering af turnédatoer, ingen forklaringer, intet mediegejl. Det var det, der var så smukt ved det hele. Bowie havde produceret billede og lyd, sound and vision. Intet mere. Personligt havde jeg ikke brug for en David Bowie, der optrådte på åndssvage talkshows med uvidende og respektløse værter, og hvor Bowie ville tale med sin bedste, flabede Cockney-accent og indstuderede undvigelser. Men jeg havde brug for hans musik.*"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "text": "[1]: #gieqcn6qcbr"
+            },
+            {
+              "text": "[2]: #gieqcn6qcbs"
+            },
+            {
+              "text": "[3]: http://therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day"
+            },
+            {
+              "text": "[4]: http://therumpus.net/2013/04/swinging-modern-sounds-44-and-another-day"
             }
           ]
         }
       ],
-      "title": "SOL, REGN, ILD, MIG, DIG"
+      "title": "# SOL, REGN, ILD, MIG, DIG"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "Jeg tror på en fremtidig revolution af sindelagene og måderne at forestille sig ting på, som vil bringe skam over alle fortidige."
+              "text": "*Jeg tror på en fremtidig revolution af sindelagene og måderne at forestille sig ting på, som vil bringe skam over alle fortidige.*"
             }
           ]
         },
@@ -2709,7 +2764,7 @@
         {
           "lines": [
             {
-              "text": "PÅ TITELNUMMERET PÅ BLACKSTAR, SOM BLEV UDSENDT blot et par dage før hans død, synger Bowie: “I’m not a pop star.” For mig og for millioner af fans var han meget mere end det. Han var en person, der ganske enkelt fik os til at føle os i live. Det er det, der gør hans død så svær at kapere."
+              "text": "**PÅ TITELNUMMERET PÅ *BLACKSTAR*, SOM BLEV UDSENDT** blot et par dage før hans død, synger Bowie: “I’m not a pop star.” For mig og for millioner af fans var han meget mere end det. Han var en person, der ganske enkelt fik os til at føle os i live. Det er det, der gør hans død så svær at kapere."
             }
           ]
         },
@@ -2730,7 +2785,7 @@
         {
           "lines": [
             {
-              "text": "Efter at have fået nyheden om Bowies død lyttede jeg til ham synge “nothing remains” – åbningsordene på ‘Sunday’, det langsomme, første nummer på albummet Heathen fra 2002. Sangen fremstår nu som en klagesang, en bøn eller en dødssalme. Det er i lyset af Bowies død selvfølgelig ekstremt fristende at fortolke disse ord på den mest åbenlyse måde: Intet er tilbage til os efter hans død. Alt er tabt."
+              "text": "Efter at have fået nyheden om Bowies død lyttede jeg til ham synge “nothing remains” – åbningsordene på ‘Sunday’, det langsomme, første nummer på albummet *Heathen* fra 2002. Sangen fremstår nu som en klagesang, en bøn eller en dødssalme. Det er i lyset af Bowies død selvfølgelig ekstremt fristende at fortolke disse ord på den mest åbenlyse måde: Intet er tilbage til os efter hans død. Alt er tabt."
             }
           ]
         },
@@ -2744,21 +2799,21 @@
         {
           "lines": [
             {
-              "text": "Som vi har set i denne lille bog, præger og dukker ordet nothing op forskellige steder i Bowies værk, fra “hold on to nothing” på ‘After All’ fra albummet The Man Who Sold The World over de funklende, dystopiske visioner på Diamond Dogs og refrænet “We’re nothing and nothing can help us” fra ‘“Heroes”’ og hele vejen frem til den triumf, som Blackstar – den måske bedste plade, han har lavet i 30 år – er. Intet er overalt hos Bowie. Intetheden viser sig i så mange af hans sange."
+              "text": "Som vi har set i denne lille bog, præger og dukker ordet *nothing* op forskellige steder i Bowies værk, fra “hold on to nothing” på ‘After All’ fra albummet *The Man Who Sold The World* over de funklende, dystopiske visioner på *Diamond Dogs* og refrænet “We’re nothing and nothing can help us” fra ‘“Heroes”’ og hele vejen frem til den triumf, som *Blackstar* – den måske bedste plade, han har lavet i 30 år – er. Intet er overalt hos Bowie. Intetheden viser sig i så mange af hans sange."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Betyder dette så, at Bowie var en form for nihilist? Betyder det, at hans musik – fra den kulturelle opløsning på Diamond Dogs over den depressive mathed på Low til den tilsyneladende melankoli på ‘Lazarus’ – er en form for budskab om pessimisme og undergang?"
+              "text": "Betyder dette så, at Bowie var en form for nihilist? Betyder det, at hans musik – fra den kulturelle opløsning på *Diamond Dogs* over den depressive mathed på *Low* til den tilsyneladende melankoli på ‘Lazarus’ – er en form for budskab om pessimisme og undergang?"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "På ingen måde. Lad os tage Blackstar, det album, som nu må betragtes som et budskab til Bowies fans fra hinsides graven, og som jeg og så mange andre lyttede til som besatte efter dets udgivelse den 8. januar og dernæst med andre ører, efter at nyheden om hans død blev offentliggjort i New York kl. 1.30 mandag den 11. januar 2016. På albummets sidste nummer, ‘I Can’t Give Everything Away’, hvis titel er en reaktion på det krav om mening, som Bowies lyttere blev ved med at fremsætte gennem årtierne, synger han:"
+              "text": "På ingen måde. Lad os tage *Blackstar*, det album, som nu må betragtes som et budskab til Bowies fans fra hinsides graven, og som jeg og så mange andre lyttede til som besatte efter dets udgivelse den 8. januar og dernæst med andre ører, efter at nyheden om hans død blev offentliggjort i New York kl. 1.30 mandag den 11. januar 2016. På albummets sidste nummer, ‘I Can’t Give Everything Away’, hvis titel er en reaktion på det krav om mening, som Bowies lyttere blev ved med at fremsætte gennem årtierne, synger han:"
             }
           ]
         },
@@ -2793,7 +2848,7 @@
         {
           "lines": [
             {
-              "text": "Inden for rammerne af Bowies negativitet, under hans tilsyneladende sortsyn og pessimisme, hans nej, kan man høre et højt og tydeligt ja, en fuldkommen og betingelsesløs bekræftelse af livet i al dets kaotiske kompleksitet, men også dets øjeblikke af henrykkelse og fryd. Hvad angår Bowie, tror jeg, at vi først kan høre det store ja, hans musik genlyder af, når vi gør op med de sociale konventioners falskhed, den organiserede religions papisme og hokuspokus og den tvangsmæssige lykke, der plager vores kultur."
+              "text": "Inden for rammerne af Bowies negativitet, under hans tilsyneladende sortsyn og pessimisme, hans *nej*, kan man høre et højt og tydeligt *ja*, en fuldkommen og betingelsesløs bekræftelse af livet i al dets kaotiske kompleksitet, men også dets øjeblikke af henrykkelse og fryd. Hvad angår Bowie, tror jeg, at vi først kan høre det store *ja*, hans musik genlyder af, når vi gør op med de sociale konventioners falskhed, den organiserede religions papisme og hokuspokus og den tvangsmæssige lykke, der plager vores kultur."
             }
           ]
         },
@@ -2821,21 +2876,24 @@
         {
           "lines": [
             {
-              "text": "Kernen i dette håb – den kerne, som giver det et følelsesmæssigt register, der berører vores dybeste længsel – er følelsen af, at vi ikke er alene, som Bowie synger i ‘Rock ’n’ Roll Suicide’: “Oh no, love, you’re not alone”, følelsen af, at vi kan være helte blot for en dag, og at vi kan være os blot for en dag, med en ny forståelse af, hvad det vil sige at være os. Dette har også en politisk betydning. Bowie blev ofte – især tilbage i 1970’erne – med urette betragtet som en form for højrefløjsnationalist (jeg kan – med en vis glæde – nævne, at Bowie i modsætning til Mick Jagger og Paul McCartney i 2003 afslog tilbuddet fra den engelske dronning om at blive slået til ridder)."
+              "text": "Kernen i dette håb – den kerne, som giver det et følelsesmæssigt register, der berører vores dybeste længsel – er følelsen af, at vi ikke er alene, som Bowie synger i ‘Rock ’n’ Roll Suicide’: “Oh no, love, you’re not alone”, følelsen af, at vi kan være helte blot for en dag, og at vi kan være *os* blot for en dag, med en ny forståelse af, hvad det vil sige at være os. Dette har også en politisk betydning. Bowie blev ofte – især tilbage i 1970’erne – med urette betragtet som en form for højrefløjsnationalist (jeg kan – med en vis glæde – nævne, at Bowie i modsætning til Mick Jagger og Paul McCartney i 2003 afslog tilbuddet fra den engelske dronning om at blive slået til ridder)."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Der er endnu nogle linjer fra Blackstar, fra nummeret ‘Dollar Days’, som er særlig stærke. Bowie synger:"
+              "text": "Der er endnu nogle linjer fra *Blackstar*, fra nummeret ‘Dollar Days’, som er særlig stærke. Bowie synger:"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "If I never see the English evergreens I’mrunning to"
+              "text": "If I never see the English evergreens I’m"
+            },
+            {
+              "text": "running to"
             }
           ]
         },
@@ -2863,19 +2921,19 @@
         {
           "lines": [
             {
-              "text": "I mine øjne hører Bowie til i en utopisk, æstetisk tradition, som længes efter et ja inden for rammerne af engelskhedens indeklemte, smålige og hårde nej. Det, som Bowies musik længtes efter og tillod os at drømme om, var nye måder at være sammen på, en ny styrke i vores lyst og kærlighed udtrykt i skarpere billeder og lyde. Det er sådan, jeg vælger at høre citatet fra digteren Hölderlin, som indledte dette kapitel. Bowies musik gør det muligt for os at forestille os en fremtidig revolution af sindelagene og måderne at forestille sig ting på. Ved at lytte på en anden måde kan vi måske blive i stand til at opføre os og opfatte tingene på en måde, som bringer skam over fortiden."
+              "text": "I mine øjne hører Bowie til i en utopisk, æstetisk tradition, som længes efter et *ja* inden for rammerne af engelskhedens indeklemte, smålige og hårde *nej*. Det, som Bowies musik længtes efter og tillod os at drømme om, var nye måder at være sammen på, en ny styrke i vores lyst og kærlighed udtrykt i skarpere billeder og lyde. Det er sådan, jeg vælger at høre citatet fra digteren Hölderlin, som indledte dette kapitel. Bowies musik gør det muligt for os at forestille os en fremtidig revolution af sindelagene og måderne at forestille sig ting på. Ved at lytte på en anden måde kan vi måske blive i stand til at opføre os og opfatte tingene på en måde, som bringer skam over fortiden."
             }
           ]
         }
       ],
-      "title": "AT SIGE NEJ, MEN MENE JA"
+      "title": "# AT SIGE NEJ, MEN MENE JA"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "BOWIES MUSIK TILBYDER OS EN UDSTRAKT HÅND OG FØRER os til de mørkeste steder, de ensomste steder, men også de mest følsomme steder, de steder, hvor vi har brug for kærlighed, og hvor vi føler et stort begær. Hans musik er ikke kold. Den er det stik modsatte af kold."
+              "text": "**BOWIES MUSIK TILBYDER OS EN UDSTRAKT HÅND OG FØRER** os til de mørkeste steder, de ensomste steder, men også de mest følsomme steder, de steder, hvor vi har brug for kærlighed, og hvor vi føler et stort begær. Hans musik er ikke kold. Den er det stik modsatte af kold."
             }
           ]
         },
@@ -2889,7 +2947,7 @@
         {
           "lines": [
             {
-              "text": "Bowies værk handlede selvfølgelig fra begyndelsen om døden. I ‘Space Oddity’ svæver Major Tom ud i rummet, tydeligt bevidst om at være reduceret til en kendis, en vare. Han dør, mens han fortæller sin hustru, at han elsker hende. Og sådan fortsætter det, fra Bowies Scott Walker-inspirerede coverversion af Jacques Brels ‘My Death’ over ‘Rock ’n’ Roll Suicide’ til ‘We are the Dead’ fra Diamond Dogs og frem til et fremragende, sent nummer som ‘You Feel So Lonely You Could Die’ fra The Next Day, en kærlighedssang om had, som ender med ordene:"
+              "text": "Bowies værk handlede selvfølgelig fra begyndelsen om døden. I ‘Space Oddity’ svæver Major Tom ud i rummet, tydeligt bevidst om at være reduceret til en kendis, en vare. Han dør, mens han fortæller sin hustru, at han elsker hende. Og sådan fortsætter det, fra Bowies Scott Walker-inspirerede coverversion af Jacques Brels ‘My Death’ over ‘Rock ’n’ Roll Suicide’ til ‘We are the Dead’ fra *Diamond Dogs* og frem til et fremragende, sent nummer som ‘You Feel So Lonely You Could Die’ fra *The Next Day*, en kærlighedssang om had, som ender med ordene:"
             }
           ]
         },
@@ -2924,21 +2982,21 @@
         {
           "lines": [
             {
-              "text": "Min første reaktion på Blackstar – fra fredag den 8. januar til søndag den 10. januar – var meget enkel: Det lød som et Bowie-album. Jeg kan huske, at jeg ganske enkelt tænkte: “Det her er virkelig godt.” Ja, det var jazzet, det var melankolsk, der var nye folk med, men det var på ingen måde et totalt brud med fortiden. For den trofaste fan tilbød Blackstar den blanding af noget nyt og af kontinuitet, som er karakteristisk for mange af Bowies bedste plader."
+              "text": "Min første reaktion på *Blackstar* – fra fredag den 8. januar til søndag den 10. januar – var meget enkel: Det lød som et Bowie-album. Jeg kan huske, at jeg ganske enkelt tænkte: “Det her er virkelig godt.” Ja, det var jazzet, det var melankolsk, der var nye folk med, men det var på ingen måde et totalt brud med fortiden. For den trofaste fan tilbød *Blackstar* den blanding af noget nyt og af kontinuitet, som er karakteristisk for mange af Bowies bedste plader."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Jeg så videoen til titelnummeret utallige gange efter dens release den 19. november 2015. Jeg kendte allerede nogle af numrene fra Blackstar, som for eksempel ‘Sue (In a Season of Crime)’ og ‘Tis a Pity She Was a Whore’, om end i andre og efter min mening dårligere miks (begge disse numre fremstår meget mere sanselige og slagkraftige på Blackstar). Mundharpedelen på ‘I Can’t Give Everything Away’ var et tydeligt nik til ‘New Career in a New Town’ fra Low. ‘Dollar Days’ fik mig til at tænke på ‘Thursday’s Child’ fra Hours…"
+              "text": "Jeg så videoen til titelnummeret utallige gange efter dens release den 19. november 2015. Jeg kendte allerede nogle af numrene fra *Blackstar*, som for eksempel ‘Sue (In a Season of Crime)’ og ‘Tis a Pity She Was a Whore’, om end i andre og efter min mening dårligere miks (begge disse numre fremstår meget mere sanselige og slagkraftige på *Blackstar*). Mundharpedelen på ‘I Can’t Give Everything Away’ var et tydeligt nik til ‘New Career in a New Town’ fra *Low*. ‘Dollar Days’ fik mig til at tænke på ‘Thursday’s Child’ fra *Hours…*"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Så hvad ændrede nyheden om Bowies død mandag den 11. januar? Efter at være kommet over det første chok og efter at have skrevet nogle mindeord til New York Times tilbragte jeg hele aftenen i eget selskab med at lytte til Blackstar igen og igen. Det hele lød ganske enkelt anderledes, og det var (selv om dette åbenlyst er absurd), som om Bowie talte direkte til mig. Det var, som om Bowies stemme havde undergået en forandring – den lød nærmest overnaturlig. De ord, som jeg som en besat havde lyttet til de seneste tre dage, havde pludselig fået nogle helt andre konnotationer."
+              "text": "Så hvad ændrede nyheden om Bowies død mandag den 11. januar? Efter at være kommet over det første chok og efter at have skrevet nogle mindeord til *New York Times* tilbragte jeg hele aftenen i eget selskab med at lytte til *Blackstar* igen og igen. Det hele lød ganske enkelt anderledes, og det var (selv om dette åbenlyst er absurd), som om Bowie talte direkte til mig. Det var, som om Bowies stemme havde undergået en forandring – den lød nærmest overnaturlig. De ord, som jeg som en besat havde lyttet til de seneste tre dage, havde pludselig fået nogle helt andre konnotationer."
             }
           ]
         },
@@ -2952,7 +3010,10 @@
         {
           "lines": [
             {
-              "text": "Don’t believe for just one secondI’m forgetting you"
+              "text": "Don’t believe for just one second"
+            },
+            {
+              "text": "I’m forgetting you"
             }
           ]
         },
@@ -2980,7 +3041,7 @@
         {
           "lines": [
             {
-              "text": "Jeg havde de seneste to dage brugt en masse tid på at dechifrere ‘Girl Loves Me’s blanding af Nadsat – det sprog, som Anthony Burgess opfandt i A Clockwork Orange – og bøsseslang fra 1960’ernes London. Men sent om aftenen mandag den 11. januar var sangens budskab enkelt og krystalklart: “Where the fuck did Monday go?” Intet havde forandret sig i musikken på Blackstar, men på en eller anden måde havde alt forandret sig. Bowies kunst lød anderledes efter hans død."
+              "text": "Jeg havde de seneste to dage brugt en masse tid på at dechifrere ‘Girl Loves Me’s blanding af Nadsat – det sprog, som Anthony Burgess opfandt i *A Clockwork Orange* – og bøsseslang fra 1960’ernes London. Men sent om aftenen mandag den 11. januar var sangens budskab enkelt og krystalklart: “Where the fuck did Monday go?” Intet havde forandret sig i musikken på *Blackstar*, men på en eller anden måde havde alt forandret sig. Bowies kunst lød anderledes efter hans død."
             }
           ]
         },
@@ -2999,49 +3060,49 @@
           ]
         }
       ],
-      "title": "HVOR FANDEN BLEV MANDAG AF?"
+      "title": "# HVOR FANDEN BLEV MANDAG AF?"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "MEN HVORFOR LIGE LAZARUS? DET SPEKULEREDE JEG MEGET på. Lazarus var ikke blot titlen på hans sidste video, men også titlen på den musical instrueret af Ivo van Hove, som havde premiere den 7. december 2015 på New York Theatre Workshop, og som Bowie skrev sammen med Enda Walsh. Forestillingen indeholder også sangen ‘Lazarus’, fremragende sunget af Michael C. Hall (hvis Bowie-imitation gennem hele forestillingen er formidabel). Jeg var så heldig at se forestillingen to gange, til forpremieren og igen efter premieren i midten af december, hvor jeg efter forestillingen havde en dialog med publikum i samtale med Henry Hey, Bowies music director."
+              "text": "**MEN HVORFOR LIGE LAZARUS? DET SPEKULEREDE JEG MEGET** på. Lazarus var ikke blot titlen på hans sidste video, men også titlen på den musical instrueret af Ivo van Hove, som havde premiere den 7. december 2015 på New York Theatre Workshop, og som Bowie skrev sammen med Enda Walsh. Forestillingen indeholder også sangen ‘Lazarus’, fremragende sunget af Michael C. Hall (hvis Bowie-imitation gennem hele forestillingen er formidabel). Jeg var så heldig at se forestillingen to gange, til forpremieren og igen efter premieren i midten af december, hvor jeg efter forestillingen havde en dialog med publikum i samtale med Henry Hey, Bowies *music director*."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Fortællingen i forestillingen Lazarus er en slags forsættelse af Manden som kom ned på jorden, Walter Tevis’ roman fra 1963. Nicolas Roegs filmatisering af Tevis’ bog fra 1976 ender med, at rumvæsenet Thomas Jerome Newton, som spilles af Bowie, bor i New York og har et seriøst alkoholproblem. Newton er ikke ældet og kan ikke dø. Forestillingen Lazarus tager tråden op fra filmens slutning og viser Newton i sin lejlighed i New York, hvor han drikker store mængder gin, spiser Twinkie-kager og ser fjernsyn nonstop."
+              "text": "Fortællingen i forestillingen *Lazarus* er en slags forsættelse af *Manden som kom ned på jorden*, Walter Tevis’ roman fra 1963. Nicolas Roegs filmatisering af Tevis’ bog fra 1976 ender med, at rumvæsenet Thomas Jerome Newton, som spilles af Bowie, bor i New York og har et seriøst alkoholproblem. Newton er ikke ældet og kan ikke dø. Forestillingen *Lazarus* tager tråden op fra filmens slutning og viser Newton i sin lejlighed i New York, hvor han drikker store mængder gin, spiser Twinkie-kager og ser fjernsyn nonstop."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Lazarus er historien om et rumvæsen, som er fanget på jorden, og som hverken kan dø eller ældes. Newtons manglende evne til at dø er gennemtrængt af erindringen om den kærlighed, han følte for Mary-Lou, den stuepige, han mødte på motellet i New Mexico i Manden som kom ned på jorden. Vi ser videoflashback af hende på en storskærm på scenens midte. Newton nedbrudte sind fremtryller spøgelset af eller fantasien om en ny teenagepige, som er en kvasiincestuøs blanding af hans kæreste Mary-Lou og hans døde datter derhjemme på planeten. På et tidspunkt forsvinder pigen efter at være blevet symbolsk dræbt, og Newton giver sig hen til en psykotisk vrangforestilling om at flyve af sted i en rumraket og vende tilbage til sin hjemplanet. Men det er tydeligt, at han i virkeligheden ikke er på vej nogen steder hen. Han er bundet til jorden."
+              "text": "*Lazarus* er historien om et rumvæsen, som er fanget på jorden, og som hverken kan dø eller ældes. Newtons manglende evne til at dø er gennemtrængt af erindringen om den kærlighed, han følte for Mary-Lou, den stuepige, han mødte på motellet i New Mexico i *Manden som kom ned på jorden*. Vi ser videoflashback af hende på en storskærm på scenens midte. Newton nedbrudte sind fremtryller spøgelset af eller fantasien om en ny teenagepige, som er en kvasiincestuøs blanding af hans kæreste Mary-Lou og hans døde datter derhjemme på planeten. På et tidspunkt forsvinder pigen efter at være blevet symbolsk dræbt, og Newton giver sig hen til en psykotisk vrangforestilling om at flyve af sted i en rumraket og vende tilbage til sin hjemplanet. Men det er tydeligt, at han i virkeligheden ikke er på vej nogen steder hen. Han er bundet til jorden."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "For Bowies fans er identifikationen af Bowie med Newton fuldstændig. Sådan har det altid været. Stillbilleder fra Roegs Manden som kom ned på jorden blev brugt på coveret af Low og Station to Station. Roeg fik oprindeligt ideen til at caste Bowie i rollen som Newton efter at have set Alan Yentobs dokumentarprogram for BBC2 fra 1975, Cracked Actor, hvor Bowie spiller sig selv, hvad end det så måtte betyde. Det, der er så underligt, er, at Bowie i sine sidste år blev så interesseret i Newton-karakteren, at han ønskede at genbesøge og udvide historien. Denne gang fylder Bowie imidlertid historien med sin egen musik, hvilket muliggør en endnu større identifikation mellem Bowie og Newton end i filmen fra 1976, hvor der ikke optrådte nogle af de kompositioner, som Bowie havde skrevet til soundtracket. I den nye forestilling indgår der omkring 15 Bowie-sange, fire af dem ikke udgivne på daværende tidspunkt, herunder ‘Lazarus’."
+              "text": "For Bowies fans er identifikationen af Bowie med Newton fuldstændig. Sådan har det altid været. Stillbilleder fra Roegs *Manden som kom ned på jorden* blev brugt på coveret af *Low* og *Station to Station*. Roeg fik oprindeligt ideen til at caste Bowie i rollen som Newton efter at have set Alan Yentobs dokumentarprogram for BBC2 fra 1975, *Cracked Actor*, hvor Bowie spiller sig selv, hvad end det så måtte betyde. Det, der er så underligt, er, at Bowie i sine sidste år blev så interesseret i Newton-karakteren, at han ønskede at genbesøge og udvide historien. Denne gang fylder Bowie imidlertid historien med sin egen musik, hvilket muliggør en endnu større identifikation mellem Bowie og Newton end i filmen fra 1976, hvor der ikke optrådte nogle af de kompositioner, som Bowie havde skrevet til soundtracket. I den nye forestilling indgår der omkring 15 Bowie-sange, fire af dem ikke udgivne på daværende tidspunkt, herunder ‘Lazarus’."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Selvfølgelig vil vi i lyset af Bowies død læse alt, hvad han foretog sig de sidste år af sit liv, som en selvbiografisk allegori, især når man præsenteres for så tilsyneladende åbenlyse fingerpeg, som vi kan finde i Lazarus. Men Bowie tager karakteren Newton i besiddelse og mobiliserer den som et udtryksmiddel for en række tilbagevendende temaer i sin musik: aldring, sorg, isolation, tab af kærlighed, afsky for verden og mediefremkaldt psykose. Newton er på en gang Bowie og ikke Bowie. Det er gennem denne afstandtagen, at den dybeste intimitet muliggøres."
+              "text": "Selvfølgelig vil vi i lyset af Bowies død læse alt, hvad han foretog sig de sidste år af sit liv, som en selvbiografisk allegori, især når man præsenteres for så tilsyneladende åbenlyse fingerpeg, som vi kan finde i *Lazarus*. Men Bowie tager karakteren Newton i besiddelse og mobiliserer den som et udtryksmiddel for en række tilbagevendende temaer i sin musik: aldring, sorg, isolation, tab af kærlighed, afsky for verden og mediefremkaldt psykose. Newton er på en gang Bowie og ikke Bowie. Det er gennem denne afstandtagen, at den dybeste intimitet muliggøres."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Men hvorfor hedder musicalen Lazarus? Og hvorfor valgte Bowie, at videoen til nummeret med denne titel skulle være hans sidste, hans sidste offentlige fremtræden, hans sidste fremkaldelse. Her er vi nødt til at vende blikket mod Bibelen. I Johannesevangeliet er Lazarus den person, som Jesus opvakte fra de døde, efter at Lazarus i fire dage havde ligget i en grav i en klippehule. Jesus udsætter sig selv – på grund af de lokale farisæeres had – for en vis fare, da han vender tilbage til landsbyen Betania (i dag byen al-Eizariya, der ligger på Vestbredden). Jesus gør dette af kærlighed til Lazarus, men især på grund af den venlighed og tro, som Lazarus’ søstre, Martha og Maria, viser Jesus. Det var Maria, som “salvede Herren med vellugtende olie og tørrede hans fødder med sit hår”. Dette er det afgørende øjeblik i Det Nye Testamentes fortælling og teologi, hvor Jesus erklærer: “Jeg er opstandelsen og livet; den, der tror på mig, skal leve, om han end dør. Og enhver, som lever og tror på mig, skal aldrig i evighed dø.” Da Jesus ser Marias sorg over sin brors død, siger Johannesevangeliet, at “Jesus brast i gråd.”"
+              "text": "Men hvorfor hedder musicalen *Lazarus*? Og hvorfor valgte Bowie, at videoen til nummeret med denne titel skulle være hans sidste, hans sidste offentlige fremtræden, hans sidste fremkaldelse. Her er vi nødt til at vende blikket mod Bibelen. I Johannesevangeliet er Lazarus den person, som Jesus opvakte fra de døde, efter at Lazarus i fire dage havde ligget i en grav i en klippehule. Jesus udsætter sig selv – på grund af de lokale farisæeres had – for en vis fare, da han vender tilbage til landsbyen Betania (i dag byen al-Eizariya, der ligger på Vestbredden). Jesus gør dette af kærlighed til Lazarus, men især på grund af den venlighed og tro, som Lazarus’ søstre, Martha og Maria, viser Jesus. Det var Maria, som “salvede Herren med vellugtende olie og tørrede hans fødder med sit hår”. Dette er det afgørende øjeblik i Det Nye Testamentes fortælling og teologi, hvor Jesus erklærer: “Jeg er opstandelsen og livet; den, der tror på mig, skal leve, om han end dør. Og enhver, som lever og tror på mig, skal aldrig i evighed dø.” Da Jesus ser Marias sorg over sin brors død, siger Johannesevangeliet, at “Jesus brast i gråd.”"
             }
           ]
         },
@@ -3076,14 +3137,20 @@
         {
           "lines": [
             {
-              "text": "I mean he, he never asked to beraised from the tomb"
+              "text": "I mean he, he never asked to be"
+            },
+            {
+              "text": "raised from the tomb"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "I mean no one ever actually asked him toforsake his dreams."
+              "text": "I mean no one ever actually asked him to"
+            },
+            {
+              "text": "forsake his dreams."
             }
           ]
         },
@@ -3097,14 +3164,20 @@
         {
           "lines": [
             {
-              "text": "He ended up like so many of them do,back on the streets of New York City"
+              "text": "He ended up like so many of them do,"
+            },
+            {
+              "text": "back on the streets of New York City"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "In a soup queue, a dope fiend, a slave, thenprison, then the madhouse, then the grave"
+              "text": "In a soup queue, a dope fiend, a slave, then"
+            },
+            {
+              "text": "prison, then the madhouse, then the grave"
             }
           ]
         },
@@ -3118,14 +3191,17 @@
         {
           "lines": [
             {
-              "text": "But what do we really know of the deadand who actually cares?"
+              "text": "But what do we really know of the dead"
+            },
+            {
+              "text": "and who actually cares?"
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Måske er historien om Lazarus ikke så meget historien om en heroisk genopstandelse, som beviser Jesus’ messianske evner, men en trist fortælling om en person, der trækkes tilbage i livet uden egentlig at have lyst til det. Bowies Lazarus er ikke så meget en historie om en tilbagevenden til livet som en historie om Newtons erkendelse af sin manglende evne til at dø, samtidig med at han sørger over tabt kærlighed, en historie om at være isoleret fra verden, afhængig og psykotisk."
+              "text": "Måske er historien om Lazarus ikke så meget historien om en heroisk genopstandelse, som beviser Jesus’ messianske evner, men en trist fortælling om en person, der trækkes tilbage i livet uden egentlig at have lyst til det. Bowies *Lazarus* er ikke så meget en historie om en tilbagevenden til livet som en historie om Newtons erkendelse af sin manglende evne til at dø, samtidig med at han sørger over tabt kærlighed, en historie om at være isoleret fra verden, afhængig og psykotisk."
             }
           ]
         },
@@ -3151,35 +3227,35 @@
           ]
         }
       ],
-      "title": "LAZARUS, NEWTON, GRACCHUS"
+      "title": "# LAZARUS, NEWTON, GRACCHUS"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "JEG VIL GERNE AFSLUTTE DENNE BOG, HVOR JEG BEGYNDTE; med min mor, Sheila Patricia Critchley. Det var sammen med hende, at jeg i 1972 så Bowie på Top of the Pops, og det var hende, der købte ‘Starman’ til mig. Hun introducerede mig til Bowie, og for at være ærlig, var Bowie en af de få ting, vi egentlig var i stand til at tale sammen om i løbet af de mindre gyldne år, som fulgte."
+              "text": "**JEG VIL GERNE AFSLUTTE DENNE BOG, HVOR JEG BEGYNDTE**; med min mor, Sheila Patricia Critchley. Det var sammen med hende, at jeg i 1972 så Bowie på *Top of the Pops*, og det var hende, der købte ‘Starman’ til mig. Hun introducerede mig til Bowie, og for at være ærlig, var Bowie en af de få ting, vi egentlig var i stand til at tale sammen om i løbet af de mindre gyldne år, som fulgte."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Min mor døde den 5. december 2015. Jeg vil ikke gå i detaljer. Folk siger alle mulige ret uinteressante ting om sorgens smerte. Mine følelser i dagene og ugerne efter, at hun døde, var ikke kun en følelse af voldsom smerte ledsaget af en manglende evne til at koncentrere mig, for slet ikke at tale om at sove, men en meget klar og meget nøgtern følelse af, at tiden havde mistet sin fremdrift. Tiden var på en eller anden måde gået i stå, den ville ikke give sig eller flytte sig. Jeg følte mig fanget i tidens net. Selvfølgelig tænkte jeg på Bowies ord fra Aladdin Sane, hvor tidens “script is you and me … he flexes like a whore … his trick is you and me”."
+              "text": "Min mor døde den 5. december 2015. Jeg vil ikke gå i detaljer. Folk siger alle mulige ret uinteressante ting om sorgens smerte. Mine følelser i dagene og ugerne efter, at hun døde, var ikke kun en følelse af voldsom smerte ledsaget af en manglende evne til at koncentrere mig, for slet ikke at tale om at sove, men en meget klar og meget nøgtern følelse af, at tiden havde mistet sin fremdrift. Tiden var på en eller anden måde gået i stå, den ville ikke give sig eller flytte sig. Jeg følte mig fanget i tidens net. Selvfølgelig tænkte jeg på Bowies ord fra *Aladdin Sane*, hvor tidens “script is you and me … he flexes like a whore … his trick is you and me”."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "I ugerne efter min mors død læste jeg så meget om sorg, som mine begrænsede koncentrationsevner tillod. Men den eneste person, som syntes at forstå, hvad jeg følte, var den engelske digter Denise Riley, der har skrevet en form for fragmenteret krønike om eftervirkningerne af sin søns død (Time Lived, Without its Flow; Capsule Editions, 2012). Det er ikke kun det, at man føler sig umådeligt trist, eller at man er ved at gennemgå en form for sorgproces, som indebærer en række distinkte skridt. Efter min mor døde, havde jeg en meget klar, næsten kontemplativ følelse af tidens virkelighed, af at være fanget i nuet og blot håbe på, at det ville gå over. Det var en kontemplativ tilstand, som ikke udspillede sig i mit hoved. Den tog bolig i kroppen."
+              "text": "I ugerne efter min mors død læste jeg så meget om sorg, som mine begrænsede koncentrationsevner tillod. Men den eneste person, som syntes at forstå, hvad jeg følte, var den engelske digter Denise Riley, der har skrevet en form for fragmenteret krønike om eftervirkningerne af sin søns død (*Time Lived, Without its Flow*; Capsule Editions, 2012). Det er ikke kun det, at man føler sig umådeligt trist, eller at man er ved at gennemgå en form for sorgproces, som indebærer en række distinkte skridt. Efter min mor døde, havde jeg en meget klar, næsten kontemplativ følelse af tidens virkelighed, af at være fanget i nuet og blot håbe på, at det ville gå over. Det var en kontemplativ tilstand, som ikke udspillede sig i mit hoved. Den tog bolig i kroppen."
             }
           ]
         },
         {
           "lines": [
             {
-              "text": "Riley skriver, at døden giver os et knugende greb om det nu, det øjeblik, vi er indlejret i. Vi sidder fast i nuet – et nu, som ikke vil give sig. Det er nonsens at sige carpe diem, for der er ingen dag at gribe. Tiden har grebet os. Og denne meget sanselige følelse af, at tiden har mistet sin fremdrift, leves ikke i frygt og bæven, men i det, som Riley kalder for en “krystalklar enkelhed”. Vi flyder på en eller anden måde gennem tiden ansigt til ansigt med et smerteligt tab, idet vi knap nok lægger mærke til tidens bevægelse, mens vi indånder og udånder tiden. Døden ankommer til vores verden, og tiden går i stå."
+              "text": "Riley skriver, at døden giver os et knugende greb om det nu, det øjeblik, vi er indlejret i. Vi sidder fast i nuet – et nu, som ikke vil give sig. Det er nonsens at sige *carpe diem*, for der er ingen dag at gribe. Tiden har grebet os. Og denne meget sanselige følelse af, at tiden har mistet sin fremdrift, leves ikke i frygt og bæven, men i det, som Riley kalder for en “krystalklar enkelhed”. Vi flyder på en eller anden måde gennem tiden ansigt til ansigt med et smerteligt tab, idet vi knap nok lægger mærke til tidens bevægelse, mens vi indånder og udånder tiden. Døden ankommer til vores verden, og tiden går i stå."
             }
           ]
         },
@@ -3212,7 +3288,7 @@
           ]
         }
       ],
-      "title": "SHEILA, TAKE A BOW"
+      "title": "# SHEILA, TAKE A BOW"
     },
     {
       "paragraphs": [
@@ -3245,7 +3321,7 @@
           ]
         }
       ],
-      "title": "TAK"
+      "title": "# TAK"
     },
     {
       "paragraphs": [
@@ -3259,7 +3335,7 @@
         {
           "lines": [
             {
-              "text": "‘Andy Warhol’, ‘Life on Mars?’, ‘Quicksand’, David Bowie; ‘The Secret Life of Arabia’, David Bowie, Brian Eno og Carlos Alomar; ‘Candidate’, David Bowie."
+              "text": "‘Andy Warhol’, ‘Life on Mars?’, ‘Quicksand’, *David Bowie*; ‘The Secret Life of Arabia’, *David Bowie, Brian Eno og Carlos Alomar*; ‘Candidate’, *David Bowie*."
             }
           ]
         },
@@ -3273,7 +3349,7 @@
         {
           "lines": [
             {
-              "text": "‘Rock ’n’ Roll Suicide’, David Bowie."
+              "text": "‘Rock ’n’ Roll Suicide’, *David Bowie*."
             }
           ]
         },
@@ -3287,7 +3363,7 @@
         {
           "lines": [
             {
-              "text": "‘Changes’, David Bowie."
+              "text": "‘Changes’, *David Bowie*."
             }
           ]
         },
@@ -3301,7 +3377,7 @@
         {
           "lines": [
             {
-              "text": "‘Heat’, ‘Quicksand’, David Bowie."
+              "text": "‘Heat’, ‘Quicksand’, *David Bowie*."
             }
           ]
         },
@@ -3315,7 +3391,7 @@
         {
           "lines": [
             {
-              "text": "‘Rebel, Rebel’, ‘The Supermen’, ‘After All’, David Bowie; ‘“Heroes”’, David Bowie og Brian Eno."
+              "text": "‘Rebel, Rebel’, ‘The Supermen’, ‘After All’, *David Bowie*; ‘“Heroes”’, *David Bowie og Brian Eno*."
             }
           ]
         },
@@ -3329,7 +3405,7 @@
         {
           "lines": [
             {
-              "text": "‘Space Oddity’, ‘Ashes to Ashes’, ‘Starman’, David Bowie."
+              "text": "‘Space Oddity’, ‘Ashes to Ashes’, ‘Starman’, *David Bowie*."
             }
           ]
         },
@@ -3343,7 +3419,7 @@
         {
           "lines": [
             {
-              "text": "‘Oh! You Pretty Things’, ‘Drive-In Saturday’, ‘Diamond Dogs’, ‘Future Legend’, David Bowie."
+              "text": "‘Oh! You Pretty Things’, ‘Drive-In Saturday’, ‘Diamond Dogs’, ‘Future Legend’, *David Bowie*."
             }
           ]
         },
@@ -3357,7 +3433,7 @@
         {
           "lines": [
             {
-              "text": "‘Sweet Thing’, ‘All the Madmen’, ‘Candidate’, David Bowie."
+              "text": "‘Sweet Thing’, ‘All the Madmen’, ‘Candidate’, *David Bowie*."
             }
           ]
         },
@@ -3371,7 +3447,7 @@
         {
           "lines": [
             {
-              "text": "‘Dantons død’, Georg Büchner; ‘It’s No Game’, ‘Up the Hill Backwards’, David Bowie."
+              "text": "‘Dantons død’, *Georg Büchner*; ‘It’s No Game’, ‘Up the Hill Backwards’, *David Bowie*."
             }
           ]
         },
@@ -3385,7 +3461,7 @@
         {
           "lines": [
             {
-              "text": "‘All the Young Dudes’, David Bowie."
+              "text": "‘All the Young Dudes’, *David Bowie*."
             }
           ]
         },
@@ -3399,7 +3475,7 @@
         {
           "lines": [
             {
-              "text": "‘I Can’t Read’, David Bowie og Reeves Gabrels."
+              "text": "‘I Can’t Read’, *David Bowie og Reeves Gabrels*."
             }
           ]
         },
@@ -3413,7 +3489,7 @@
         {
           "lines": [
             {
-              "text": "‘Sound and Vision’, ‘Be My Wife’, ‘Station to Station’, ‘“Heroes”’, ‘Let’s Dance’, ‘Blackout’, ‘5:15 The Angels Have Gone’, ‘Absolute Beginners’, ‘Survive’, David Bowie."
+              "text": "‘Sound and Vision’, ‘Be My Wife’, ‘Station to Station’, ‘“Heroes”’, ‘Let’s Dance’, ‘Blackout’, ‘5:15 The Angels Have Gone’, ‘Absolute Beginners’, ‘Survive’, *David Bowie*."
             }
           ]
         },
@@ -3427,7 +3503,7 @@
         {
           "lines": [
             {
-              "text": "‘Heathen (The Rays)’, ‘Reality’, David Bowie."
+              "text": "‘Heathen (The Rays)’, ‘Reality’, *David Bowie*."
             }
           ]
         },
@@ -3441,7 +3517,7 @@
         {
           "lines": [
             {
-              "text": "‘Reality’, David Bowie; ‘Watt’, Samuel Beckett; artikel i Sound on Sound, David Bowie."
+              "text": "‘Reality’, *David Bowie*; ‘Watt’, Samuel Beckett; artikel i *Sound on Sound*, *David Bowie*."
             }
           ]
         },
@@ -3455,7 +3531,7 @@
         {
           "lines": [
             {
-              "text": "‘The Width of a Circle’, David Bowie; ‘Seven’, David Bowie og Reeves Gabrels; ‘Word on a Wing’, ‘No Control’, ‘Slow Burn’, ‘The Next Day’, David Bowie."
+              "text": "‘The Width of a Circle’, *David Bowie*; ‘Seven’, *David Bowie og Reeves Gabrels*; ‘Word on a Wing’, ‘No Control’, ‘Slow Burn’, ‘The Next Day’, *David Bowie*."
             }
           ]
         },
@@ -3469,7 +3545,7 @@
         {
           "lines": [
             {
-              "text": "‘Sunday’, David Bowie; ‘Sunday Morning’, Wallace Stevens."
+              "text": "‘Sunday’, *David Bowie*; ‘Sunday Morning’, *Wallace Stevens*."
             }
           ]
         },
@@ -3483,7 +3559,7 @@
         {
           "lines": [
             {
-              "text": "‘Where Are We Now?’, David Bowie."
+              "text": "‘Where Are We Now?’, *David Bowie*."
             }
           ]
         },
@@ -3497,7 +3573,7 @@
         {
           "lines": [
             {
-              "text": "‘Blackstar’, ‘Sunday’, ‘After All’, ‘“Heroes”’, ‘I Can’t Give Everything Away’, ‘Rock ’n’ Roll Suicide’, David Bowie."
+              "text": "‘Blackstar’, ‘Sunday’, ‘After All’, ‘“Heroes”’, ‘I Can’t Give Everything Away’, ‘Rock ’n’ Roll Suicide’, *David Bowie*."
             }
           ]
         },
@@ -3511,7 +3587,7 @@
         {
           "lines": [
             {
-              "text": "‘You Feel So Lonely You Could Die’, ‘Dollar Days’, ‘Girl Loves Me’, ‘Lazarus’, David Bowie."
+              "text": "‘You Feel So Lonely You Could Die’, ‘Dollar Days’, ‘Girl Loves Me’, ‘Lazarus’, *David Bowie*."
             }
           ]
         },
@@ -3525,7 +3601,7 @@
         {
           "lines": [
             {
-              "text": "‘Lazarus’, David Bowie; ‘Dig, Lazarus Dig!’, Nick Cave; ‘Jægeren Gracchus’, Franz Kafka."
+              "text": "‘Lazarus’, *David Bowie*; ‘Dig, Lazarus Dig!’, *Nick Cave*; ‘Jægeren Gracchus’, *Franz Kafka*."
             }
           ]
         },
@@ -3539,19 +3615,19 @@
         {
           "lines": [
             {
-              "text": "‘Time Lived, Without its Flow’, Denise Riley."
+              "text": "‘Time Lived, Without its Flow’, *Denise Riley*."
             }
           ]
         }
       ],
-      "title": "ANVENDTE TEKSTER"
+      "title": "# ANVENDTE TEKSTER"
     },
     {
       "paragraphs": [
         {
           "lines": [
             {
-              "text": "SIMON CRITCHLEY (f. 1960) er Hans Jonas Professor ved New School for Social Research in New York. Han har skrevet mange bøger, herunder Very Little … Almost Nothing, Infinitely Demanding, The Book of Dead Philosophers og The Faith of the Faithless. I 2014 udkom Critchleys første roman Memory Theatre og i 2015 Notes on Suicide. Critchley redigerer ‘The Stone’, en klumme om filosofi i The New York Times, og udgør 50 procent af et obskurt band ved navn Critchley & Simmons."
+              "text": "**SIMON CRITCHLEY** (f. 1960) er Hans Jonas Professor ved New School for Social Research in New York. Han har skrevet mange bøger, herunder *Very Little … Almost Nothing*, *Infinitely Demanding*, *The Book of Dead Philosophers* og *The Faith of the Faithless*. I 2014 udkom Critchleys første roman *Memory Theatre* og i 2015 *Notes on Suicide.* Critchley redigerer ‘The Stone’, en klumme om filosofi i *The New York Times*, og udgør 50 procent af et obskurt band ved navn Critchley & Simmons."
             }
           ]
         }

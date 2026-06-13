@@ -14,7 +14,7 @@ tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
 clap = { version = "4", features = ["derive"] }
 epub = "2"
 serde_json = "1"
-scraper = "0.18"
+html2text = "0.4"
 
 [build-dependencies]
 tonic-prost-build = "*"

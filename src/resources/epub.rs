@@ -1,5 +1,4 @@
 use epub::doc::EpubDoc;
-use scraper::{Html, Selector};
 
 use crate::messages::{Book, Chapter, Line, Paragraph};
 
@@ -20,41 +19,14 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
         })
         .unwrap_or_default();
 
-    let p_selector = Selector::parse("p").unwrap();
-    let h_selector = Selector::parse("h1, h2, h3, h4, h5, h6").unwrap();
-
     let mut chapters = Vec::new();
 
     loop {
         let mime = doc.get_current_mime().unwrap_or_default();
         if mime.contains("html") {
             if let Some((content, _)) = doc.get_current_str() {
-                let document = Html::parse_document(&content);
-
-                let chapter_title = document
-                    .select(&h_selector)
-                    .next()
-                    .map(|el| el.text().collect::<String>().trim().to_string())
-                    .unwrap_or_default();
-
-                let paragraphs: Vec<Paragraph> = document
-                    .select(&p_selector)
-                    .filter_map(|el| {
-                        let text = el.text().collect::<String>();
-                        let text = text.trim().to_string();
-                        if text.is_empty() {
-                            return None;
-                        }
-                        let lines = vec![Line { text: text.clone() }];
-                        Some(Paragraph { lines })
-                    })
-                    .collect();
-
-                if !paragraphs.is_empty() {
-                    chapters.push(Chapter {
-                        title: chapter_title,
-                        paragraphs,
-                    });
+                if let Some(chapter) = parse_html_chapter(&content) {
+                    chapters.push(chapter);
                 }
             }
         }
@@ -70,5 +42,46 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
         description,
         keywords,
         chapters,
+    })
+}
+
+fn parse_html_chapter(html: &str) -> Option<Chapter> {
+    let text = html2text::from_read(html.as_bytes(), usize::MAX);
+
+    let mut blocks = text
+        .split("\n\n")
+        .map(|b| b.trim())
+        .filter(|b| !b.is_empty());
+
+    // Treat the first block as the chapter title if it's a single short line
+    let first = blocks.next()?;
+    let (chapter_title, rest_start) = if !first.contains('\n') && first.len() <= 120 {
+        (first.to_string(), None)
+    } else {
+        (String::new(), Some(first))
+    };
+
+    let paragraphs: Vec<Paragraph> = rest_start
+        .into_iter()
+        .chain(blocks)
+        .map(|block| {
+            let lines = block
+                .lines()
+                .map(|l| l.trim())
+                .filter(|l| !l.is_empty())
+                .map(|l| Line { text: l.to_string() })
+                .collect::<Vec<_>>();
+            Paragraph { lines }
+        })
+        .filter(|p| !p.lines.is_empty())
+        .collect();
+
+    if paragraphs.is_empty() {
+        return None;
+    }
+
+    Some(Chapter {
+        title: chapter_title,
+        paragraphs,
     })
 }
