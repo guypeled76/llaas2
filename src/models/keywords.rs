@@ -1,3 +1,7 @@
+use rust_bert::pipelines::{
+    keywords_extraction::KeywordExtractionModel
+};
+
 pub fn apply() {
     let model = KeywordExtractionModel::new(Default::default()).unwrap();
     let input = [

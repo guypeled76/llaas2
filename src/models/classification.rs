@@ -1,3 +1,8 @@
+use rust_bert::pipelines::{
+    zero_shot_classification::ZeroShotClassificationModel
+};
+
+
 pub fn apply() {
     let classification_model = ZeroShotClassificationModel::new(Default::default()).unwrap();
     let input = [
