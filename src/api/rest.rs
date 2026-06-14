@@ -1,8 +1,18 @@
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+use actix_web::{App, HttpResponse, HttpServer, Responder, get, patch, post, web};
 
-#[get("/test")]
-async fn index() -> impl Responder {
-    HttpResponse::Ok().body("Hello, world!")
+#[get("/languages/list")]
+async fn languages_list() -> impl Responder {
+    HttpResponse::Ok().body("Available languages: en, es, fr, de")
+}
+
+#[post("/languages/add/{name}")]
+async fn languages_add() -> impl Responder {
+    HttpResponse::Ok().body(format!("Language {} added!!", "dd"))
+}
+
+#[patch("/languages/update/{name}")]
+async fn languages_update() -> impl Responder {
+    HttpResponse::Ok().body(format!("Language {} updated!!", "dd"))
 }
 
 /**
@@ -13,7 +23,9 @@ pub fn start_server(port: u16) {
     let address = format!("0.0.0.0:{}", port);
     let server = HttpServer::new(|| {
         App::new()
-            .service(index)
+            .service(languages_list)
+            .service(languages_add)
+            .service(languages_update)
     })
     .bind(address)
     .expect("Failed to bind server")
