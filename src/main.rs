@@ -63,8 +63,12 @@ fn main() {
             api::rest::start_server(port);
         }
         Commands::Video { url, languages } => {
-            resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
-            println!("Downloaded video from URL: {}", url);
+            let result = resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
+            println!("Downloaded video from URL: {}", result.url);
+            println!("Video path: {} (valid: {})", result.video.0, result.video.1);
+            for (lang, path, valid) in result.subtitles {
+                println!("Subtitle [{}]: {} (valid: {})", lang, path, valid);
+            }
         }
     }
 }

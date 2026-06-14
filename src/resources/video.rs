@@ -74,10 +74,11 @@ pub fn download(url: &str, languages: &[&str]) -> Result<Video, VideoError> {
 
         // The subtitles field contains a vector of tuples, each containing the language, 
         // path to the subtitle file, and a boolean indicating whether the file exists and is valid.
-        let subtitles = languages.iter().map(|&lang| {
-            let sub_path = output_dir.join(format!("output.{}.vtt", lang));
-            (lang.to_string(), sub_path.to_str().unwrap().to_string(), sub_path.exists())
-        }).collect();
+        let subtitles = languages
+            .iter()
+            .map(|lang| (output_dir.join(format!("output.{}.vtt", lang)), lang))
+            .map(|(path, lang)| (lang.to_string(), path.to_str().unwrap().to_string(), path.exists()))
+            .collect();
 
     // The Video struct is returned with the URL, 
     // paths to the downloaded video and subtitles, 
