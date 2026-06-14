@@ -1,6 +1,8 @@
 use surrealdb::Surreal;
 use surrealdb::engine::local::RocksDb;
 
+use crate::common::errors::LlaasError;
+
 
 // A module to handle database connections and operations using SurrealDB with a RocksDB engine. 
 // It provides a Connection struct that initializes the database connection and allows for future 
@@ -12,7 +14,7 @@ pub struct Connection {
 impl Connection {
 
     // Initialize the database connection
-    pub async fn new() -> Result<Self, surrealdb::Error> {
+    pub async fn new() -> Result<Self, LlaasError> {
         let db = Surreal::new::<RocksDb>("./resources/data").await?;
         db.signin(surrealdb::auth::Root {
             username: "root",

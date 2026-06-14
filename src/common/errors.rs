@@ -5,6 +5,7 @@ pub enum LlaasError {
     PredictionError(String),
     FileNotFound(String),
     IOError(std::io::Error),
+    DatabaseError(surrealdb::Error),
 }
 
 /**
@@ -13,5 +14,14 @@ pub enum LlaasError {
 impl From<std::io::Error> for LlaasError {
     fn from(error: std::io::Error) -> Self {
         LlaasError::IOError(error)
+    }
+}
+
+/**
+ * Implements the From trait to convert a SurrealDB error into a LlaasError.
+ */
+impl From<surrealdb::Error> for LlaasError {
+    fn from(error: surrealdb::Error) -> Self {
+        LlaasError::DatabaseError(error)
     }
 }
