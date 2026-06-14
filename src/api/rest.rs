@@ -1,13 +1,22 @@
-use actix_web::{App, HttpResponse, HttpServer, Responder, get, patch, post, web};
+use actix_web::{App, HttpResponse, HttpServer, Responder, get, patch, post, web::Json};
+use validator::Validate;
+
+use crate::api::types::Language;
+
+
+
 
 #[get("/languages/list")]
 async fn languages_list() -> impl Responder {
     HttpResponse::Ok().body("Available languages: en, es, fr, de")
 }
 
-#[post("/languages/add/{name}")]
-async fn languages_add() -> impl Responder {
-    HttpResponse::Ok().body(format!("Language {} added!!", "dd"))
+#[post("/languages/add")]
+async fn languages_add(body: Json<Language>) -> impl Responder {
+    match body.validate() {
+        Err(errors) => HttpResponse::BadRequest().body(format!("Validation errors: {:?}", errors)),
+        Ok(_) => HttpResponse::Ok().body(format!("Language {} added!!", body.name)),
+    }
 }
 
 #[patch("/languages/update/{name}")]
