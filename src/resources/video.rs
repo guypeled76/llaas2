@@ -262,7 +262,7 @@ pub fn download(url: &str, languages: &[&str]) -> Result<Video, VideoError> {
             "--no-playlist",
             "--embed-metadata",
             "--embed-thumbnail",
-            "--movflags", "+faststart",
+            //"--movflags", "+faststart",
             "--write-subs",
             "--sub-langs", &languages.join(","),
             url,

@@ -35,7 +35,7 @@ async fn languages_update(url: Path<LanguageUrl>) -> impl Responder {
     }
 }
 
-#[patch("/videos/{id}/{lang}/subtitles.vtt")]
+#[get("/videos/{id}/{lang}/subtitles.vtt")]
 async fn video_vtt(path: Path<(uuid::Uuid, String)>) -> impl Responder {
     let (id, lang) = path.into_inner();
     match video::subtitles(id, &lang) {
@@ -44,7 +44,7 @@ async fn video_vtt(path: Path<(uuid::Uuid, String)>) -> impl Responder {
     }
 }
 
-#[patch("/videos/{id}/{lang}/view.html")]
+#[get("/videos/{id}/{lang}/view.html")]
 async fn video_view(path: Path<(uuid::Uuid, String)>) -> impl Responder {
     let (id, lang) = path.into_inner();
     match video::view(id, &lang) {
@@ -53,7 +53,7 @@ async fn video_view(path: Path<(uuid::Uuid, String)>) -> impl Responder {
     }
 }
 
-#[patch("/videos/{id}/stream")]
+#[get("/videos/{id}.mp4")]
 async fn video_stream(req: HttpRequest, path: Path<uuid::Uuid>) -> impl Responder {
     let id = path.into_inner();
     video::stream(req, id)
