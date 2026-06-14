@@ -25,6 +25,8 @@ uuid = "1.23.3"
 validator = { version = "0.20.0", features=["derive"]}
 async-trait = "0.1.89"
 derive_more = "2.1.1"
+tokio-util = "0.7.18"
+webvtt-parser = "1.0.0-beta.4-rc.5"
 
 [build-dependencies]
 tonic-prost-build = "*"
