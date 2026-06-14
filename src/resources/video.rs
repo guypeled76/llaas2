@@ -84,8 +84,8 @@ pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, VideoError> {
         <body>
             <h3>Instant Subtitle Playback Sync</h3>
             <video id="myVideo" controls width="640">
-                <source src="/video" type="video/mp4">
-                <track id="subTrack" src="/subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+                <source src="/videos/{uid}.mp4" type="video/mp4">
+                <track id="subTrack" src="/videos/{uid}/{lang}/subtitles.vtt" kind="subtitles" srclang="{lang}" label="{lang}" default>
             </video>
 
             <div id="subtitle-timeline">
