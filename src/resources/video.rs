@@ -8,10 +8,10 @@ use std::path::PathBuf;
 use std::process::Command;
 
 pub struct Video {
-    url: String,
-    video: (String, bool), // (path, is_valid)
-    subtitles: Vec<(String, String, bool)>, // (language, path, is_valid)
-    languages: Vec<String>,
+    pub url: String,
+    pub video: (String, bool), // (path, is_valid)
+    pub subtitles: Vec<(String, String, bool)>, // (language, path, is_valid)
+    pub languages: Vec<String>,
 }
 
 /**
@@ -22,7 +22,7 @@ pub struct Video {
  */
 #[derive(Debug)]
 pub struct VideoError {
-    message: String,
+    pub message: String,
 }
 
 /**
@@ -50,6 +50,7 @@ pub fn download(url: &str, languages: &[&str]) -> Result<Video, VideoError> {
     // Execute the yt-dlp command to download the video and extract subtitles in the specified languages.
     // https://www.ditig.com/yt-dlp-cheat-sheet#embed-metadata-and-thumbnail
     // yt-dlp -f "mp4" --no-playlist --embed-metadata --embed-thumbnail --write-subs --sub-langs "es" "{utl}" -o "output.%(ext)s"
+    // We show the progress of the download and subtitle extraction process by printing messages to the console.
     Command::new("yt-dlp")
         .args(&[
             "-f", "mp4",
@@ -61,6 +62,7 @@ pub fn download(url: &str, languages: &[&str]) -> Result<Video, VideoError> {
             url,
             "-o", output_dir.join("output.%(ext)s").to_str().unwrap(),
         ])
+        .stdout(std::process::Stdio::inherit())
         .output()
         .map_err(|e| VideoError { message: format!("Failed to execute yt-dlp: {}", e) })?;
 
