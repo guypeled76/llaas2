@@ -2,9 +2,11 @@ mod models;
 mod resources;
 mod common;
 mod messages;
+mod api;
 
 use clap::{Parser, Subcommand};
 use std::fs;
+use models::tts;
 
 #[derive(Parser)]
 #[command(name = "llaas")]
@@ -29,6 +31,16 @@ enum Commands {
         #[arg(long, default_value = "en")]
         lang: String,
     },
+    Video {
+        #[arg(long)]
+        url: String,
+        #[arg(long, default_value = "en")]
+        languages: Vec<String>,
+    },
+    Start {
+        #[arg(long, default_value = "8080")]
+        port: u16,
+    },
 }
 
 fn main() {
@@ -43,8 +55,20 @@ fn main() {
             println!("Written to {to}");
         }
         Commands::Tts { text, file, lang } => {
-            models::tts::TtsModel::wav(&text, &file, &lang).unwrap();
+            tts::save_as_wav(tts::TtsPreset::OmniVoice, &text, &file, &lang).unwrap();
             println!("Written to {file}");
+        }
+        Commands::Start { port } => {
+            println!("Starting server on port {port}...");
+            api::rest::start_server(port);
+        }
+        Commands::Video { url, languages } => {
+            let result = resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
+            println!("Downloaded video from URL: {}", result.url);
+            println!("Video path: {} (valid: {})", result.video.0, result.video.1);
+            for (lang, path, valid) in result.subtitles {
+                println!("Subtitle [{}]: {} (valid: {})", lang, path, valid);
+            }
         }
     }
 }
