@@ -2,6 +2,7 @@ mod models;
 mod resources;
 mod common;
 mod messages;
+mod api;
 
 use clap::{Parser, Subcommand};
 use std::fs;
@@ -29,6 +30,10 @@ enum Commands {
         #[arg(long, default_value = "en")]
         lang: String,
     },
+    Start {
+        #[arg(long, default_value = "8080")]
+        port: u16,
+    },
 }
 
 fn main() {
@@ -45,6 +50,10 @@ fn main() {
         Commands::Tts { text, file, lang } => {
             models::tts::TtsModel::wav(&text, &file, &lang).unwrap();
             println!("Written to {file}");
+        }
+        Commands::Start { port } => {
+            println!("Starting server on port {port}...");
+            api::rest::start_server(port);
         }
     }
 }
