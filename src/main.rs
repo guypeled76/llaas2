@@ -6,6 +6,7 @@ mod api;
 
 use clap::{Parser, Subcommand};
 use std::fs;
+use models::tts;
 
 #[derive(Parser)]
 #[command(name = "llaas")]
@@ -48,7 +49,7 @@ fn main() {
             println!("Written to {to}");
         }
         Commands::Tts { text, file, lang } => {
-            models::tts::TtsModel::wav(&text, &file, &lang).unwrap();
+            tts::save_as_wav(tts::TtsPreset::OmniVoice, &text, &file, &lang).unwrap();
             println!("Written to {file}");
         }
         Commands::Start { port } => {
