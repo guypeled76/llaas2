@@ -4,6 +4,9 @@
  * The Video struct contains fields for the URL of the video, the path to the downloaded video file,
  * the paths to the extracted subtitles, and the list of languages for which subtitles were extracted.
  */
+use std::path::PathBuf;
+use std::process::Command;
+
 pub struct Video {
     url: String,
     video: (String, bool), // (path, is_valid)
@@ -17,6 +20,7 @@ pub struct Video {
  * The VideoError struct can be used to represent various types of errors, 
  * such as failures in executing the yt-dlp command, issues with file paths, or problems with subtitle extraction. By using a custom error type, we can provide more specific and informative error messages to help diagnose and resolve issues that may arise during the video processing workflow.
  */
+#[derive(Debug)]
 pub struct VideoError {
     message: String,
 }

@@ -63,8 +63,8 @@ fn main() {
             api::rest::start_server(port);
         }
         Commands::Video { url, languages } => {
-            let video = resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
-            println!("Downloaded video from URL: {}", video.url);
+            resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
+            println!("Downloaded video from URL: {}", url);
         }
     }
 }
