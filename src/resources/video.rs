@@ -1,18 +1,15 @@
-
 /**
- * This module defines the Video struct, which represents a video resource that has been downloaded from a given URL. 
- * The Video struct contains fields for the URL of the video, the path to the downloaded video file,
- * the paths to the extracted subtitles, and the list of languages for which subtitles were extracted.
+ * This module provides functionality for downloading videos from a given URL, 
+ * extracting subtitles in specified languages, and serving the video and subtitle files through HTTP endpoints.
  */
+
+ // Standard library imports for file handling, process execution, and path manipulation.
 use std::path::PathBuf;
 use std::process::Command;
 use std::io::SeekFrom;
 use std::io::Seek;
 
-use webvtt_parser::{
-    Vtt
-};
-
+// Actix-web imports for building the REST API endpoints.
 use actix_web::{
     http::header,
     HttpResponse, 
@@ -20,11 +17,8 @@ use actix_web::{
     Responder
 };
 
-
+// Local module imports for handling video processing and errors.
 use tokio::io::AsyncReadExt;
-
-
-
 
 /**
  * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
@@ -44,18 +38,33 @@ pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, VideoError> {
     }
 }
 
+/**
+ * Generates an HTML view for a video with synchronized subtitle playback.
+ * The function retrieves the subtitle file for the specified video and language, 
+ * parses it using the local WebVTT parser, and generates an HTML page that includes a video player with controls and a track for subtitles.
+ * The generated HTML also includes a timeline of buttons for each subtitle cue, allowing users to jump to specific timestamps in the video.
+ * When a button is clicked, it triggers a JavaScript function that jumps to the corresponding time in the video, enabling instant subtitle playback synchronization.
+ * 
+ * Arguments
+ * * `uid` - A UUID that serves as a unique identifier for the video resource,
+ * * `lang` - A string slice that holds the language code for the subtitles to be displayed in the view.
+ * Returns
+ * * `Result<String, VideoError>` - A result containing the generated HTML view as a string if successful, 
+ * * or a VideoError if there is an error in retrieving the subtitle file, parsing
+ * * the VTT content, or any other issues that may arise during the view generation process.
+ */
 pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, VideoError> {
     let file = subtitle(uid, lang)?;
     let content = std::fs::read_to_string(file)?;
-    let vtt = Vtt::parse(&content)?;
+    let cues = parse_vtt_cues(&content);
   
 
     // Generate HTML buttons for each subtitle cue, allowing users to jump to specific timestamps in the video. 
     // Each button displays the timestamp and the subtitle text, and when clicked, 
     // it triggers a JavaScript function to jump to the corresponding time in the video.
     let mut buttons = String::new();
-    vtt.cues.iter().for_each(|cue| {
-        let start_seconds = cue.start.as_milliseconds() as f64 / 1000.0;
+    cues.iter().for_each(|cue| {
+        let start_seconds = cue.start_seconds;
         let label_minutes = (start_seconds / 60.0).floor() as u64;
         let label_seconds = (start_seconds % 60.0).floor() as u64;
         let time_label = format!("{:02}:{:02}", label_minutes, label_seconds);
@@ -222,15 +231,6 @@ impl From<std::io::Error> for VideoError {
 }
 
 /**
- * Implements the From trait to convert a webvtt_parser::VttError into a VideoError.
- */
-impl From<webvtt_parser::VttError> for VideoError {
-    fn from(error: webvtt_parser::VttError) -> Self {
-        VideoError { message: format!("VTT parse error: {}", error) }
-    }
-}
-
-/**
  * Downloads a video from the given URL and extracts subtitles in the specified languages. 
  * It uses the yt-dlp command-line tool to perform the download and subtitle extraction. 
  * The function generates a unique identifier for each download to avoid conflicts and organizes the downloaded files in a structured directory. 
@@ -336,4 +336,105 @@ fn subtitle(uid: uuid::Uuid, lang: &str) -> Result<String, VideoError> {
     } else {
         Err(VideoError { message: format!("Subtitle file for video {} in language {} not found.", uid, lang) })
     }
+}
+
+/**
+ * A minimal cue representation used by the local WebVTT parser.
+ */
+struct VttCue {
+    // Cue start time in seconds from the beginning of the media.
+    start_seconds: f64,
+    // Cue payload text flattened into a single line for button labels.
+    text: String,
+}
+
+/**
+ * Parses cue timing lines and payload text from raw WebVTT content.
+ *
+ * Supports cues with optional identifier lines and multi-line payload text.
+ */
+fn parse_vtt_cues(content: &str) -> Vec<VttCue> {
+    let mut cues = Vec::new();
+    let lines: Vec<&str> = content.lines().collect();
+    let mut i = 0;
+
+    while i < lines.len() {
+        let line = lines[i].trim();
+
+        if line.is_empty() || line == "WEBVTT" || line.starts_with("NOTE") {
+            i += 1;
+            continue;
+        }
+
+        // Handle an optional cue identifier by advancing to the following timestamp line.
+        if !line.contains(" --> ") {
+            if i + 1 < lines.len() && lines[i + 1].contains(" --> ") {
+                i += 1;
+            } else {
+                i += 1;
+                continue;
+            }
+        }
+
+        let timestamp_line = lines[i].trim();
+        let Some((start_raw, _)) = timestamp_line.split_once(" --> ") else {
+            i += 1;
+            continue;
+        };
+
+        let Some(start_seconds) = parse_vtt_timestamp_seconds(start_raw.trim()) else {
+            i += 1;
+            continue;
+        };
+
+        i += 1;
+        let mut text_lines = Vec::new();
+        while i < lines.len() {
+            let payload = lines[i].trim();
+            if payload.is_empty() {
+                break;
+            }
+            text_lines.push(payload);
+            i += 1;
+        }
+
+        cues.push(VttCue {
+            start_seconds,
+            text: text_lines.join(" "),
+        });
+
+        while i < lines.len() && lines[i].trim().is_empty() {
+            i += 1;
+        }
+    }
+
+    cues
+}
+
+/**
+ * Parses a WebVTT timestamp into total seconds.
+ *
+ * Accepts MM:SS.mmm and HH:MM:SS.mmm formats.
+ */
+fn parse_vtt_timestamp_seconds(ts: &str) -> Option<f64> {
+    let (clock, millis_str) = ts.split_once('.')?;
+    let millis = millis_str.parse::<u64>().ok()?;
+    let parts: Vec<&str> = clock.split(':').collect();
+
+    let base_seconds = match parts.as_slice() {
+        [minutes, seconds] => {
+            let minutes = minutes.parse::<u64>().ok()?;
+            let seconds = seconds.parse::<u64>().ok()?;
+            minutes * 60 + seconds
+        }
+        [hours, minutes, seconds] => {
+            let hours = hours.parse::<u64>().ok()?;
+            let minutes = minutes.parse::<u64>().ok()?;
+            let seconds = seconds.parse::<u64>().ok()?;
+            hours * 3600 + minutes * 60 + seconds
+        }
+        _ => return None,
+    };
+
+    Some(base_seconds as f64 + millis as f64 / 1000.0)
 }
