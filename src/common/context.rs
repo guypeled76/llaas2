@@ -1,3 +1,6 @@
+use surrealdb::Surreal;
+use surrealdb::engine::local::Db;
+
 use tokio::sync::OnceCell;
 use crate::common::{
     config::Config,
@@ -22,5 +25,9 @@ impl Context {
         self.connection.get_or_try_init(|| async {
             Connection::new(&self.config.database).await
         }).await
+    }
+
+    pub async fn db(&self) -> Result<&Surreal<Db>, Error> {
+        Ok(self.connection().await?.db())
     }
 }

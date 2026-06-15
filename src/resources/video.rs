@@ -8,6 +8,7 @@ use std::path::PathBuf;
 use std::process::Command;
 use std::io::SeekFrom;
 use std::io::Seek;
+use std::fs;
 use rsubs_lib::VTT;
 
 // Actix-web imports for building the REST API endpoints.
@@ -26,6 +27,141 @@ use crate::common::{
     errors::{Error, IOInfo},
     context::Context,
 };
+
+use crate::database::videos::{
+    VideoDatabase, 
+    Video 
+};
+
+
+
+/**
+ * Downloads a video from the given URL and extracts subtitles in the specified languages. 
+ * It uses the yt-dlp command-line tool to perform the download and subtitle extraction. 
+ * The function generates a unique identifier for each download to avoid conflicts and organizes the downloaded files in a structured directory. 
+ * The resulting Video struct contains the URL, paths to the downloaded video and subtitles, and the list of languages for which subtitles were extracted.
+ * # Arguments
+ * * `url` - A string slice that holds the URL of the video to be downloaded.
+ * * `languages` - A slice of string slices that holds the languages for which subtitles should be extracted.
+ * # Returns
+ * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful, 
+ * * or a LlaasError if any step of the process fails.
+ */
+pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
+
+    // Get the video database from the context.
+    let database : &dyn VideoDatabase = _context;
+
+    // Generate a unique identifier for the download to avoid conflicts and organize files.
+    let uid = uuid::Uuid::new_v4();
+
+    // Create the output directory for the downloaded video and subtitles.
+    let output = directory(uid);
+
+    println!("Downloading video from URL '{}' to '{}'", url, output.to_str().unwrap());
+
+    // Execute the yt-dlp command to download the video and extract subtitles in the specified languages.
+    // https://www.ditig.com/yt-dlp-cheat-sheet#embed-metadata-and-thumbnail
+    // yt-dlp -f "mp4" --no-playlist --embed-metadata --embed-thumbnail --movflags +faststart --write-subs --sub-langs "es" "{utl}" -o "output.%(ext)s"
+    // We show the progress of the download and subtitle extraction process by printing messages to the console.
+    Command::new("yt-dlp")
+        .args(&[
+            "-f", "mp4",
+            "--no-playlist",
+            "--embed-metadata",
+            "--embed-thumbnail",
+            //"--movflags", "+faststart",
+            "--write-subs",
+            "--sub-langs", &languages.join(","),
+            url,
+            "-o", output.join("output.%(ext)s").to_str().unwrap(),
+        ])
+        .stdout(std::process::Stdio::inherit())
+        .output()?;
+
+  
+
+    // Create a Video struct with the URL, paths to the downloaded video and subtitles, 
+    // and the list of languages for which subtitles were extracted.
+    let video = read(output, uid, url, languages)?;
+
+    // Upsert the video record in the database. 
+    database.upsert(&video).await?;
+
+    // The Video struct is returned with the URL, 
+    // paths to the downloaded video and subtitles, 
+    // and the list of languages for which subtitles were extracted.
+    Ok(video)
+}
+
+/**
+ * Reads the downloaded video and subtitle files from the specified output directory and constructs a Video struct.
+ * The function scans the output directory for files that match the expected naming pattern for the video and subtitle files,
+ * extracts the relevant information such as the video file name, subtitle file names, and languages,
+ * and returns a Video struct containing the URL, paths to the downloaded video and subtitles, and the list of languages for which subtitles were extracted.
+ * # Arguments
+ * * `output` - A PathBuf representing the directory where the downloaded video and subtitles are
+ * stored, which is generated based on a unique identifier (UUID) for the download.
+ * * `uid` - A UUID that serves as a unique identifier for the video resource,
+ * * `url` - A string slice that holds the URL of the video that was downloaded,
+ * * `languages` - A slice of string slices that holds the languages for which subtitles were extracted.
+ * # Returns
+ * * `Result<Video, LlaasError>` - A result containing the Video struct if the video and subtitle files are successfully read and processed, 
+ * * or a LlaasError if there are any issues in reading the files, extracting the information, or constructing the Video struct.
+ */
+fn read(output: PathBuf, uid: uuid::Uuid, url: &str, languages: &[&str]) -> Result<Video, Error> {
+
+    let files : Vec<(String, bool)> = fs::read_dir(output)?.filter_map(|e| {
+        let entry = e.ok()?;
+        let path = entry.path();
+        let file_name = path.file_name()?.to_str()?;
+
+        // If file starts with output and ends with .mp4 or any like srt, vtt subtitles extension.
+        if file_name.starts_with("output") && (file_name.ends_with(".mp4") || file_name.ends_with(".vtt") || file_name.ends_with(".srt")) {
+            Some((file_name.to_string(), file_name.ends_with(".mp4")))
+        } else {
+            None
+        }
+
+    }).collect();
+
+    // Get the video file name or return an error if the video file is not found in the output directory.
+    let video = match files
+            .iter()
+            .find(|(name, is_video)| *is_video).map(|(name, _)| name.clone()) {
+        Some(name) => name,
+        None => return Err(Error::IOError(IOInfo(format!("Video file not found in output directory for video with ID {}.", uid), None))),
+    };
+
+    // Get all the subtitle files.
+    let subtitles: Vec<String> = files
+        .iter()
+        .filter_map(|(name, is_video)| if !*is_video { Some(name) } else { None })
+        .map(|name| name.into())
+        .collect();
+        
+
+    // Extract the languages for which subtitles were extracted based on the subtitle file names.
+    let langauges = subtitles.iter().filter_map(|name| {
+        // Extract the language code from the subtitle file name.
+        let parts: Vec<&str> = name.split('.').collect();
+        if parts.len() >= 3 {
+            Some(parts[1].to_string())
+        } else {
+            None
+        }
+    }).collect();
+
+    // Create a Video struct.
+    Ok(Video {
+        uid: uid.into(),
+        url: url.to_string(),
+        video: video.into(),
+        subtitles: subtitles,
+        languages: langauges,
+    })
+    
+}
 
 /**
  * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
@@ -212,87 +348,6 @@ pub fn stream(_context: &Context, req: HttpRequest, uid: uuid::Uuid) -> impl Res
         .insert_header((header::CONTENT_TYPE, "video/mp4"))
         .insert_header((header::CONTENT_LENGTH, file_size))
         .streaming(stream)
-}
-
-/**
- * The Video struct represents a video resource that has been downloaded from a given URL. 
- * It contains fields for the URL of the video, the path to the downloaded video file,
- * the paths to the extracted subtitles, and the list of languages for which subtitles were extracted. 
- * The video field is a tuple containing the path to the downloaded video file and a boolean indicating whether the file exists and is valid. 
- * The subtitles field is a vector of tuples, each containing the language, path to the subtitle file, and a boolean indicating whether the file exists and is valid. 
- * The languages field is a vector of strings representing the languages for which subtitles were extracted
- */
-pub struct Video {
-    pub url: String,
-    pub video: (String, bool), // (path, is_valid)
-    pub subtitles: Vec<(String, String, bool)>, // (language, path, is_valid)
-    pub languages: Vec<String>,
-}
-
-/**
- * Downloads a video from the given URL and extracts subtitles in the specified languages. 
- * It uses the yt-dlp command-line tool to perform the download and subtitle extraction. 
- * The function generates a unique identifier for each download to avoid conflicts and organizes the downloaded files in a structured directory. 
- * The resulting Video struct contains the URL, paths to the downloaded video and subtitles, and the list of languages for which subtitles were extracted.
- * # Arguments
- * * `url` - A string slice that holds the URL of the video to be downloaded.
- * * `languages` - A slice of string slices that holds the languages for which subtitles should be extracted.
- * # Returns
- * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful, 
- * * or a LlaasError if any step of the process fails.
- */
-pub fn download(_context: &Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
-
-    // Generate a unique identifier for the download to avoid conflicts and organize files.
-    let uid = uuid::Uuid::new_v4();
-
-    // Create the output directory for the downloaded video and subtitles.
-    let output = directory(uid);
-
-    println!("Downloading video from URL '{}' to '{}'", url, output.to_str().unwrap());
-
-    // Execute the yt-dlp command to download the video and extract subtitles in the specified languages.
-    // https://www.ditig.com/yt-dlp-cheat-sheet#embed-metadata-and-thumbnail
-    // yt-dlp -f "mp4" --no-playlist --embed-metadata --embed-thumbnail --movflags +faststart --write-subs --sub-langs "es" "{utl}" -o "output.%(ext)s"
-    // We show the progress of the download and subtitle extraction process by printing messages to the console.
-    Command::new("yt-dlp")
-        .args(&[
-            "-f", "mp4",
-            "--no-playlist",
-            "--embed-metadata",
-            "--embed-thumbnail",
-            //"--movflags", "+faststart",
-            "--write-subs",
-            "--sub-langs", &languages.join(","),
-            url,
-            "-o", output.join("output.%(ext)s").to_str().unwrap(),
-        ])
-        .stdout(std::process::Stdio::inherit())
-        .output()?;
-
-        // Check if the video file was downloaded successfully and if the subtitle files were extracted for the specified languages.
-        let video_path = output.join("output.mp4");
-
-        // The video field contains the path to the downloaded video and a boolean indicating whether the file exists and is valid.
-        let video = (video_path.to_str().unwrap().to_string(), video_path.exists());
-
-        // The subtitles field contains a vector of tuples, each containing the language, 
-        // path to the subtitle file, and a boolean indicating whether the file exists and is valid.
-        let subtitles = languages
-            .iter()
-            .map(|lang| (output.join(format!("output.{}.vtt", lang)), lang))
-            .map(|(path, lang)| (lang.to_string(), path.to_str().unwrap().to_string(), path.exists()))
-            .collect();
-
-    // The Video struct is returned with the URL, 
-    // paths to the downloaded video and subtitles, 
-    // and the list of languages for which subtitles were extracted.
-    Ok(Video {
-        url: url.to_string(),
-        languages: languages.iter().map(|&lang| lang.to_string()).collect(),
-        video: video,
-        subtitles: subtitles,
-    })
 }
 
 /**

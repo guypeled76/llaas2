@@ -3,8 +3,8 @@ mod resources;
 mod common;
 mod messages;
 mod api;
+mod database;
 
-use any_tts::config;
 use clap::{Parser, Subcommand};
 use std::fs;
 use models::tts;
@@ -48,7 +48,8 @@ enum Commands {
     },
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let cli = Cli::parse();
 
     // Initialize the application context with configuration settings. 
@@ -75,7 +76,7 @@ fn main() {
             api::rest::start_server(context, port);
         }
         Commands::Video { url, languages } => {
-            let result = resources::video::download(context, &url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
+            let result = resources::video::download(context, &url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).await.unwrap();
             println!("Downloaded video from URL: {}", result.url);
             println!("Video path: {} (valid: {})", result.video.0, result.video.1);
             for (lang, path, valid) in result.subtitles {

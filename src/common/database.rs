@@ -28,4 +28,9 @@ impl Connection {
         db.use_ns("llaas").use_db("main").await?;
         Ok(Self { db })
     }
+
+    /// Get a reference to the SurrealDB instance for performing database operations.
+    pub fn db(&self) -> &Surreal<Db> {
+        &self.db
+    }
 }
