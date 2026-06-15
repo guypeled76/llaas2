@@ -52,8 +52,8 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
     // Get the video database from the context.
     let database : &dyn VideoDatabase = _context;
 
-    // Generate a unique identifier for the download to avoid conflicts and organize files.
-    let uid = uuid::Uuid::new_v4();
+    // Get the uid based on a hash of the URL.
+    let uid = &uuid::Uuid::new_v4().to_string();
 
     // Create the output directory for the downloaded video and subtitles.
     let output = directory(uid);
@@ -86,7 +86,7 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
     let video = read(output, uid, url, languages)?;
 
     // Upsert the video record in the database. 
-    database.upsert(&uid.to_string(), &video).await?;
+    database.upsert(&uid.to_string(), video.clone()).await?;
 
     // The Video struct is returned with the URL, 
     // paths to the downloaded video and subtitles, 
@@ -109,7 +109,7 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
  * * `Result<Video, LlaasError>` - A result containing the Video struct if the video and subtitle files are successfully read and processed, 
  * * or a LlaasError if there are any issues in reading the files, extracting the information, or constructing the Video struct.
  */
-fn read(output: PathBuf, uid: uuid::Uuid, url: &str, languages: &[&str]) -> Result<Video, Error> {
+fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Video, Error> {
 
     let files : Vec<(String, bool)> = fs::read_dir(output)?.filter_map(|e| {
         let entry = e.ok()?;
@@ -173,7 +173,7 @@ fn read(output: PathBuf, uid: uuid::Uuid, url: &str, languages: &[&str]) -> Resu
  * * `Option<String>` - An option containing the path to the video file as a string
  * * boolean indicating whether the file exists and is valid. If the file does not exist or is not valid, it returns None.
  */
-pub fn subtitles(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+pub fn subtitles(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
     match subtitle(context, uid, lang) {
         Ok(path) => Ok(std::fs::read_to_string(path)?),
         Err(e) => Err(e),
@@ -195,7 +195,7 @@ pub fn subtitles(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<Strin
  * * or a LlaasError if there is an error in retrieving the subtitle file, parsing
  * * the VTT content, or any other issues that may arise during the view generation process.
  */
-pub fn view(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+pub fn view(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
     let file = subtitle(context, uid, lang)?;
     let content = std::fs::read_to_string(file)?;
     let vtt = VTT::parse(&content).map_err(|e| {
@@ -282,8 +282,8 @@ pub fn view(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Er
  * * `impl Responder` - An HTTP response that either streams the requested portion of the video file back to the client with appropriate headers if the file exists and is valid, or returns an
  * * error response if the file does not exist, is not valid, or if there are any issues in processing the request.
  */
-pub fn stream(_context: &Context, req: HttpRequest, uid: uuid::Uuid) -> impl Responder {
-    let file_info = match video(uid) {
+pub fn stream(_context: &Context, req: HttpRequest, uid: String) -> impl Responder {
+    let file_info = match video(&uid) {
         Ok(info) => info,
         Err(_) => return HttpResponse::NotFound().body(format!("Video with ID {} is not available.", uid)),
     };
@@ -358,7 +358,7 @@ pub fn stream(_context: &Context, req: HttpRequest, uid: uuid::Uuid) -> impl Res
  * # Returns
  * * `PathBuf` - A PathBuf representing the directory path where the downloaded video and subtitles will be stored.
  */
-fn directory(uid: uuid::Uuid) -> PathBuf {
+fn directory(uid: &str) -> PathBuf {
     PathBuf::from(format!("resources/videos/{}/", uid))
 }
 
@@ -367,7 +367,7 @@ fn directory(uid: uuid::Uuid) -> PathBuf {
  * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists. 
  * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid. 
  */
-fn video(uid: uuid::Uuid) -> Result<String, Error> {
+fn video(uid: &str) -> Result<String, Error> {
     let path = directory(uid).join("output.mp4");
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
@@ -385,7 +385,7 @@ fn video(uid: uuid::Uuid) -> Result<String, Error> {
 * The function constructs the path to the subtitle file based on the directory structure defined in the `directory` function and checks if the file exists. 
 * It returns a tuple containing the path to the subtitle file as a string and a boolean indicating whether the file exists and is valid. 
 */
-fn subtitle(_context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+fn subtitle(_context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
     let path = directory(uid).join(format!("output.{}.vtt", lang));
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())

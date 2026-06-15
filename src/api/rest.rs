@@ -35,26 +35,26 @@ async fn languages_update(url: Path<LanguageUrl>) -> impl Responder {
 }
 
 #[get("/videos/{id}/{lang}/subtitles.vtt")]
-async fn video_vtt(context: web::Data<&'static Context>, path: Path<(uuid::Uuid, String)>) -> impl Responder {
+async fn video_vtt(context: web::Data<&'static Context>, path: Path<(String, String)>) -> impl Responder {
     let (id, lang) = path.into_inner();
-    match video::subtitles(&context, id, &lang) {
+    match video::subtitles(&context, &id, &lang) {
         Ok(subtitle) => HttpResponse::Ok().body(subtitle),
         Err(_) => HttpResponse::NotFound().body(format!("Subtitle for video {} in language {} not found!!", id, lang)),
     }
 }
 
 #[get("/videos/{id}/{lang}/view.html")]
-async fn video_view(context: web::Data<&'static Context>, path: Path<(uuid::Uuid, String)>) -> impl Responder {
+async fn video_view(context: web::Data<&'static Context>, path: Path<(String, String)>) -> impl Responder {
     let (id, lang) = path.into_inner();
-    match video::view(&context, id, &lang) {
+    match video::view(&context, &id, &lang) {
         Ok(view) => HttpResponse::Ok().body(view),
         Err(_) => HttpResponse::NotFound().body(format!("View for video {} in language {} not found!!", id, lang)),
     }
 }
 
 #[get("/videos/{id}.mp4")]
-async fn video_stream(context: web::Data<&'static Context>, req: HttpRequest, path: Path<uuid::Uuid>) -> impl Responder {
-    let id = path.into_inner();
+async fn video_stream(context: web::Data<&'static Context>, req: HttpRequest, path: Path<String>) -> impl Responder {
+    let id = path.into_inner().clone();
     video::stream(&context, req, id)
 }
 

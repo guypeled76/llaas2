@@ -78,10 +78,6 @@ async fn main() {
         Commands::Video { url, languages } => {
             let result = resources::video::download(context, &url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).await.unwrap();
             println!("Downloaded video from URL: {}", result.url);
-            println!("Video path: {} (valid: {})", result.video.0, result.video.1);
-            for (lang, path, valid) in result.subtitles {
-                println!("Subtitle [{}]: {} (valid: {})", lang, path, valid);
-            }
         }
     }
 }

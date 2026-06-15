@@ -9,6 +9,9 @@ use serde::{
 };
 
 
+use surrealdb::opt::auth::Record;
+use surrealdb_types::SurrealValue;
+
 
 /**
  * The Video struct represents a video resource that has been downloaded from a given URL. 
@@ -18,7 +21,7 @@ use serde::{
  * The subtitles field is a vector of tuples, each containing the language, path to the subtitle file, and a boolean indicating whether the file exists and is valid. 
  * The languages field is a vector of strings representing the languages for which subtitles were extracted
  */
-#[derive(Debug, Serialize, Deserialize, Clone)]
+#[derive(Debug, Serialize, Deserialize, Clone, SurrealValue)]
 pub struct Video {
     pub url: String,
     pub video: String,
@@ -28,7 +31,7 @@ pub struct Video {
 
 #[async_trait::async_trait]
 pub trait VideoDatabase {
-    async fn upsert(&self, id: &str, video: &Video) -> Result<(), Error>;
+    async fn upsert(&self, id: &str, video: Video) -> Result<(), Error>;
 }
 
 
@@ -36,7 +39,7 @@ pub trait VideoDatabase {
 impl VideoDatabase for Context {
 
     
-    async fn upsert(&self, id: &str, video: &Video) -> Result<(), Error> {
+    async fn upsert(&self, id: &str, video: Video) -> Result<(), Error> {
         // Here you would implement the logic to insert or update the video record in your database.
         // This is a placeholder implementation and should be replaced with actual database interaction code.
         println!("Upserting video with URL: {}", video.url);
@@ -44,9 +47,9 @@ impl VideoDatabase for Context {
         // Get the database connection from the context.
         let db = self.db().await?;
 
-        let result = db.create(("video", id)).content(video).await?;
+        let result: Option<Record<()>> = db.create(("video", id)).content(video).await?;
 
-        print!("Video upserted: {:?}", result);
+        println!("Video upserted: {:?}", result);
 
         Ok(())
     }
