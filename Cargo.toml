@@ -26,6 +26,7 @@ validator = { version = "0.20.0", features=["derive"]}
 async-trait = "0.1.89"
 derive_more = "2.1.1"
 tokio-util = "0.7.18"
+rsubs-lib = "0.3.4"
 
 [build-dependencies]
 tonic-prost-build = "*"

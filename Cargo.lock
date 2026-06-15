@@ -641,7 +641,7 @@ dependencies = [
  "bitflags 2.13.0",
  "cexpr",
  "clang-sys",
- "itertools 0.11.0",
+ "itertools 0.13.0",
  "proc-macro2",
  "quote",
  "regex",
@@ -1614,6 +1614,9 @@ name = "deranged"
 version = "0.5.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7cd812cc2bc1d69d4764bd80df88b4317eaef9e773c75226407d9bc0876b211c"
+dependencies = [
+ "serde_core",
+]
 
 [[package]]
 name = "derive_arbitrary"
@@ -3847,6 +3850,7 @@ dependencies = [
  "html2text",
  "json",
  "prost",
+ "rsubs-lib",
  "rust-bert",
  "serde",
  "serde_json",
@@ -5967,6 +5971,17 @@ dependencies = [
  "num-traits",
  "serde",
  "smallvec",
+]
+
+[[package]]
+name = "rsubs-lib"
+version = "0.3.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6cccd363d956d25e7dc83d8ab1607b85003ee91c288ceed256fd4b3d5abe6d0f"
+dependencies = [
+ "regex",
+ "serde",
+ "time",
 ]
 
 [[package]]

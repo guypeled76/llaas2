@@ -8,6 +8,7 @@ use std::path::PathBuf;
 use std::process::Command;
 use std::io::SeekFrom;
 use std::io::Seek;
+use rsubs_lib::VTT;
 
 // Actix-web imports for building the REST API endpoints.
 use actix_web::{
@@ -47,7 +48,7 @@ pub fn subtitles(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<Strin
 /**
  * Generates an HTML view for a video with synchronized subtitle playback.
  * The function retrieves the subtitle file for the specified video and language, 
- * parses it using the local WebVTT parser, and generates an HTML page that includes a video player with controls and a track for subtitles.
+ * parses it using rsubs_lib's WebVTT parser, and generates an HTML page that includes a video player with controls and a track for subtitles.
  * The generated HTML also includes a timeline of buttons for each subtitle cue, allowing users to jump to specific timestamps in the video.
  * When a button is clicked, it triggers a JavaScript function that jumps to the corresponding time in the video, enabling instant subtitle playback synchronization.
  * 
@@ -62,21 +63,33 @@ pub fn subtitles(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<Strin
 pub fn view(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
     let file = subtitle(context, uid, lang)?;
     let content = std::fs::read_to_string(file)?;
-    let cues = parse_vtt_cues(&content);
+    let vtt = VTT::parse(&content).map_err(|e| {
+        Error::IOError(IOInfo(
+            format!(
+                "Failed to parse subtitle file for video {} in language {}: {}",
+                uid, lang, e
+            ),
+            None,
+        ))
+    })?;
   
 
     // Generate HTML buttons for each subtitle cue, allowing users to jump to specific timestamps in the video. 
     // Each button displays the timestamp and the subtitle text, and when clicked, 
     // it triggers a JavaScript function to jump to the corresponding time in the video.
     let mut buttons = String::new();
-    cues.iter().for_each(|cue| {
-        let start_seconds = cue.start_seconds;
+    vtt.lines.iter().for_each(|cue| {
+        let start_seconds = cue.start.hour() as f64 * 3600.0
+            + cue.start.minute() as f64 * 60.0
+            + cue.start.second() as f64
+            + cue.start.nanosecond() as f64 / 1_000_000_000.0;
         let label_minutes = (start_seconds / 60.0).floor() as u64;
         let label_seconds = (start_seconds % 60.0).floor() as u64;
         let time_label = format!("{:02}:{:02}", label_minutes, label_seconds);
+        let cue_text = cue.text.split_whitespace().collect::<Vec<_>>().join(" ");
         buttons.push_str(&format!(
             r#"<button onclick="jump_to({})">[{}] "{}"</button>"#,
-            start_seconds, time_label, cue.text
+            start_seconds, time_label, cue_text
         ));
     });
     
@@ -327,105 +340,4 @@ fn subtitle(_context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, E
             IOInfo(format!("Subtitle file for video {} in language {} not found.", uid, lang), None)
         ))
     }
-}
-
-/**
- * A minimal cue representation used by the local WebVTT parser.
- */
-struct VttCue {
-    // Cue start time in seconds from the beginning of the media.
-    start_seconds: f64,
-    // Cue payload text flattened into a single line for button labels.
-    text: String,
-}
-
-/**
- * Parses cue timing lines and payload text from raw WebVTT content.
- *
- * Supports cues with optional identifier lines and multi-line payload text.
- */
-fn parse_vtt_cues(content: &str) -> Vec<VttCue> {
-    let mut cues = Vec::new();
-    let lines: Vec<&str> = content.lines().collect();
-    let mut i = 0;
-
-    while i < lines.len() {
-        let line = lines[i].trim();
-
-        if line.is_empty() || line == "WEBVTT" || line.starts_with("NOTE") {
-            i += 1;
-            continue;
-        }
-
-        // Handle an optional cue identifier by advancing to the following timestamp line.
-        if !line.contains(" --> ") {
-            if i + 1 < lines.len() && lines[i + 1].contains(" --> ") {
-                i += 1;
-            } else {
-                i += 1;
-                continue;
-            }
-        }
-
-        let timestamp_line = lines[i].trim();
-        let Some((start_raw, _)) = timestamp_line.split_once(" --> ") else {
-            i += 1;
-            continue;
-        };
-
-        let Some(start_seconds) = parse_vtt_timestamp_seconds(start_raw.trim()) else {
-            i += 1;
-            continue;
-        };
-
-        i += 1;
-        let mut text_lines = Vec::new();
-        while i < lines.len() {
-            let payload = lines[i].trim();
-            if payload.is_empty() {
-                break;
-            }
-            text_lines.push(payload);
-            i += 1;
-        }
-
-        cues.push(VttCue {
-            start_seconds,
-            text: text_lines.join(" "),
-        });
-
-        while i < lines.len() && lines[i].trim().is_empty() {
-            i += 1;
-        }
-    }
-
-    cues
-}
-
-/**
- * Parses a WebVTT timestamp into total seconds.
- *
- * Accepts MM:SS.mmm and HH:MM:SS.mmm formats.
- */
-fn parse_vtt_timestamp_seconds(ts: &str) -> Option<f64> {
-    let (clock, millis_str) = ts.split_once('.')?;
-    let millis = millis_str.parse::<u64>().ok()?;
-    let parts: Vec<&str> = clock.split(':').collect();
-
-    let base_seconds = match parts.as_slice() {
-        [minutes, seconds] => {
-            let minutes = minutes.parse::<u64>().ok()?;
-            let seconds = seconds.parse::<u64>().ok()?;
-            minutes * 60 + seconds
-        }
-        [hours, minutes, seconds] => {
-            let hours = hours.parse::<u64>().ok()?;
-            let minutes = minutes.parse::<u64>().ok()?;
-            let seconds = seconds.parse::<u64>().ok()?;
-            hours * 3600 + minutes * 60 + seconds
-        }
-        _ => return None,
-    };
-
-    Some(base_seconds as f64 + millis as f64 / 1000.0)
 }
