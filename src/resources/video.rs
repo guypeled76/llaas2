@@ -21,7 +21,8 @@ use actix_web::{
 use tokio::io::AsyncReadExt;
 
 // Import the custom error type for handling errors in video processing.
-use crate::common::errors::LlaasError;
+use crate::common::errors::Error;
+use crate::common::errors::IOInfo;
 
 /**
  * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
@@ -34,7 +35,7 @@ use crate::common::errors::LlaasError;
  * * `Option<String>` - An option containing the path to the video file as a string
  * * boolean indicating whether the file exists and is valid. If the file does not exist or is not valid, it returns None.
  */
-pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, LlaasError> {
+pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
     match subtitle(uid, lang) {
         Ok(path) => Ok(std::fs::read_to_string(path)?),
         Err(e) => Err(e),
@@ -56,7 +57,7 @@ pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, LlaasError> {
  * * or a LlaasError if there is an error in retrieving the subtitle file, parsing
  * * the VTT content, or any other issues that may arise during the view generation process.
  */
-pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, LlaasError> {
+pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
     let file = subtitle(uid, lang)?;
     let content = std::fs::read_to_string(file)?;
     let cues = parse_vtt_cues(&content);
@@ -225,7 +226,7 @@ pub struct Video {
  * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful, 
  * * or a LlaasError if any step of the process fails.
  */
-pub fn download(url: &str, languages: &[&str]) -> Result<Video, LlaasError> {
+pub fn download(url: &str, languages: &[&str]) -> Result<Video, Error> {
 
     // Generate a unique identifier for the download to avoid conflicts and organize files.
     let uid = uuid::Uuid::new_v4();
@@ -297,12 +298,15 @@ fn directory(uid: uuid::Uuid) -> PathBuf {
  * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists. 
  * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid. 
  */
-fn video(uid: uuid::Uuid) -> Result<String, LlaasError> {
+fn video(uid: uuid::Uuid) -> Result<String, Error> {
     let path = directory(uid).join("output.mp4");
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
     } else {
-        Err(LlaasError::FileNotFound(format!("Video file for video with ID {} not found.", uid)))
+        Err(Error::IOError(
+            IOInfo(format!("Video file for video with ID {} not found.", uid), 
+            None
+        )))
 
     }
 }
@@ -312,12 +316,14 @@ fn video(uid: uuid::Uuid) -> Result<String, LlaasError> {
 * The function constructs the path to the subtitle file based on the directory structure defined in the `directory` function and checks if the file exists. 
 * It returns a tuple containing the path to the subtitle file as a string and a boolean indicating whether the file exists and is valid. 
 */
-fn subtitle(uid: uuid::Uuid, lang: &str) -> Result<String, LlaasError> {
+fn subtitle(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
     let path = directory(uid).join(format!("output.{}.vtt", lang));
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
     } else {
-        Err(LlaasError::FileNotFound(format!("Subtitle file for video {} in language {} not found.", uid, lang)))
+        Err(Error::IOError(
+            IOInfo(format!("Subtitle file for video {} in language {} not found.", uid, lang), None)
+        ))
     }
 }
 

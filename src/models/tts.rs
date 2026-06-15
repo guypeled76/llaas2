@@ -6,7 +6,7 @@ use any_tts::{
     TtsModel as AnyTtsModel,
 };
 
-use crate::common::errors::LlaasError;
+use crate::common::errors::Error;
 
 /**
  * An enumeration to define preset configurations for TTS models. 
@@ -32,28 +32,21 @@ impl TtsModel {
      * Initializes the TTS model with a Kokoro backend.
      * If model loading fails, it returns an error message.
      */
-    pub fn new(settings: TtsPreset) -> Result<TtsModel, LlaasError> {
+    pub fn new(settings: TtsPreset) -> Result<TtsModel, Error> {
         let config = match settings {
             TtsPreset::Kokoro => TtsConfig::new(ModelType::Kokoro).with_preferred_runtime(),
             TtsPreset::OmniVoice => TtsConfig::new(ModelType::OmniVoice).with_preferred_runtime(),
         };
-        let result = load_model(config);
-
-        match result {
-            Ok(model) => Ok(TtsModel { model }),
-            Err(e) => {
-                eprintln!("Error initializing TTS model: {}", e);
-                Err(LlaasError::ModelInitializationError(e.to_string()))
-            }
-        }
+        let model = load_model(config)?;
+        Ok(TtsModel { model: model })
     }
 
     /**
      * Synthesizes speech for the given text and returns WAV bytes.
      */
-    pub fn synthesize(&self, text: &str, lang: &str) -> Result<Vec<u8>, LlaasError> {
+    pub fn synthesize(&self, text: &str, lang: &str) -> Result<Vec<u8>, Error> {
         let request = SynthesisRequest::new(text).with_language(lang);
-        let audio = self.model.synthesize(&request).map_err(|e| LlaasError::PredictionError(e.to_string()))?;
+        let audio = self.model.synthesize(&request)?;
         Ok(audio.get_wav())
     }
 }
@@ -63,14 +56,15 @@ impl TtsModel {
  * A convenience method to synthesize speech in one call.
  * It initializes the model and returns generated WAV bytes.
  */
-pub fn as_wav(settings: TtsPreset, text: &str, lang: &str) -> Result<Vec<u8>, LlaasError> {
+pub fn as_wav(settings: TtsPreset, text: &str, lang: &str) -> Result<Vec<u8>, Error> {
     let model = TtsModel::new(settings)?;
     model.synthesize(text, lang)
 }
 /**
  * A convenience method to synthesize speech and write the WAV bytes to a file.
  */
-pub fn save_as_wav(settings: TtsPreset, text: &str, file: &str, lang: &str) -> Result<(), LlaasError> {
+pub fn save_as_wav(settings: TtsPreset, text: &str, file: &str, lang: &str) -> Result<(), Error> {
     let wav_bytes = as_wav(settings, text, lang)?;
-    std::fs::write(file, wav_bytes).map_err(|e| LlaasError::TtsError(e.to_string()))
+    std::fs::write(file, wav_bytes)?;
+    Ok(())
 }

@@ -20,7 +20,7 @@ any-tts = { version = "0.1.2", features = ["metal"] }
 actix-web = "4.13.0"
 json = "0.12.4"
 serde = { version = "1.0.228", features=["derive"]}
-surrealdb = "3.1.4"
+surrealdb = { version = "3.1.4", features=["kv-rocksdb"]}
 uuid = "1.23.3"
 validator = { version = "0.20.0", features=["derive"]}
 async-trait = "0.1.89"
