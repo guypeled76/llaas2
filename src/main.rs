@@ -4,9 +4,14 @@ mod common;
 mod messages;
 mod api;
 
+use any_tts::config;
 use clap::{Parser, Subcommand};
 use std::fs;
 use models::tts;
+use common::{
+    config::Config,
+    context::Context,
+};
 
 #[derive(Parser)]
 #[command(name = "llaas")]
@@ -46,6 +51,13 @@ enum Commands {
 fn main() {
     let cli = Cli::parse();
 
+    // Initialize the application context with configuration settings. 
+    // The context is created as a static reference to ensure it lives for the entire duration of the application 
+    // and can be safely shared across threads and async tasks without needing to clone or manage lifetimes manually.
+    let context: &'static Context = Box::leak(Box::new(
+        Context::new(Config::new())
+    ));
+
     match cli.command {
         Commands::Book { from, to } => {
             let book = resources::epub::read(&from).expect("Failed to read epub");
@@ -60,10 +72,10 @@ fn main() {
         }
         Commands::Start { port } => {
             println!("Starting server on port {port}...");
-            api::rest::start_server(port);
+            api::rest::start_server(context, port);
         }
         Commands::Video { url, languages } => {
-            let result = resources::video::download(&url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
+            let result = resources::video::download(context, &url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).unwrap();
             println!("Downloaded video from URL: {}", result.url);
             println!("Video path: {} (valid: {})", result.video.0, result.video.1);
             for (lang, path, valid) in result.subtitles {

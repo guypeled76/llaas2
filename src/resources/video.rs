@@ -21,8 +21,10 @@ use actix_web::{
 use tokio::io::AsyncReadExt;
 
 // Import the custom error type for handling errors in video processing.
-use crate::common::errors::Error;
-use crate::common::errors::IOInfo;
+use crate::common::{
+    errors::{Error, IOInfo},
+    context::Context,
+};
 
 /**
  * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
@@ -35,8 +37,8 @@ use crate::common::errors::IOInfo;
  * * `Option<String>` - An option containing the path to the video file as a string
  * * boolean indicating whether the file exists and is valid. If the file does not exist or is not valid, it returns None.
  */
-pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
-    match subtitle(uid, lang) {
+pub fn subtitles(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+    match subtitle(context, uid, lang) {
         Ok(path) => Ok(std::fs::read_to_string(path)?),
         Err(e) => Err(e),
     }
@@ -57,8 +59,8 @@ pub fn subtitles(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
  * * or a LlaasError if there is an error in retrieving the subtitle file, parsing
  * * the VTT content, or any other issues that may arise during the view generation process.
  */
-pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
-    let file = subtitle(uid, lang)?;
+pub fn view(context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+    let file = subtitle(context, uid, lang)?;
     let content = std::fs::read_to_string(file)?;
     let cues = parse_vtt_cues(&content);
   
@@ -132,7 +134,7 @@ pub fn view(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
  * * `impl Responder` - An HTTP response that either streams the requested portion of the video file back to the client with appropriate headers if the file exists and is valid, or returns an
  * * error response if the file does not exist, is not valid, or if there are any issues in processing the request.
  */
-pub fn stream(req: HttpRequest, uid: uuid::Uuid) -> impl Responder {
+pub fn stream(_context: &Context, req: HttpRequest, uid: uuid::Uuid) -> impl Responder {
     let file_info = match video(uid) {
         Ok(info) => info,
         Err(_) => return HttpResponse::NotFound().body(format!("Video with ID {} is not available.", uid)),
@@ -226,7 +228,7 @@ pub struct Video {
  * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful, 
  * * or a LlaasError if any step of the process fails.
  */
-pub fn download(url: &str, languages: &[&str]) -> Result<Video, Error> {
+pub fn download(_context: &Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
 
     // Generate a unique identifier for the download to avoid conflicts and organize files.
     let uid = uuid::Uuid::new_v4();
@@ -316,7 +318,7 @@ fn video(uid: uuid::Uuid) -> Result<String, Error> {
 * The function constructs the path to the subtitle file based on the directory structure defined in the `directory` function and checks if the file exists. 
 * It returns a tuple containing the path to the subtitle file as a string and a boolean indicating whether the file exists and is valid. 
 */
-fn subtitle(uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
+fn subtitle(_context: &Context, uid: uuid::Uuid, lang: &str) -> Result<String, Error> {
     let path = directory(uid).join(format!("output.{}.vtt", lang));
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
