@@ -45,21 +45,6 @@ async fn video_vtt(
     }
 }
 
-#[get("/videos/{id}/{lang}/view.html")]
-async fn video_view(
-    context: web::Data<&'static Context>,
-    path: Path<(String, String)>,
-) -> impl Responder {
-    let (id, lang) = path.into_inner();
-    match video::view(&context, &id, &lang) {
-        Ok(view) => HttpResponse::Ok().body(view),
-        Err(_) => HttpResponse::NotFound().body(format!(
-            "View for video {} in language {} not found!!",
-            id, lang
-        )),
-    }
-}
-
 #[get("/videos/{id}.mp4")]
 async fn video_stream(
     context: web::Data<&'static Context>,
@@ -75,6 +60,5 @@ pub fn configure(cfg: &mut web::ServiceConfig) {
         .service(languages_add)
         .service(languages_update)
         .service(video_vtt)
-        .service(video_view)
         .service(video_stream);
 }

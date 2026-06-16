@@ -1,4 +1,5 @@
 mod api;
+mod client;
 mod common;
 mod database;
 mod messages;
