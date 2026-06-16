@@ -23,6 +23,7 @@ impl Context {
 
     pub async fn connection(&self) -> Result<&Connection, Error> {
         self.connection.get_or_try_init(|| async {
+            println!("Initializing database connection...");
             Connection::new(&self.config.database).await
         }).await
     }

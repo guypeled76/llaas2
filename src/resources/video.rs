@@ -19,9 +19,11 @@ use actix_web::{
     Responder
 };
 
+
 // Local module imports for handling video processing and errors.
 use tokio::io::AsyncReadExt;
 
+use crate::common::database;
 // Import the custom error type for handling errors in video processing.
 use crate::common::{
     errors::{Error, IOInfo},
@@ -86,7 +88,7 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
     let video = read(output, uid, url, languages)?;
 
     // Upsert the video record in the database. 
-    database.upsert(&uid.to_string(), video.clone()).await?;
+    database.upsert(&video).await?;
 
     // The Video struct is returned with the URL, 
     // paths to the downloaded video and subtitles, 
@@ -154,6 +156,7 @@ fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Vid
 
     // Create a Video struct.
     Ok(Video {
+        id: Some(database::record("video", uid)),
         url: url.to_string(),
         video: video.into(),
         subtitles: subtitles,

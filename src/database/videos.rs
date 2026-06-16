@@ -10,7 +10,9 @@ use serde::{
 
 
 use surrealdb::opt::auth::Record;
-use surrealdb_types::SurrealValue;
+use surrealdb_types::{RecordId, SurrealValue};
+
+
 
 
 /**
@@ -23,6 +25,8 @@ use surrealdb_types::SurrealValue;
  */
 #[derive(Debug, Serialize, Deserialize, Clone, SurrealValue)]
 pub struct Video {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub id: Option<RecordId>,
     pub url: String,
     pub video: String,
     pub subtitles: Vec<String>, 
@@ -31,7 +35,7 @@ pub struct Video {
 
 #[async_trait::async_trait]
 pub trait VideoDatabase {
-    async fn upsert(&self, id: &str, video: Video) -> Result<(), Error>;
+    async fn upsert(&self, video: &Video) -> Result<(), Error>;
 }
 
 
@@ -39,16 +43,24 @@ pub trait VideoDatabase {
 impl VideoDatabase for Context {
 
     
-    async fn upsert(&self, id: &str, video: Video) -> Result<(), Error> {
+    async fn upsert(&self, video: &Video) -> Result<(), Error> {
         // Here you would implement the logic to insert or update the video record in your database.
         // This is a placeholder implementation and should be replaced with actual database interaction code.
-        println!("Upserting video with URL: {}", video.url);
+        
+
+        let id = match &video.id {
+            Some(id) => id,
+            None => Err(Error::ErrorMessage("Video ID is required for upsert operation.".into()))?,
+        };
 
         // Get the database connection from the context.
         let db = self.db().await?;
 
-        let result: Option<Record<()>> = db.create(("video", id)).content(video).await?;
-
+        println!("Upserting video with URL: {}", video.url);
+        let result: Option<Video> = db
+            .upsert(id)
+            .content(video.clone())
+            .await?;
         println!("Video upserted: {:?}", result);
 
         Ok(())

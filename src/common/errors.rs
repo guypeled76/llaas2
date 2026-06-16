@@ -5,6 +5,7 @@ use any_tts::TtsError;
 /// This module defines the common error types used across the Llaas application.
 #[derive(Debug)]
 pub enum Error {
+    ErrorMessage(String),
     IOError(IOInfo),
     DBError(DatabaseInfo),
     TtsError(TtsInfo),
