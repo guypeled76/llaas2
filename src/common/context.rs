@@ -1,16 +1,12 @@
 use surrealdb::Surreal;
 use surrealdb::engine::local::Db;
 
+use crate::common::{config::Config, database::Connection, errors::Error};
 use tokio::sync::OnceCell;
-use crate::common::{
-    config::Config,
-    database::Connection,
-    errors::Error,
-};
 
 pub struct Context {
-     connection: OnceCell<Connection>,
-     config: Config,
+    connection: OnceCell<Connection>,
+    config: Config,
 }
 
 impl Context {
@@ -22,10 +18,12 @@ impl Context {
     }
 
     pub async fn connection(&self) -> Result<&Connection, Error> {
-        self.connection.get_or_try_init(|| async {
-            println!("Initializing database connection...");
-            Connection::new(&self.config.database).await
-        }).await
+        self.connection
+            .get_or_try_init(|| async {
+                println!("Initializing database connection...");
+                Connection::new(&self.config.database).await
+            })
+            .await
     }
 
     pub async fn db(&self) -> Result<&Surreal<Db>, Error> {

@@ -1,24 +1,17 @@
+use rsubs_lib::VTT;
+use std::fs;
+use std::io::Seek;
+use std::io::SeekFrom;
 /**
- * This module provides functionality for downloading videos from a given URL, 
+ * This module provides functionality for downloading videos from a given URL,
  * extracting subtitles in specified languages, and serving the video and subtitle files through HTTP endpoints.
  */
-
- // Standard library imports for file handling, process execution, and path manipulation.
+// Standard library imports for file handling, process execution, and path manipulation.
 use std::path::PathBuf;
 use std::process::Command;
-use std::io::SeekFrom;
-use std::io::Seek;
-use std::fs;
-use rsubs_lib::VTT;
 
 // Actix-web imports for building the REST API endpoints.
-use actix_web::{
-    http::header,
-    HttpResponse, 
-    HttpRequest, 
-    Responder
-};
-
+use actix_web::{HttpRequest, HttpResponse, Responder, http::header};
 
 // Local module imports for handling video processing and errors.
 use tokio::io::AsyncReadExt;
@@ -26,33 +19,27 @@ use tokio::io::AsyncReadExt;
 use crate::common::database;
 // Import the custom error type for handling errors in video processing.
 use crate::common::{
-    errors::{Error, IOInfo},
     context::Context,
+    errors::{Error, IOInfo},
 };
 
-use crate::database::videos::{
-    VideoDatabase, 
-    Video 
-};
-
-
+use crate::database::videos::{Video, VideoDatabase};
 
 /**
- * Downloads a video from the given URL and extracts subtitles in the specified languages. 
- * It uses the yt-dlp command-line tool to perform the download and subtitle extraction. 
- * The function generates a unique identifier for each download to avoid conflicts and organizes the downloaded files in a structured directory. 
+ * Downloads a video from the given URL and extracts subtitles in the specified languages.
+ * It uses the yt-dlp command-line tool to perform the download and subtitle extraction.
+ * The function generates a unique identifier for each download to avoid conflicts and organizes the downloaded files in a structured directory.
  * The resulting Video struct contains the URL, paths to the downloaded video and subtitles, and the list of languages for which subtitles were extracted.
  * # Arguments
  * * `url` - A string slice that holds the URL of the video to be downloaded.
  * * `languages` - A slice of string slices that holds the languages for which subtitles should be extracted.
  * # Returns
- * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful, 
+ * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful,
  * * or a LlaasError if any step of the process fails.
  */
 pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
-
     // Get the video database from the context.
-    let database : &dyn VideoDatabase = _context;
+    let database: &dyn VideoDatabase = _context;
 
     // Get the uid based on a hash of the URL.
     let uid = &uuid::Uuid::new_v4().to_string();
@@ -60,7 +47,11 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
     // Create the output directory for the downloaded video and subtitles.
     let output = directory(uid);
 
-    println!("Downloading video from URL '{}' to '{}'", url, output.to_str().unwrap());
+    println!(
+        "Downloading video from URL '{}' to '{}'",
+        url,
+        output.to_str().unwrap()
+    );
 
     // Execute the yt-dlp command to download the video and extract subtitles in the specified languages.
     // https://www.ditig.com/yt-dlp-cheat-sheet#embed-metadata-and-thumbnail
@@ -68,30 +59,31 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
     // We show the progress of the download and subtitle extraction process by printing messages to the console.
     Command::new("yt-dlp")
         .args(&[
-            "-f", "mp4",
+            "-f",
+            "mp4",
             "--no-playlist",
             "--embed-metadata",
             "--embed-thumbnail",
             //"--movflags", "+faststart",
             "--write-subs",
-            "--sub-langs", &languages.join(","),
+            "--sub-langs",
+            &languages.join(","),
             url,
-            "-o", output.join("output.%(ext)s").to_str().unwrap(),
+            "-o",
+            output.join("output.%(ext)s").to_str().unwrap(),
         ])
         .stdout(std::process::Stdio::inherit())
         .output()?;
 
-  
-
-    // Create a Video struct with the URL, paths to the downloaded video and subtitles, 
+    // Create a Video struct with the URL, paths to the downloaded video and subtitles,
     // and the list of languages for which subtitles were extracted.
     let video = read(output, uid, url, languages)?;
 
-    // Upsert the video record in the database. 
+    // Upsert the video record in the database.
     database.upsert(&video).await?;
 
-    // The Video struct is returned with the URL, 
-    // paths to the downloaded video and subtitles, 
+    // The Video struct is returned with the URL,
+    // paths to the downloaded video and subtitles,
     // and the list of languages for which subtitles were extracted.
     Ok(video)
 }
@@ -108,31 +100,45 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
  * * `url` - A string slice that holds the URL of the video that was downloaded,
  * * `languages` - A slice of string slices that holds the languages for which subtitles were extracted.
  * # Returns
- * * `Result<Video, LlaasError>` - A result containing the Video struct if the video and subtitle files are successfully read and processed, 
+ * * `Result<Video, LlaasError>` - A result containing the Video struct if the video and subtitle files are successfully read and processed,
  * * or a LlaasError if there are any issues in reading the files, extracting the information, or constructing the Video struct.
  */
 fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Video, Error> {
+    let files: Vec<(String, bool)> = fs::read_dir(output)?
+        .filter_map(|e| {
+            let entry = e.ok()?;
+            let path = entry.path();
+            let file_name = path.file_name()?.to_str()?;
 
-    let files : Vec<(String, bool)> = fs::read_dir(output)?.filter_map(|e| {
-        let entry = e.ok()?;
-        let path = entry.path();
-        let file_name = path.file_name()?.to_str()?;
-
-        // If file starts with output and ends with .mp4 or any like srt, vtt subtitles extension.
-        if file_name.starts_with("output") && (file_name.ends_with(".mp4") || file_name.ends_with(".vtt") || file_name.ends_with(".srt")) {
-            Some((file_name.to_string(), file_name.ends_with(".mp4")))
-        } else {
-            None
-        }
-
-    }).collect();
+            // If file starts with output and ends with .mp4 or any like srt, vtt subtitles extension.
+            if file_name.starts_with("output")
+                && (file_name.ends_with(".mp4")
+                    || file_name.ends_with(".vtt")
+                    || file_name.ends_with(".srt"))
+            {
+                Some((file_name.to_string(), file_name.ends_with(".mp4")))
+            } else {
+                None
+            }
+        })
+        .collect();
 
     // Get the video file name or return an error if the video file is not found in the output directory.
     let video = match files
-            .iter()
-            .find(|(name, is_video)| *is_video).map(|(name, _)| name.clone()) {
+        .iter()
+        .find(|(name, is_video)| *is_video)
+        .map(|(name, _)| name.clone())
+    {
         Some(name) => name,
-        None => return Err(Error::IOError(IOInfo(format!("Video file not found in output directory for video with ID {}.", uid), None))),
+        None => {
+            return Err(Error::IOError(IOInfo(
+                format!(
+                    "Video file not found in output directory for video with ID {}.",
+                    uid
+                ),
+                None,
+            )));
+        }
     };
 
     // Get all the subtitle files.
@@ -141,18 +147,20 @@ fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Vid
         .filter_map(|(name, is_video)| if !*is_video { Some(name) } else { None })
         .map(|name| name.into())
         .collect();
-        
 
     // Extract the languages for which subtitles were extracted based on the subtitle file names.
-    let langauges = subtitles.iter().filter_map(|name| {
-        // Extract the language code from the subtitle file name.
-        let parts: Vec<&str> = name.split('.').collect();
-        if parts.len() >= 3 {
-            Some(parts[1].to_string())
-        } else {
-            None
-        }
-    }).collect();
+    let langauges = subtitles
+        .iter()
+        .filter_map(|name| {
+            // Extract the language code from the subtitle file name.
+            let parts: Vec<&str> = name.split('.').collect();
+            if parts.len() >= 3 {
+                Some(parts[1].to_string())
+            } else {
+                None
+            }
+        })
+        .collect();
 
     // Create a Video struct.
     Ok(Video {
@@ -162,14 +170,13 @@ fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Vid
         subtitles: subtitles,
         languages: langauges,
     })
-    
 }
 
 /**
- * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
- * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists. 
- * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid. 
- * 
+ * Retrieves the path to the downloaded video file for a given unique identifier (UUID).
+ * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists.
+ * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid.
+ *
  * Arguments
  * * `uid` - A UUID that serves as a unique identifier for the video resource, used to locate the corresponding video file on the server.
  * Returns
@@ -185,16 +192,16 @@ pub fn subtitles(context: &Context, uid: &str, lang: &str) -> Result<String, Err
 
 /**
  * Generates an HTML view for a video with synchronized subtitle playback.
- * The function retrieves the subtitle file for the specified video and language, 
+ * The function retrieves the subtitle file for the specified video and language,
  * parses it using rsubs_lib's WebVTT parser, and generates an HTML page that includes a video player with controls and a track for subtitles.
  * The generated HTML also includes a timeline of buttons for each subtitle cue, allowing users to jump to specific timestamps in the video.
  * When a button is clicked, it triggers a JavaScript function that jumps to the corresponding time in the video, enabling instant subtitle playback synchronization.
- * 
+ *
  * Arguments
  * * `uid` - A UUID that serves as a unique identifier for the video resource,
  * * `lang` - A string slice that holds the language code for the subtitles to be displayed in the view.
  * Returns
- * * `Result<String, LlaasError>` - A result containing the generated HTML view as a string if successful, 
+ * * `Result<String, LlaasError>` - A result containing the generated HTML view as a string if successful,
  * * or a LlaasError if there is an error in retrieving the subtitle file, parsing
  * * the VTT content, or any other issues that may arise during the view generation process.
  */
@@ -210,10 +217,9 @@ pub fn view(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
             None,
         ))
     })?;
-  
 
-    // Generate HTML buttons for each subtitle cue, allowing users to jump to specific timestamps in the video. 
-    // Each button displays the timestamp and the subtitle text, and when clicked, 
+    // Generate HTML buttons for each subtitle cue, allowing users to jump to specific timestamps in the video.
+    // Each button displays the timestamp and the subtitle text, and when clicked,
     // it triggers a JavaScript function to jump to the corresponding time in the video.
     let mut buttons = String::new();
     vtt.lines.iter().for_each(|cue| {
@@ -230,8 +236,8 @@ pub fn view(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
             start_seconds, time_label, cue_text
         ));
     });
-    
-    // The generated HTML includes a video player with controls and a track for subtitles, 
+
+    // The generated HTML includes a video player with controls and a track for subtitles,
     // as well as a timeline of buttons for each subtitle cue.
     Ok(format!(
         r#"<!DOCTYPE html>
@@ -272,9 +278,9 @@ pub fn view(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
 }
 
 /**
- * Streams the video file for a given unique identifier (UUID) in response to an HTTP request. 
+ * Streams the video file for a given unique identifier (UUID) in response to an HTTP request.
  * The function checks if the video file exists and is valid, and if so, it opens
- * the file and parses the HTTP Range header to determine the byte range requested by the client. 
+ * the file and parses the HTTP Range header to determine the byte range requested by the client.
  * It then seeks the file pointer to the specified byte offset and creates a non-blocking streaming
  * payload to stream the requested portion of the video file back to the client with appropriate HTTP headers for content type, content range, and content length.
  * If the video file does not exist or is not valid, it returns a 404 Not Found response. If there are any errors in opening the file, reading metadata, or seeking the file pointer, it returns a 500 Internal Server Error response with an appropriate error message.
@@ -288,30 +294,47 @@ pub fn view(context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
 pub fn stream(_context: &Context, req: HttpRequest, uid: String) -> impl Responder {
     let file_info = match video(&uid) {
         Ok(info) => info,
-        Err(_) => return HttpResponse::NotFound().body(format!("Video with ID {} is not available.", uid)),
+        Err(_) => {
+            return HttpResponse::NotFound()
+                .body(format!("Video with ID {} is not available.", uid));
+        }
     };
 
     // 1. Open the file synchronously as initiated in your snippet
     let mut file = match std::fs::File::open(&file_info) {
         Ok(f) => f,
-        Err(_) => return HttpResponse::InternalServerError().body(format!("Failed to open video file for video with ID {}!!", uid)),
+        Err(_) => {
+            return HttpResponse::InternalServerError().body(format!(
+                "Failed to open video file for video with ID {}!!",
+                uid
+            ));
+        }
     };
 
     // 2. Get the full size of the file
     let metadata = match file.metadata() {
         Ok(m) => m,
-        Err(_) => return HttpResponse::InternalServerError().body("Failed to read video metadata."),
+        Err(_) => {
+            return HttpResponse::InternalServerError().body("Failed to read video metadata.");
+        }
     };
     let file_size = metadata.len();
 
     // 3. Parse the standard browser HTTP Range header
-    let range_header = req.headers().get(header::RANGE).and_then(|v| v.to_str().ok());
+    let range_header = req
+        .headers()
+        .get(header::RANGE)
+        .and_then(|v| v.to_str().ok());
 
     if let Some(range_str) = range_header {
         if let Some(range) = range_str.strip_prefix("bytes=") {
             let parts: Vec<&str> = range.split('-').collect();
-            let start = parts.get(0).and_then(|&s| s.parse::<u64>().ok()).unwrap_or(0);
-            let end = parts.get(1)
+            let start = parts
+                .get(0)
+                .and_then(|&s| s.parse::<u64>().ok())
+                .unwrap_or(0);
+            let end = parts
+                .get(1)
                 .and_then(|&s| s.parse::<u64>().ok())
                 .unwrap_or(file_size - 1);
 
@@ -326,7 +349,8 @@ pub fn stream(_context: &Context, req: HttpRequest, uid: String) -> impl Respond
 
             // Seek the file pointer to the specific timestamp offset slice
             if file.seek(SeekFrom::Start(start)).is_err() {
-                return HttpResponse::InternalServerError().body("Failed to seek file payload offset.");
+                return HttpResponse::InternalServerError()
+                    .body("Failed to seek file payload offset.");
             }
 
             // Convert standard file to a non-blocking streaming chunk payload
@@ -336,7 +360,10 @@ pub fn stream(_context: &Context, req: HttpRequest, uid: String) -> impl Respond
             return HttpResponse::PartialContent()
                 .insert_header((header::CONTENT_TYPE, "video/mp4"))
                 .insert_header((header::ACCEPT_RANGES, "bytes"))
-                .insert_header((header::CONTENT_RANGE, format!("bytes {}-{}/{}", start, end, file_size)))
+                .insert_header((
+                    header::CONTENT_RANGE,
+                    format!("bytes {}-{}/{}", start, end, file_size),
+                ))
                 .insert_header((header::CONTENT_LENGTH, chunk_size))
                 .streaming(stream);
         }
@@ -353,8 +380,8 @@ pub fn stream(_context: &Context, req: HttpRequest, uid: String) -> impl Respond
 }
 
 /**
- * Generates a directory path for storing the downloaded video and subtitles based on a unique identifier (UUID). 
- * The directory is structured as "resources/videos/{uid}/", where {uid} is the string representation of the UUID. 
+ * Generates a directory path for storing the downloaded video and subtitles based on a unique identifier (UUID).
+ * The directory is structured as "resources/videos/{uid}/", where {uid} is the string representation of the UUID.
  * This function helps to organize the downloaded files in a way that avoids conflicts and allows for easy retrieval based on the unique identifier.
  * # Arguments
  * * `uid` - A UUID that serves as a unique identifier for the download, ensuring that each download has its own dedicated directory.
@@ -366,35 +393,38 @@ fn directory(uid: &str) -> PathBuf {
 }
 
 /**
- * Retrieves the path to the downloaded video file for a given unique identifier (UUID). 
- * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists. 
- * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid. 
+ * Retrieves the path to the downloaded video file for a given unique identifier (UUID).
+ * The function constructs the path to the video file based on the directory structure defined in the `directory` function and checks if the file exists.
+ * It returns a tuple containing the path to the video file as a string and a boolean indicating whether the file exists and is valid.
  */
 fn video(uid: &str) -> Result<String, Error> {
     let path = directory(uid).join("output.mp4");
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
     } else {
-        Err(Error::IOError(
-            IOInfo(format!("Video file for video with ID {} not found.", uid), 
-            None
+        Err(Error::IOError(IOInfo(
+            format!("Video file for video with ID {} not found.", uid),
+            None,
         )))
-
     }
 }
 
 /**
-* Retrieves the path to the subtitle file for a given unique identifier (UUID) and language. 
-* The function constructs the path to the subtitle file based on the directory structure defined in the `directory` function and checks if the file exists. 
-* It returns a tuple containing the path to the subtitle file as a string and a boolean indicating whether the file exists and is valid. 
+* Retrieves the path to the subtitle file for a given unique identifier (UUID) and language.
+* The function constructs the path to the subtitle file based on the directory structure defined in the `directory` function and checks if the file exists.
+* It returns a tuple containing the path to the subtitle file as a string and a boolean indicating whether the file exists and is valid.
 */
 fn subtitle(_context: &Context, uid: &str, lang: &str) -> Result<String, Error> {
     let path = directory(uid).join(format!("output.{}.vtt", lang));
     if path.exists() {
         Ok(path.to_str().unwrap().to_string())
     } else {
-        Err(Error::IOError(
-            IOInfo(format!("Subtitle file for video {} in language {} not found.", uid, lang), None)
-        ))
+        Err(Error::IOError(IOInfo(
+            format!(
+                "Subtitle file for video {} in language {} not found.",
+                uid, lang
+            ),
+            None,
+        )))
     }
 }

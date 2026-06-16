@@ -1,15 +1,13 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 use validator::Validate;
 
-#[derive(Validate,Debug, Serialize, Deserialize)]
+#[derive(Validate, Debug, Serialize, Deserialize)]
 pub struct LanguageRequest {
-
     #[validate(length(min = 2, max = 10))]
     pub name: String,
     #[validate(length(min = 2, max = 10))]
     pub code: String,
 }
-
 
 #[derive(Validate, Debug, Serialize, Deserialize)]
 pub struct LanguageUrl {

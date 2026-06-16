@@ -1,17 +1,14 @@
+mod api;
+mod common;
+mod database;
+mod messages;
 mod models;
 mod resources;
-mod common;
-mod messages;
-mod api;
-mod database;
 
 use clap::{Parser, Subcommand};
-use std::fs;
+use common::{config::Config, context::Context};
 use models::tts;
-use common::{
-    config::Config,
-    context::Context,
-};
+use std::fs;
 
 #[derive(Parser)]
 #[command(name = "llaas")]
@@ -52,12 +49,10 @@ enum Commands {
 async fn main() {
     let cli = Cli::parse();
 
-    // Initialize the application context with configuration settings. 
-    // The context is created as a static reference to ensure it lives for the entire duration of the application 
+    // Initialize the application context with configuration settings.
+    // The context is created as a static reference to ensure it lives for the entire duration of the application
     // and can be safely shared across threads and async tasks without needing to clone or manage lifetimes manually.
-    let context: &'static Context = Box::leak(Box::new(
-        Context::new(Config::new())
-    ));
+    let context: &'static Context = Box::leak(Box::new(Context::new(Config::new())));
 
     match cli.command {
         Commands::Book { from, to } => {
@@ -76,7 +71,13 @@ async fn main() {
             api::rest::start_server(context, port);
         }
         Commands::Video { url, languages } => {
-            let result = resources::video::download(context, &url, &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>()).await.unwrap();
+            let result = resources::video::download(
+                context,
+                &url,
+                &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>(),
+            )
+            .await
+            .unwrap();
             println!("Downloaded video from URL: {}", result.url);
         }
     }

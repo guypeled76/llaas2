@@ -1,14 +1,9 @@
+use crate::models::keywords::KeywordsModel;
 use epub::doc::EpubDoc;
 use unicode_segmentation::UnicodeSegmentation;
-use crate::models::keywords::KeywordsModel;
 
 /// A module to handle reading and parsing EPUB files, extracting metadata and content into structured formats.
-use crate::messages::{
-    Book, 
-    Chapter, 
-    Line, 
-    Paragraph
-};
+use crate::messages::{Book, Chapter, Line, Paragraph};
 
 /// Reads an EPUB file from the given path and extracts its metadata and content into a Book struct. It uses the EpubDoc library to read the EPUB file and the KeywordsModel to extract keywords from the metadata.
 /// # Arguments
@@ -21,10 +16,19 @@ use crate::messages::{
 pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
     let mut doc = EpubDoc::new(path)?;
 
-    let title = doc.mdata("title").map(|m| m.value.clone()).unwrap_or_default();
-    let author = doc.mdata("creator").map(|m| m.value.clone()).unwrap_or_default();
-    let description = doc.mdata("description").map(|m| m.value.clone()).unwrap_or_default();
-    
+    let title = doc
+        .mdata("title")
+        .map(|m| m.value.clone())
+        .unwrap_or_default();
+    let author = doc
+        .mdata("creator")
+        .map(|m| m.value.clone())
+        .unwrap_or_default();
+    let description = doc
+        .mdata("description")
+        .map(|m| m.value.clone())
+        .unwrap_or_default();
+
     print!("Extracting keywords from metadata... ");
     let keywords = KeywordsModel::apply(&[&title, &author, &description]);
     print!("Done.\n");
@@ -86,7 +90,9 @@ fn parse_html_chapter(html: &str) -> Option<Chapter> {
         .map(|block| {
             let lines = block
                 .unicode_sentences()
-                .map(|s| Line { text: s.to_string() })
+                .map(|s| Line {
+                    text: s.to_string(),
+                })
                 .collect();
             Paragraph { lines }
         })

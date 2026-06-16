@@ -5,23 +5,18 @@ use surrealdb_types::RecordId;
 
 use std::path::Path;
 
-use crate::common::{
-    config::DatabaseConfig, 
-    errors::Error
-};
+use crate::common::{config::DatabaseConfig, errors::Error};
 
-// A module to handle database connections and operations using SurrealDB with a RocksDB engine. 
-// It provides a Connection struct that initializes the database connection and allows for future 
+// A module to handle database connections and operations using SurrealDB with a RocksDB engine.
+// It provides a Connection struct that initializes the database connection and allows for future
 // expansion to include methods for querying and manipulating the database as needed.
 pub struct Connection {
     db: Surreal<Db>,
 }
 
 impl Connection {
-
     // Initialize the database connection
-pub async fn new(config: &DatabaseConfig) -> Result<Self, Error> {
-
+    pub async fn new(config: &DatabaseConfig) -> Result<Self, Error> {
         // Check if the database file already exists to determine if we need to initialize it with credentials.
         let is_new_db = !Path::new(&config.path).exists();
 
@@ -30,20 +25,18 @@ pub async fn new(config: &DatabaseConfig) -> Result<Self, Error> {
 
         // If the database is new, initialize it with dynamic credentials from the configuration.
         if is_new_db {
-
             println!("Initializing empty database with dynamic credentials...");
-        
+
             // Pass variables into the query using the '$' prefix
             let query = format!(
                 "DEFINE USER {} ON ROOT PASSWORD '{}' ROLES OWNER;",
-                config.username, 
-                config.password
+                config.username, config.password
             );
             db.query(&query).await?;
 
             // Create namespace and database if they don't exist
-            db.query("DEFINE NAMESPACE llaas; USE NS llaas; DEFINE DATABASE main;").await?;
-
+            db.query("DEFINE NAMESPACE llaas; USE NS llaas; DEFINE DATABASE main;")
+                .await?;
         }
 
         println!("Setting namespace and database for future operations...");
@@ -54,13 +47,12 @@ pub async fn new(config: &DatabaseConfig) -> Result<Self, Error> {
         println!("Signing in to the database with provided credentials...");
 
         // Sign in to the database using the credentials from the configuration.
-        db.signin(Root { 
-            username: config.username.clone(), 
-            password: config.password.clone() 
+        db.signin(Root {
+            username: config.username.clone(),
+            password: config.password.clone(),
         })
         .await?;
 
-    
         Ok(Self { db })
     }
 
@@ -69,7 +61,6 @@ pub async fn new(config: &DatabaseConfig) -> Result<Self, Error> {
         &self.db
     }
 }
-
 
 /// A convenience method to create a RecordId from a table name and key.
 pub fn record(table: &str, key: &str) -> RecordId {

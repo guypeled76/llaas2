@@ -1,6 +1,4 @@
-use rust_bert::pipelines::{
-    keywords_extraction::KeywordExtractionModel
-};
+use rust_bert::pipelines::keywords_extraction::KeywordExtractionModel;
 
 /**
  * A wrapper around the KeywordExtractionModel to handle initialization and prediction.
@@ -10,21 +8,18 @@ pub struct KeywordsModel {
     model: KeywordExtractionModel<'static>,
 }
 
-
-
 impl KeywordsModel {
-
     /**
      * Initializes the KeywordExtractionModel. If the model fails to load, it returns an error message.
      */
     pub fn new() -> Result<KeywordsModel, String> {
         let result = KeywordExtractionModel::new(Default::default());
-        
+
         match result {
-            Ok(model) =>  Ok(KeywordsModel { model }) ,
+            Ok(model) => Ok(KeywordsModel { model }),
             Err(e) => {
                 eprintln!("Error initializing the model: {}", e);
-                Err(e.to_string()) 
+                Err(e.to_string())
             }
         }
     }
@@ -33,12 +28,13 @@ impl KeywordsModel {
      * Predicts keywords from the given text inputs. It processes the input text and returns a vector of extracted keywords.
      */
     pub fn predict(&self, text: &[&str]) -> Vec<String> {
-        self.model.predict(text)
-                .into_iter()
-                .flatten()
-                .flatten()
-                .map(|kw| kw.text)
-                .collect()
+        self.model
+            .predict(text)
+            .into_iter()
+            .flatten()
+            .flatten()
+            .map(|kw| kw.text)
+            .collect()
     }
 
     /**
@@ -49,5 +45,3 @@ impl KeywordsModel {
         model.predict(text)
     }
 }
-
-

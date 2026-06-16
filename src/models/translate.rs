@@ -1,17 +1,9 @@
+use rust_bert::pipelines::{
+    common::ModelType,
+    translation::{Language, TranslationModelBuilder},
+};
 
-
-use rust_bert::pipelines::{common::ModelType, translation::{
-    Language,  
-    TranslationModelBuilder,
-}};
-
-use tch::{Device};
-
-
-
-
-
-
+use tch::Device;
 
 pub fn apply() {
     let model = TranslationModelBuilder::new()
@@ -23,24 +15,21 @@ pub fn apply() {
         .unwrap();
 
     let input = [
-        "Hello, how are you?", 
-        "This is a test of the translation pipeline."
+        "Hello, how are you?",
+        "This is a test of the translation pipeline.",
     ];
-    
-    let output = model.translate(
-        &input, 
-        None, 
-        Language::Spanish
-    );
+
+    let output = model.translate(&input, None, Language::Spanish);
 
     match output {
-        Ok(translations) => for v in translations {
-            println!("{}", v);
-        },
+        Ok(translations) => {
+            for v in translations {
+                println!("{}", v);
+            }
+        }
         Err(e) => {
             eprintln!("Error during translation: {}", e);
             return;
         }
     }
 }
-

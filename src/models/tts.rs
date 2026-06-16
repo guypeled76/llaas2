@@ -1,23 +1,17 @@
-use any_tts::{
-    load_model,
-    ModelType,
-    SynthesisRequest,
-    TtsConfig,
-    TtsModel as AnyTtsModel,
-};
+use any_tts::{ModelType, SynthesisRequest, TtsConfig, TtsModel as AnyTtsModel, load_model};
 
 use crate::common::errors::Error;
 
 /**
- * An enumeration to define preset configurations for TTS models. 
- * This allows for easy selection of different TTS backends without needing to specify detailed configuration parameters each time. 
+ * An enumeration to define preset configurations for TTS models.
+ * This allows for easy selection of different TTS backends without needing to specify detailed configuration parameters each time.
  * The presets can be expanded in the future to include additional models or configurations as needed.
  */
 pub enum TtsPreset {
     Kokoro,
     OmniVoice,
 }
-    
+
 /**
  * A wrapper around any-tts to handle model initialization and speech synthesis.
  * This struct provides a simple interface to synthesize WAV audio from text.
@@ -25,7 +19,6 @@ pub enum TtsPreset {
 pub struct TtsModel {
     model: Box<dyn AnyTtsModel>,
 }
-
 
 impl TtsModel {
     /**
@@ -50,7 +43,6 @@ impl TtsModel {
         Ok(audio.get_wav())
     }
 }
-
 
 /**
  * A convenience method to synthesize speech in one call.

@@ -1,17 +1,13 @@
 use actix_web::{
-    App, HttpResponse, HttpRequest, HttpServer, Responder, 
-    get, patch, post, 
-    web::{self, Json, Path}
+    App, HttpRequest, HttpResponse, HttpServer, Responder, get, patch, post,
+    web::{self, Json, Path},
 };
 
 use validator::Validate;
 
 use crate::api::types::{LanguageRequest, LanguageUrl};
+use crate::common::{context::Context, errors::Error};
 use crate::resources::video;
-use crate::common::{
-    errors::Error,
-    context::Context,
-};
 
 #[get("/languages/list")]
 async fn languages_list() -> impl Responder {
@@ -35,25 +31,41 @@ async fn languages_update(url: Path<LanguageUrl>) -> impl Responder {
 }
 
 #[get("/videos/{id}/{lang}/subtitles.vtt")]
-async fn video_vtt(context: web::Data<&'static Context>, path: Path<(String, String)>) -> impl Responder {
+async fn video_vtt(
+    context: web::Data<&'static Context>,
+    path: Path<(String, String)>,
+) -> impl Responder {
     let (id, lang) = path.into_inner();
     match video::subtitles(&context, &id, &lang) {
         Ok(subtitle) => HttpResponse::Ok().body(subtitle),
-        Err(_) => HttpResponse::NotFound().body(format!("Subtitle for video {} in language {} not found!!", id, lang)),
+        Err(_) => HttpResponse::NotFound().body(format!(
+            "Subtitle for video {} in language {} not found!!",
+            id, lang
+        )),
     }
 }
 
 #[get("/videos/{id}/{lang}/view.html")]
-async fn video_view(context: web::Data<&'static Context>, path: Path<(String, String)>) -> impl Responder {
+async fn video_view(
+    context: web::Data<&'static Context>,
+    path: Path<(String, String)>,
+) -> impl Responder {
     let (id, lang) = path.into_inner();
     match video::view(&context, &id, &lang) {
         Ok(view) => HttpResponse::Ok().body(view),
-        Err(_) => HttpResponse::NotFound().body(format!("View for video {} in language {} not found!!", id, lang)),
+        Err(_) => HttpResponse::NotFound().body(format!(
+            "View for video {} in language {} not found!!",
+            id, lang
+        )),
     }
 }
 
 #[get("/videos/{id}.mp4")]
-async fn video_stream(context: web::Data<&'static Context>, req: HttpRequest, path: Path<String>) -> impl Responder {
+async fn video_stream(
+    context: web::Data<&'static Context>,
+    req: HttpRequest,
+    path: Path<String>,
+) -> impl Responder {
     let id = path.into_inner().clone();
     video::stream(&context, req, id)
 }
@@ -63,7 +75,6 @@ async fn video_stream(context: web::Data<&'static Context>, req: HttpRequest, pa
  * The server listens on all interfaces and serves the defined endpoints.
  */
 pub fn start_server(context: &'static Context, port: u16) {
-    
     // Construct the address to bind the server to, using the specified port. The server will listen on all interfaces (
     let address = format!("0.0.0.0:{}", port);
 
@@ -82,7 +93,5 @@ pub fn start_server(context: &'static Context, port: u16) {
     .expect("Failed to bind server")
     .run();
 
-    let _ = tokio::runtime::Runtime::new()
-        .unwrap()
-        .block_on(server);
+    let _ = tokio::runtime::Runtime::new().unwrap().block_on(server);
 }
