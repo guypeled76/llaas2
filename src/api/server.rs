@@ -1,0 +1,18 @@
+use actix_web::{App, HttpServer, web};
+
+use crate::api::{client, rest};
+use crate::common::context::Context;
+
+pub async fn start_server(context: &'static Context, port: u16) -> std::io::Result<()> {
+    let address = format!("0.0.0.0:{}", port);
+
+    HttpServer::new(move || {
+        App::new()
+            .app_data(web::Data::new(context))
+            .configure(rest::configure)
+            .configure(client::configure)
+    })
+    .bind(address)?
+    .run()
+    .await
+}

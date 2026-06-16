@@ -68,7 +68,9 @@ async fn main() {
         }
         Commands::Start { port } => {
             println!("Starting server on port {port}...");
-            api::rest::start_server(context, port);
+            if let Err(err) = api::server::start_server(context, port).await {
+                eprintln!("Server failed to start: {err}");
+            }
         }
         Commands::Video { url, languages } => {
             let result = resources::video::download(

@@ -1,12 +1,12 @@
 use actix_web::{
-    App, HttpRequest, HttpResponse, HttpServer, Responder, get, patch, post,
+    HttpRequest, HttpResponse, Responder, get, patch, post,
     web::{self, Json, Path},
 };
 
 use validator::Validate;
 
 use crate::api::types::{LanguageRequest, LanguageUrl};
-use crate::common::{context::Context, errors::Error};
+use crate::common::context::Context;
 use crate::resources::video;
 
 #[get("/languages/list")]
@@ -70,28 +70,11 @@ async fn video_stream(
     video::stream(&context, req, id)
 }
 
-/**
- * Starts the REST API server on the specified port.
- * The server listens on all interfaces and serves the defined endpoints.
- */
-pub fn start_server(context: &'static Context, port: u16) {
-    // Construct the address to bind the server to, using the specified port. The server will listen on all interfaces (
-    let address = format!("0.0.0.0:{}", port);
-
-    // Create and run the Actix-web server with the defined routes and handlers and set the AppState with the specified port. The server will run indefinitely until it is stopped.
-    let server = HttpServer::new(move || {
-        App::new()
-            .app_data(web::Data::new(context))
-            .service(languages_list)
-            .service(languages_add)
-            .service(languages_update)
-            .service(video_vtt)
-            .service(video_view)
-            .service(video_stream)
-    })
-    .bind(address)
-    .expect("Failed to bind server")
-    .run();
-
-    let _ = tokio::runtime::Runtime::new().unwrap().block_on(server);
+pub fn configure(cfg: &mut web::ServiceConfig) {
+    cfg.service(languages_list)
+        .service(languages_add)
+        .service(languages_update)
+        .service(video_vtt)
+        .service(video_view)
+        .service(video_stream);
 }
