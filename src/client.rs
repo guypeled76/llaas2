@@ -1,14 +1,133 @@
 use actix_web::{HttpRequest, HttpResponse, Responder, get};
 
 pub mod videos;
+pub mod app;
+pub mod homepage;
+
+use leptos::prelude::*;
+use leptos_router::
+    location::RequestUrl
+;
+
 
 #[get("/{tail:.*}")]
 async fn app_shell(req: HttpRequest) -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
-        .body(videos::spa_html(req.uri().path()))
+        .body(spa_html(req.uri().path()))
 }
 
 pub fn configure(cfg: &mut actix_web::web::ServiceConfig) {
     cfg.service(app_shell);
 }
+
+
+fn spa_html(path: &str) -> String {
+    let app_html = Owner::new().with(|| {
+        provide_context(RequestUrl::new(path));
+        view! { <app::App/> }.to_html()
+    });
+
+    let shell = r#"<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLAAS</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; background: #121212; color: #fff; }
+    #subtitle-timeline { margin-top: 20px; max-height: 300px; overflow-y: auto; padding: 10px; background: #1e1e1e; border-radius: 6px; }
+    button { margin: 6px 0; padding: 10px; cursor: pointer; display: block; width: 100%; text-align: left; background: #2a2a2a; color: #fff; border: 1px solid #3a3a3a; border-radius: 4px; }
+    button:hover { background: #3a3a3a; }
+    video { border-radius: 6px; background: #000; max-width: 100%; height: auto; }
+    input { margin-right: 8px; margin-bottom: 8px; padding: 8px; }
+  </style>
+</head>
+<body>
+  <div id="app">{APP_HTML}</div>
+  <script>
+    function parseVttToButtons(vtt, container) {
+      const blocks = vtt.split(/\r?\n\r?\n/);
+      const cuePattern = /(\d{2}):(\d{2}):(\d{2})\.(\d{3})\s+-->\s+(\d{2}):(\d{2}):(\d{2})\.(\d{3})/;
+      container.innerHTML = "";
+
+      for (const block of blocks) {
+        const lines = block.split(/\r?\n/).filter(Boolean);
+        const timing = lines.find((line) => cuePattern.test(line));
+        if (!timing) continue;
+
+        const m = timing.match(cuePattern);
+        if (!m) continue;
+
+        const startSeconds =
+          Number(m[1]) * 3600 +
+          Number(m[2]) * 60 +
+          Number(m[3]) +
+          Number(m[4]) / 1000;
+
+        const cueText = lines
+          .filter((line) => line !== timing && !/^\d+$/.test(line))
+          .join(" ")
+          .trim();
+
+        const labelMinutes = Math.floor(startSeconds / 60).toString().padStart(2, "0");
+        const labelSeconds = Math.floor(startSeconds % 60).toString().padStart(2, "0");
+
+        const btn = document.createElement("button");
+        btn.textContent = `[${labelMinutes}:${labelSeconds}] "${cueText}"`;
+        btn.addEventListener("click", () => {
+          const video = document.getElementById("myVideo");
+          if (!video) return;
+          video.currentTime = startSeconds;
+          video.play();
+        });
+
+        container.appendChild(btn);
+      }
+    }
+
+    function wireHomeFormNavigation() {
+      const form = document.getElementById("video-form");
+      if (!form) return;
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const idInput = document.getElementById("video-id");
+        const langInput = document.getElementById("video-lang");
+        if (!idInput || !langInput) return;
+
+        const id = idInput.value.trim();
+        const lang = langInput.value.trim();
+        if (!id || !lang) return;
+
+        window.location.href = `/videos/${encodeURIComponent(id)}/${encodeURIComponent(lang)}`;
+      });
+    }
+
+    async function loadSubtitleTimeline() {
+      const timeline = document.getElementById("subtitle-timeline");
+      const track = document.getElementById("subTrack");
+      if (!timeline || !track) return;
+
+      const src = track.getAttribute("src");
+      if (!src) return;
+
+      try {
+        const res = await fetch(src);
+        if (!res.ok) throw new Error("Subtitle file not found");
+        const vtt = await res.text();
+        parseVttToButtons(vtt, timeline);
+      } catch (err) {
+        timeline.innerHTML = `<p>${String(err)}</p>`;
+      }
+    }
+
+    wireHomeFormNavigation();
+    loadSubtitleTimeline();
+  </script>
+</body>
+</html>"#;
+
+    shell.replace("{APP_HTML}", &app_html)
+}
+
