@@ -1,3 +1,5 @@
+pub mod graphql;
 pub mod rest;
 pub mod server;
-pub mod types;
+
+pub use llaas_api::rest as types;

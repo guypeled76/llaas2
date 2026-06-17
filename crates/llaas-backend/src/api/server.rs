@@ -1,11 +1,12 @@
 use actix_web::{App, HttpServer, web};
 
-use crate::api::rest;
+use crate::api::{graphql, rest};
 use crate::client;
 use llaas_store::context::Context;
 
 pub async fn start_server(context: &'static Context, port: u16) -> std::io::Result<()> {
     let address = format!("0.0.0.0:{}", port);
+    let schema = llaas_api::graphql::schema();
 
     // Initialize the global async executor used by Leptos's reactive runtime.
     // Required for server-side rendering of async resources / server functions.
@@ -14,7 +15,9 @@ pub async fn start_server(context: &'static Context, port: u16) -> std::io::Resu
     HttpServer::new(move || {
         App::new()
             .app_data(web::Data::new(context))
+            .app_data(web::Data::new(schema.clone()))
             .configure(rest::configure)
+            .configure(graphql::configure)
             .configure(client::configure)
     })
     .bind(address)?

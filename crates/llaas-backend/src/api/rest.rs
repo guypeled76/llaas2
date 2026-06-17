@@ -5,7 +5,7 @@ use actix_web::{
 
 use validator::Validate;
 
-use crate::api::types::{LanguageRequest, LanguageUrl};
+use llaas_api::rest::{LanguageRequest, LanguageUrl};
 use llaas_resources::video;
 use llaas_store::context::Context;
 
