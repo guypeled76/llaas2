@@ -28,6 +28,7 @@ publish = false
 llaas-api = { path = "crates/llaas-api" }
 llaas-ai = { path = "crates/llaas-ai" }
 llaas-backend = { path = "crates/llaas-backend" }
+llaas-cli = { path = "crates/llaas-cli" }
 llaas-common = { path = "crates/llaas-common" }
 llaas-core = { path = "crates/llaas-core" }
 llaas-jobs = { path = "crates/llaas-jobs" }
@@ -35,34 +36,5 @@ llaas-resources = { path = "crates/llaas-resources" }
 llaas-store = { path = "crates/llaas-store" }
 
 [dependencies]
-llaas-api.workspace = true
-llaas-ai.workspace = true
-llaas-backend.workspace = true
-llaas-common.workspace = true
-llaas-resources.workspace = true
-llaas-store.workspace = true
-console = { version = "0.16.3", features = ["std"] }
-prost = "0.14"
-tonic = "*"
-tonic-prost = "*"
+llaas-cli.workspace = true
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
-clap = { version = "4", features = ["derive"] }
-epub = "2"
-serde_json = "1"
-html2text = "0.4"
-unicode-segmentation = "1.13.3"
-actix-web = "4.13.0"
-leptos = { version = "0.8.12", features = ["ssr"] }
-leptos_router = { version = "0.8.13", features = ["ssr"] }
-json = "0.12.4"
-serde = { version = "1.0.228", features=["derive"]}
-surrealdb = { version = "3.1.4", features=["kv-rocksdb"]}
-uuid = "1.23.3"
-validator = { version = "0.20.0", features=["derive"]}
-async-trait = "0.1.89"
-derive_more = "2.1.1"
-tokio-util = "0.7.18"
-rsubs-lib = "0.3.4"
-surrealdb-types = "3.1.4"
-any_spawner = { version = "0.3.0", features = ["tokio"] }
-futures = "0.3"

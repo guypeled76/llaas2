@@ -1,6 +1,6 @@
 # LLAAS
 
-LLAAS is a language learning platform server. The current implementation is still the original single `llaas` package, while the repository is being prepared for a workspace split.
+LLAAS is a language learning platform server. The repository is being split into workspace crates while preserving the existing command behavior.
 
 The refactor plan lives in [plans/workspace-graphql-refactor.md](plans/workspace-graphql-refactor.md).
 
@@ -19,7 +19,7 @@ The refactor plan lives in [plans/workspace-graphql-refactor.md](plans/workspace
 
 ## Current Checkpoint
 
-The root `llaas` package remains the behavior-preserving implementation until code is moved into the workspace crates.
+The root `llaas` package is now a thin compatibility binary that delegates to `llaas-cli`. The current implementation has been moved into workspace crates, while later phases will replace local CLI calls with GraphQL service calls.
 
 ```sh
 cargo check --workspace

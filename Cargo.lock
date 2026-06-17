@@ -3899,12 +3899,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "json"
-version = "0.12.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "078e285eafdfb6c4b434e0d31e8cfcb5115b651496faca5749b88fafd4f23bfd"
-
-[[package]]
 name = "jsonwebtoken"
 version = "10.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4295,37 +4289,8 @@ checksum = "92daf443525c4cce67b150400bc2316076100ce0b3686209eb8cf3c31612e6f0"
 name = "llaas"
 version = "0.1.0"
 dependencies = [
- "actix-web",
- "any_spawner",
- "async-trait",
- "clap",
- "console",
- "derive_more",
- "epub",
- "futures",
- "html2text",
- "json",
- "leptos",
- "leptos_router",
- "llaas-ai",
- "llaas-api",
- "llaas-backend",
- "llaas-common",
- "llaas-resources",
- "llaas-store",
- "prost",
- "rsubs-lib",
- "serde",
- "serde_json",
- "surrealdb",
- "surrealdb-types",
+ "llaas-cli",
  "tokio",
- "tokio-util",
- "tonic",
- "tonic-prost",
- "unicode-segmentation",
- "uuid",
- "validator",
 ]
 
 [[package]]
@@ -4370,8 +4335,15 @@ dependencies = [
 name = "llaas-cli"
 version = "0.1.0"
 dependencies = [
+ "clap",
+ "llaas-ai",
  "llaas-api",
+ "llaas-backend",
  "llaas-common",
+ "llaas-resources",
+ "llaas-store",
+ "serde_json",
+ "tokio",
 ]
 
 [[package]]

@@ -1,3 +1,4 @@
-fn main() {
-    println!("llaas-cli workspace shell");
+#[tokio::main]
+async fn main() {
+    llaas_cli::run().await;
 }
