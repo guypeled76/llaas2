@@ -390,6 +390,7 @@ checksum = "1384d3fe1eecb464229fcf6eebb72306591c56bf27b373561489458a7c73027d"
 dependencies = [
  "futures",
  "thiserror 2.0.18",
+ "tokio",
  "wasm-bindgen-futures",
 ]
 
@@ -4296,11 +4297,13 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "any-tts",
+ "any_spawner",
  "async-trait",
  "clap",
  "console",
  "derive_more",
  "epub",
+ "futures",
  "html2text",
  "json",
  "leptos",

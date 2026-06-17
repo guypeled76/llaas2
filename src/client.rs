@@ -4,6 +4,7 @@ pub mod app;
 pub mod homepage;
 pub mod videos;
 
+use futures::StreamExt;
 use leptos::prelude::*;
 use leptos_router::location::RequestUrl;
 
@@ -14,7 +15,8 @@ pub fn configure(cfg: &mut actix_web::web::ServiceConfig) {
 
 #[get("/{tail:.*}")]
 async fn app_shell(req: HttpRequest) -> impl Responder {
-    let html = Owner::new().with(|| {
+    let owner = Owner::new();
+    let view = owner.with(|| {
         provide_context(RequestUrl::new(req.uri().path()));
         view! {
             <html>
@@ -40,8 +42,16 @@ async fn app_shell(req: HttpRequest) -> impl Responder {
                 </body>
             </html>
         }
-        .to_html()
     });
+
+    // SSR-only (no hydration): use the in-order HTML stream, which awaits each
+    // <Suspense> before emitting, and collect it into a fully-resolved string.
+    // ScopedFuture keeps the reactive owner/observer active while polling.
+    let html = owner
+        .with(|| {
+            ScopedFuture::new(view.to_html_stream_in_order().collect::<String>())
+        })
+        .await;
 
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
