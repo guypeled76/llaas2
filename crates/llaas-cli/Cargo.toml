@@ -1,0 +1,13 @@
+[package]
+name = "llaas-cli"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "llaas-cli"
+path = "src/main.rs"
+
+[dependencies]
+llaas-api.workspace = true
+llaas-common.workspace = true

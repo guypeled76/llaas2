@@ -4327,6 +4327,86 @@ dependencies = [
 ]
 
 [[package]]
+name = "llaas-ai"
+version = "0.1.0"
+dependencies = [
+ "llaas-common",
+]
+
+[[package]]
+name = "llaas-api"
+version = "0.1.0"
+dependencies = [
+ "llaas-common",
+ "llaas-core",
+]
+
+[[package]]
+name = "llaas-backend"
+version = "0.1.0"
+dependencies = [
+ "llaas-api",
+ "llaas-common",
+ "llaas-jobs",
+ "llaas-resources",
+ "llaas-store",
+]
+
+[[package]]
+name = "llaas-cli"
+version = "0.1.0"
+dependencies = [
+ "llaas-api",
+ "llaas-common",
+]
+
+[[package]]
+name = "llaas-common"
+version = "0.1.0"
+dependencies = [
+ "llaas-core",
+]
+
+[[package]]
+name = "llaas-core"
+version = "0.1.0"
+
+[[package]]
+name = "llaas-frontend"
+version = "0.1.0"
+dependencies = [
+ "llaas-api",
+ "llaas-core",
+]
+
+[[package]]
+name = "llaas-jobs"
+version = "0.1.0"
+dependencies = [
+ "llaas-ai",
+ "llaas-common",
+ "llaas-core",
+ "llaas-resources",
+ "llaas-store",
+]
+
+[[package]]
+name = "llaas-resources"
+version = "0.1.0"
+dependencies = [
+ "llaas-common",
+ "llaas-core",
+]
+
+[[package]]
+name = "llaas-store"
+version = "0.1.0"
+dependencies = [
+ "llaas-common",
+ "llaas-core",
+]
+
+[[package]]
 name = "local-channel"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"

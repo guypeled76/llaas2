@@ -1,0 +1,15 @@
+[package]
+name = "llaas-jobs"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+llaas-ai.workspace = true
+llaas-common.workspace = true
+llaas-core.workspace = true
+llaas-resources.workspace = true
+llaas-store.workspace = true
