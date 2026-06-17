@@ -1,13 +1,12 @@
 mod api;
-mod client;
 mod common;
 mod database;
-mod messages;
 mod models;
 mod resources;
 
 use clap::{Parser, Subcommand};
 use common::{config::Config, context::Context};
+use llaas_api::messages;
 use models::tts;
 use std::fs;
 

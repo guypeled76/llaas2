@@ -8,7 +8,6 @@ use futures::StreamExt;
 use leptos::prelude::*;
 use leptos_router::location::RequestUrl;
 
-
 pub fn configure(cfg: &mut actix_web::web::ServiceConfig) {
     cfg.service(app_shell);
 }
@@ -48,13 +47,10 @@ async fn app_shell(req: HttpRequest) -> impl Responder {
     // <Suspense> before emitting, and collect it into a fully-resolved string.
     // ScopedFuture keeps the reactive owner/observer active while polling.
     let html = owner
-        .with(|| {
-            ScopedFuture::new(view.to_html_stream_in_order().collect::<String>())
-        })
+        .with(|| ScopedFuture::new(view.to_html_stream_in_order().collect::<String>()))
         .await;
 
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(html)
 }
-

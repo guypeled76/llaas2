@@ -6,8 +6,8 @@ use actix_web::{
 use validator::Validate;
 
 use crate::api::types::{LanguageRequest, LanguageUrl};
-use crate::common::context::Context;
-use crate::resources::video;
+use llaas_resources::video;
+use llaas_store::context::Context;
 
 #[get("/languages/list")]
 async fn languages_list() -> impl Responder {

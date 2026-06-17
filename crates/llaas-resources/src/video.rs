@@ -16,14 +16,12 @@ use actix_web::{HttpRequest, HttpResponse, Responder, http::header};
 // Local module imports for handling video processing and errors.
 use tokio::io::AsyncReadExt;
 
-use crate::common::database;
+use llaas_store::database;
 // Import the custom error type for handling errors in video processing.
-use crate::common::{
-    context::Context,
-    errors::{Error, IOInfo},
-};
+use llaas_common::errors::{Error, IOInfo};
+use llaas_store::context::Context;
 
-use crate::database::videos::{Video, VideoDatabase};
+use llaas_store::videos::{Video, VideoDatabase};
 
 /**
  * Downloads a video from the given URL and extracts subtitles in the specified languages.
@@ -103,7 +101,7 @@ pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Resu
  * * `Result<Video, LlaasError>` - A result containing the Video struct if the video and subtitle files are successfully read and processed,
  * * or a LlaasError if there are any issues in reading the files, extracting the information, or constructing the Video struct.
  */
-fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Video, Error> {
+fn read(output: PathBuf, uid: &str, url: &str, _languages: &[&str]) -> Result<Video, Error> {
     let files: Vec<(String, bool)> = fs::read_dir(output)?
         .filter_map(|e| {
             let entry = e.ok()?;
@@ -126,7 +124,7 @@ fn read(output: PathBuf, uid: &str, url: &str, languages: &[&str]) -> Result<Vid
     // Get the video file name or return an error if the video file is not found in the output directory.
     let video = match files
         .iter()
-        .find(|(name, is_video)| *is_video)
+        .find(|(_name, is_video)| *is_video)
         .map(|(name, _)| name.clone())
     {
         Some(name) => name,

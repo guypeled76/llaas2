@@ -1,2 +1,1 @@
-pub mod epub;
-pub mod video;
+pub use llaas_resources::{epub, video};

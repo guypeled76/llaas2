@@ -2,3 +2,6 @@
 //!
 //! Keep this crate small: configuration, error shape, tracing setup, shutdown
 //! helpers, and low-level utility traits belong here.
+
+pub mod config;
+pub mod errors;

@@ -13,12 +13,12 @@ message Article {
     string author = 2;
     string description = 3;
     repeated string keywords = 4;
-    repeated Paragraph paragraphs = 5;   
+    repeated Paragraph paragraphs = 5;
 }
 
 message Chapter {
     string title = 1;
-    repeated Paragraph paragraphs = 2;   
+    repeated Paragraph paragraphs = 2;
 }
 
 message Paragraph {

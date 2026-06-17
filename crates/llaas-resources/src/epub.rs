@@ -1,9 +1,9 @@
-use crate::models::keywords::KeywordsModel;
 use epub::doc::EpubDoc;
+use llaas_ai::keywords::KeywordsModel;
 use unicode_segmentation::UnicodeSegmentation;
 
 /// A module to handle reading and parsing EPUB files, extracting metadata and content into structured formats.
-use crate::messages::{Book, Chapter, Line, Paragraph};
+use llaas_api::messages::{Book, Chapter, Line, Paragraph};
 
 /// Reads an EPUB file from the given path and extracts its metadata and content into a Book struct. It uses the EpubDoc library to read the EPUB file and the KeywordsModel to extract keywords from the metadata.
 /// # Arguments

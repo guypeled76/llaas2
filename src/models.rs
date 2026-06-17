@@ -1,6 +1,2 @@
-pub mod classification;
-pub mod keywords;
-pub mod pos;
-pub mod sentiment;
-pub mod translate;
-pub mod tts;
+#[allow(unused_imports)]
+pub use llaas_ai::{classification, keywords, pos, sentiment, translate, tts};

@@ -8,4 +8,7 @@ publish.workspace = true
 path = "src/lib.rs"
 
 [dependencies]
+any-tts = { version = "0.1.2", features = ["metal"] }
 llaas-common.workspace = true
+rust-bert = "0.23.0"
+tch = "0.17.0"

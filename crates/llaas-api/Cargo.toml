@@ -10,3 +10,7 @@ path = "src/lib.rs"
 [dependencies]
 llaas-common.workspace = true
 llaas-core.workspace = true
+prost = "0.14"
+
+[build-dependencies]
+tonic-prost-build = "*"

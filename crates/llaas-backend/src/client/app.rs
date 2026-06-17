@@ -4,10 +4,7 @@ use leptos_router::{
     path,
 };
 
-use crate::client::{
-    homepage::HomePage,
-    videos::VideoPage,
-};
+use crate::client::{homepage::HomePage, videos::VideoPage};
 
 #[component]
 pub fn App() -> impl IntoView {

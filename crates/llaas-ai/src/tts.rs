@@ -1,6 +1,6 @@
 use any_tts::{ModelType, SynthesisRequest, TtsConfig, TtsModel as AnyTtsModel, load_model};
 
-use crate::common::errors::Error;
+use llaas_common::errors::Error;
 
 /**
  * An enumeration to define preset configurations for TTS models.

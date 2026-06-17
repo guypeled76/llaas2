@@ -4296,7 +4296,6 @@ name = "llaas"
 version = "0.1.0"
 dependencies = [
  "actix-web",
- "any-tts",
  "any_spawner",
  "async-trait",
  "clap",
@@ -4308,19 +4307,22 @@ dependencies = [
  "json",
  "leptos",
  "leptos_router",
+ "llaas-ai",
+ "llaas-api",
+ "llaas-backend",
+ "llaas-common",
+ "llaas-resources",
+ "llaas-store",
  "prost",
  "rsubs-lib",
- "rust-bert",
  "serde",
  "serde_json",
  "surrealdb",
  "surrealdb-types",
- "tch",
  "tokio",
  "tokio-util",
  "tonic",
  "tonic-prost",
- "tonic-prost-build",
  "unicode-segmentation",
  "uuid",
  "validator",
@@ -4330,7 +4332,10 @@ dependencies = [
 name = "llaas-ai"
 version = "0.1.0"
 dependencies = [
+ "any-tts",
  "llaas-common",
+ "rust-bert",
+ "tch",
 ]
 
 [[package]]
@@ -4339,17 +4344,26 @@ version = "0.1.0"
 dependencies = [
  "llaas-common",
  "llaas-core",
+ "prost",
+ "tonic-prost-build",
 ]
 
 [[package]]
 name = "llaas-backend"
 version = "0.1.0"
 dependencies = [
+ "actix-web",
+ "any_spawner",
+ "futures",
+ "leptos",
+ "leptos_router",
  "llaas-api",
  "llaas-common",
  "llaas-jobs",
  "llaas-resources",
  "llaas-store",
+ "serde",
+ "validator",
 ]
 
 [[package]]
@@ -4364,7 +4378,9 @@ dependencies = [
 name = "llaas-common"
 version = "0.1.0"
 dependencies = [
+ "any-tts",
  "llaas-core",
+ "surrealdb",
 ]
 
 [[package]]
@@ -4394,16 +4410,32 @@ dependencies = [
 name = "llaas-resources"
 version = "0.1.0"
 dependencies = [
+ "actix-web",
+ "epub",
+ "html2text",
+ "llaas-ai",
+ "llaas-api",
  "llaas-common",
  "llaas-core",
+ "llaas-store",
+ "rsubs-lib",
+ "tokio",
+ "tokio-util",
+ "unicode-segmentation",
+ "uuid",
 ]
 
 [[package]]
 name = "llaas-store"
 version = "0.1.0"
 dependencies = [
+ "async-trait",
  "llaas-common",
  "llaas-core",
+ "serde",
+ "surrealdb",
+ "surrealdb-types",
+ "tokio",
 ]
 
 [[package]]

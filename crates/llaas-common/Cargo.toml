@@ -8,4 +8,6 @@ publish.workspace = true
 path = "src/lib.rs"
 
 [dependencies]
+any-tts = "0.1.2"
 llaas-core.workspace = true
+surrealdb = { version = "3.1.4", default-features = false }
