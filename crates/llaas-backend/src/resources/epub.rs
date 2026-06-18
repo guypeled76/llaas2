@@ -69,7 +69,7 @@ pub fn read(path: &str) -> Result<Book, Box<dyn std::error::Error>> {
 /// This function will return None if the HTML content cannot be parsed into a chapter, which can occur if the content is empty or does not contain valid text. The function does not return an error
 /// but instead uses the Option type to indicate the success or failure of the parsing operation.
 fn parse_html_chapter(html: &str) -> Option<Chapter> {
-    let text = html2text::from_read(html.as_bytes(), usize::MAX);
+    let text = html2text::from_read(html.as_bytes(), usize::MAX).ok()?;
 
     let mut blocks = text
         .split("\n\n")

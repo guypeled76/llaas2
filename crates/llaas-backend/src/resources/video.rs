@@ -1,4 +1,4 @@
-use rsubs_lib::vtt;
+use rsubs_lib::VTT;
 use std::fs;
 use std::io::Seek;
 use std::io::SeekFrom;
