@@ -17,11 +17,13 @@ use actix_web::{HttpRequest, HttpResponse, Responder, http::header};
 use tokio::io::AsyncReadExt;
 
 use crate::store::database;
+use crate::store::videos::{Video, VideoDatabase};
+
 // Import the custom error type for handling errors in video processing.
 use crate::common::errors::{Error, IOInfo};
 use crate::common::context::Context;
 
-use crate::store::videos::{Video, VideoDatabase};
+
 
 /**
  * Downloads a video from the given URL and extracts subtitles in the specified languages.
@@ -35,9 +37,9 @@ use crate::store::videos::{Video, VideoDatabase};
  * * `Result<Video, LlaasError>` - A result containing the Video struct if the download and subtitle extraction are successful,
  * * or a LlaasError if any step of the process fails.
  */
-pub async fn download(_context: &Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
+pub async fn download(context: &'static Context, url: &str, languages: &[&str]) -> Result<Video, Error> {
     // Get the video database from the context.
-    let database: &dyn VideoDatabase = _context;
+    let database: &'static dyn VideoDatabase = context;
 
     // Get the uid based on a hash of the URL.
     let uid = &uuid::Uuid::new_v4().to_string();
