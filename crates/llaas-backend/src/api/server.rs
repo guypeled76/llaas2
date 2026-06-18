@@ -2,7 +2,7 @@ use actix_web::{App, HttpServer, web};
 
 use crate::api::{graphql, rest};
 use crate::client;
-use crate::store::context::Context;
+use crate::common::context::Context;
 
 pub async fn start_server(context: &'static Context, port: u16) -> std::io::Result<()> {
     let address = format!("0.0.0.0:{}", port);

@@ -1,7 +1,26 @@
 use actix_web::{HttpRequest, HttpResponse, Responder, get, post, web};
 use async_graphql::http::GraphiQLSource;
+use async_graphql::{EmptyMutation, EmptySubscription, Object, Schema};
 use async_graphql_actix_web::{GraphQLRequest, GraphQLResponse, GraphQLSubscription};
-use crate::api::graphql::LlaasSchema;
+
+pub type LlaasSchema = Schema<QueryRoot, EmptyMutation, EmptySubscription>;
+
+pub fn schema() -> LlaasSchema {
+    Schema::build(QueryRoot, EmptyMutation, EmptySubscription).finish()
+}
+
+pub struct QueryRoot;
+
+#[Object]
+impl QueryRoot {
+    async fn service_name(&self) -> &str {
+        "llaas"
+    }
+
+    async fn languages(&self) -> Vec<&str> {
+        vec!["en", "es", "fr", "de"]
+    }
+}
 
 #[post("/graphql")]
 async fn graphql(schema: web::Data<LlaasSchema>, request: GraphQLRequest) -> GraphQLResponse {

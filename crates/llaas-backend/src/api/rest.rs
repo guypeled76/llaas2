@@ -2,12 +2,24 @@ use actix_web::{
     HttpRequest, HttpResponse, Responder, get, patch, post,
     web::{self, Json, Path},
 };
+use serde::{Deserialize, Serialize};
 
 use validator::Validate;
 
-use crate::api::rest::{LanguageRequest, LanguageUrl};
 use crate::resources::video;
 use crate::common::context::Context;
+
+#[derive(Debug, Clone, Serialize, Deserialize, Validate)]
+pub struct LanguageRequest {
+    #[validate(length(min = 2, max = 32))]
+    pub name: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, Validate)]
+pub struct LanguageUrl {
+    #[validate(length(min = 2, max = 8))]
+    pub code: String,
+}
 
 #[get("/languages/list")]
 async fn languages_list() -> impl Responder {

@@ -7,14 +7,26 @@ publish.workspace = true
 [dependencies]
 actix-web = "4.13.0"
 any_spawner = { version = "0.3.0", features = ["tokio"] }
+any-tts = "0.1.7"
 async-graphql = { version = "7.2.1", features = ["graphiql"] }
 async-graphql-actix-web = "7.2.1"
+async-trait = "0.1.89"
+clap = { version = "4.5.53", features = ["derive"] }
+epub = "2.1.4"
 futures = "0.3"
 html2text = "0.17.1"
 leptos = { version = "0.8.12", features = ["ssr"] }
 leptos_router = { version = "0.8.13", features = ["ssr"] }
+console = { version = "0.16.3", features = ["std"] }
+rsubs-lib = "0.1.6"
 rust-bert = "0.23.0"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.150"
 surrealdb = { version = "3.1.4", features= ["kv-rocksdb"]}
+surrealdb-types = "3.1.4"
+tch = "0.17.0"
+tokio = { version = "1.48.0", features = ["fs", "io-util", "macros", "rt-multi-thread", "sync"] }
+tokio-util = { version = "0.7.17", features = ["io"] }
+unicode-segmentation = "1.12.0"
+uuid = { version = "1.18.1", features = ["v4"] }
 validator = { version = "0.20.0", features = ["derive"] }

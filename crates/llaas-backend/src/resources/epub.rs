@@ -1,5 +1,5 @@
 use epub::doc::EpubDoc;
-use llaas_ai::keywords::KeywordsModel;
+use crate::ai::keywords::KeywordsModel;
 use unicode_segmentation::UnicodeSegmentation;
 
 /// A module to handle reading and parsing EPUB files, extracting metadata and content into structured formats.

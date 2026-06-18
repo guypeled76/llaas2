@@ -1241,6 +1241,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d64e8af5551369d19cf50138de61f1c42074ab970f74e99be916646777f8fc87"
 dependencies = [
  "encode_unicode",
+ "libc",
+ "unicode-width",
  "windows-sys 0.61.2",
 ]
 
@@ -3619,6 +3621,7 @@ dependencies = [
  "any_spawner",
  "async-graphql",
  "async-graphql-actix-web",
+ "console",
  "futures",
  "html2text",
  "leptos",
