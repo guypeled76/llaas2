@@ -16,12 +16,12 @@ use actix_web::{HttpRequest, HttpResponse, Responder, http::header};
 // Local module imports for handling video processing and errors.
 use tokio::io::AsyncReadExt;
 
-use llaas_store::database;
+use crate::store::database;
 // Import the custom error type for handling errors in video processing.
-use llaas_common::errors::{Error, IOInfo};
-use llaas_store::context::Context;
+use crate::common::errors::{Error, IOInfo};
+use crate::common::context::Context;
 
-use llaas_store::videos::{Video, VideoDatabase};
+use crate::store::videos::{Video, VideoDatabase};
 
 /**
  * Downloads a video from the given URL and extracts subtitles in the specified languages.

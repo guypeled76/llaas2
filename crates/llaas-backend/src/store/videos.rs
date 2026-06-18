@@ -1,6 +1,6 @@
 use crate::context::Context;
 
-use llaas_common::errors::Error;
+use crate::common::errors::Error;
 use serde::{Deserialize, Serialize};
 use surrealdb_types::{RecordId, SurrealValue};
 

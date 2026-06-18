@@ -5,7 +5,7 @@ use surrealdb_types::RecordId;
 
 use std::path::Path;
 
-use llaas_common::{config::DatabaseConfig, errors::Error};
+use crate::common::{config::DatabaseConfig, errors::Error};
 
 // A module to handle database connections and operations using SurrealDB with a RocksDB engine.
 // It provides a Connection struct that initializes the database connection and allows for future

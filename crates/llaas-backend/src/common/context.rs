@@ -1,8 +1,8 @@
 use surrealdb::Surreal;
 use surrealdb::engine::local::Db;
 
-use crate::database::Connection;
-use llaas_common::{config::Config, errors::Error};
+use crate::store::database::Connection;
+use crate::common::{config::Config, errors::Error};
 use tokio::sync::OnceCell;
 
 pub struct Context {

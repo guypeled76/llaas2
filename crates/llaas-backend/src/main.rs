@@ -1,9 +1,17 @@
+mod resources;
+mod store;
+mod api;
+mod client;
+mod ai;
+mod common;
+
 use clap::{Parser, Subcommand};
-use llaas_ai::tts;
-use llaas_api::messages;
-use llaas_common::config::Config;
-use llaas_store::context::Context;
+use ai::tts;
+use api::messages;
+use common::config::Config;
+use common::context::Context;
 use std::fs;
+
 
 #[derive(Parser)]
 #[command(name = "llaas")]
@@ -40,7 +48,8 @@ enum Commands {
     },
 }
 
-pub async fn run() {
+#[tokio::main]
+async fn main() {
     let cli = Cli::parse();
 
     // Initialize the application context with configuration settings.
@@ -50,7 +59,7 @@ pub async fn run() {
 
     match cli.command {
         Commands::Book { from, to } => {
-            let book = llaas_resources::epub::read(&from).expect("Failed to read epub");
+            let book = resources::epub::read(&from).expect("Failed to read epub");
             let json = book_to_json(&book);
             let output = serde_json::to_string_pretty(&json).expect("Failed to serialize JSON");
             fs::write(&to, output).expect("Failed to write output file");
@@ -62,12 +71,12 @@ pub async fn run() {
         }
         Commands::Start { port } => {
             println!("Starting server on port {port}...");
-            if let Err(err) = llaas_backend::api::server::start_server(context, port).await {
+            if let Err(err) = api::server::start_server(context, port).await {
                 eprintln!("Server failed to start: {err}");
             }
         }
         Commands::Video { url, languages } => {
-            let result = llaas_resources::video::download(
+            let result = resources::video::download(
                 context,
                 &url,
                 &languages.iter().map(|s| s.as_str()).collect::<Vec<_>>(),

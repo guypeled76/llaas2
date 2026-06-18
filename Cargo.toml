@@ -1,22 +1,8 @@
-[package]
-name = "llaas"
-version = "0.1.0"
-edition = "2024"
-
 [workspace]
 resolver = "3"
 members = [
-	".",
-	"crates/llaas-api",
-	"crates/llaas-ai",
 	"crates/llaas-backend",
-	"crates/llaas-cli",
-	"crates/llaas-common",
-	"crates/llaas-core",
-	"crates/llaas-frontend",
-	"crates/llaas-jobs",
-	"crates/llaas-resources",
-	"crates/llaas-store",
+	"crates/llaas-frontend"
 ]
 
 [workspace.package]
@@ -24,17 +10,4 @@ version = "0.1.0"
 edition = "2024"
 publish = false
 
-[workspace.dependencies]
-llaas-api = { path = "crates/llaas-api" }
-llaas-ai = { path = "crates/llaas-ai" }
-llaas-backend = { path = "crates/llaas-backend" }
-llaas-cli = { path = "crates/llaas-cli" }
-llaas-common = { path = "crates/llaas-common" }
-llaas-core = { path = "crates/llaas-core" }
-llaas-jobs = { path = "crates/llaas-jobs" }
-llaas-resources = { path = "crates/llaas-resources" }
-llaas-store = { path = "crates/llaas-store" }
 
-[dependencies]
-llaas-cli.workspace = true
-tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
