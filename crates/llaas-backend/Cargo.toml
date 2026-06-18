@@ -13,7 +13,8 @@ futures = "0.3"
 html2text = "0.17.1"
 leptos = { version = "0.8.12", features = ["ssr"] }
 leptos_router = { version = "0.8.13", features = ["ssr"] }
+rust-bert = "0.23.0"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.150"
-surrealdb = "3.1.4"
+surrealdb = { version = "3.1.4", features= ["kv-rocksdb"]}
 validator = { version = "0.20.0", features = ["derive"] }

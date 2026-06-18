@@ -1,7 +1,7 @@
 use actix_web::{HttpRequest, HttpResponse, Responder, get, post, web};
 use async_graphql::http::GraphiQLSource;
 use async_graphql_actix_web::{GraphQLRequest, GraphQLResponse, GraphQLSubscription};
-use llaas_api::graphql::LlaasSchema;
+use crate::api::graphql::LlaasSchema;
 
 #[post("/graphql")]
 async fn graphql(schema: web::Data<LlaasSchema>, request: GraphQLRequest) -> GraphQLResponse {
