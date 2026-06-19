@@ -24,11 +24,18 @@ pub struct Video {
 
 #[async_trait::async_trait]
 pub trait VideoDatabase {
+    async fn videos(&self) -> Result<Vec<Video>, Error>;
     async fn upsert(&self, video: &Video) -> Result<(), Error>;
 }
 
 #[async_trait::async_trait]
 impl VideoDatabase for Context {
+    async fn videos(&self) -> Result<Vec<Video>, Error> {
+        let db = self.db().await?;
+        let videos: Vec<Video> = db.select("video").await?;
+        Ok(videos)
+    }
+
     async fn upsert(&self, video: &Video) -> Result<(), Error> {
         // Here you would implement the logic to insert or update the video record in your database.
         // This is a placeholder implementation and should be replaced with actual database interaction code.

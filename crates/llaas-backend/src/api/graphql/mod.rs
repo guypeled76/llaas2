@@ -4,11 +4,14 @@
 //! for the Language Learning as a Service (LLAAS) backend.
 
 mod root;
+mod videos;
 
 use actix_web::{get, post, web, HttpRequest, HttpResponse, Responder};
 use async_graphql::http::GraphiQLSource;
 use async_graphql::{EmptyMutation, EmptySubscription, Schema};
 use async_graphql_actix_web::{GraphQLRequest, GraphQLResponse, GraphQLSubscription};
+
+use crate::common::context::Context as AppContext;
 
 pub use root::QueryRoot;
 
@@ -33,8 +36,13 @@ pub fn schema() -> LlaasSchema {
 /// This endpoint accepts GraphQL queries and mutations in JSON format
 /// and returns the results.
 #[post("/graphql")]
-async fn graphql(schema: web::Data<LlaasSchema>, request: GraphQLRequest) -> GraphQLResponse {
-    schema.execute(request.into_inner()).await.into()
+async fn graphql(
+    schema: web::Data<LlaasSchema>,
+    app_context: web::Data<&'static AppContext>,
+    request: GraphQLRequest,
+) -> GraphQLResponse {
+    let request = request.into_inner().data(*app_context.get_ref());
+    schema.execute(request).await.into()
 }
 
 /// Handles GraphQL WebSocket subscriptions.
