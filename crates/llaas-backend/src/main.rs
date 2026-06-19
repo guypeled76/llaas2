@@ -22,6 +22,9 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    Info {
+
+    },
     Book {
         #[arg(long)]
         from: String,
@@ -58,6 +61,9 @@ async fn main() {
     let context: &'static Context = Box::leak(Box::new(Context::new(Config::new())));
 
     match cli.command {
+        Commands::Info {} => { 
+            println!("LLaas Backend Application");
+        }
         Commands::Book { from, to } => {
             let book = resources::epub::read(&from).expect("Failed to read epub");
             let json = book_to_json(&book);
